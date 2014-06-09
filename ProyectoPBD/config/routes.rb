@@ -1,4 +1,6 @@
 ActiveCab::Application.routes.draw do
+  get "conductor/index"
+  get "conductor/calendario"
   get "cliente/estado"
   get "cliente/solicitud"
   get "cliente/condiciones"
