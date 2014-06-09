@@ -1,2 +1,8 @@
 <h1>Operador#index</h1>
-<p>Find me in app/views/operador/index.html.erb</p>
+<ul class="nav nav-pills nav-stacked largo">
+  <li class="active"> <%=link_to "Distancia y valor", :controller => :operador, :action => :index %> </li>
+  <li> <%=link_to "Disponibilidad de conductores", :controller => :operador, :action => :disp_conductor %> </li>
+  <li> <%=link_to "Lista de solicitudes", :controller => :operador, :action => :solicitudes %> </li>
+  <li> <%=link_to "Lista de usuarios registrados", :controller => :operador, :action => :usuarios_reg %> </li>
+
+</ul>
