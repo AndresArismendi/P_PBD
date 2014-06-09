@@ -1,7 +1,8 @@
 class GestionUsuariosController < ApplicationController
-  
-  #Index => gestion de conductores
   def index
+  end
+
+  def gestion_conductores
   end
 
   def gestion_empresas

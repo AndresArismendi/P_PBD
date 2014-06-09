@@ -6,6 +6,11 @@ class GestionUsuariosControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get gestion_conductores" do
+    get :gestion_conductores
+    assert_response :success
+  end
+
   test "should get gestion_empresas" do
     get :gestion_empresas
     assert_response :success
