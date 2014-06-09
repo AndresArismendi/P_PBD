@@ -1,0 +1,112 @@
+#encoding: utf-8
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ActiveCab</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <link href="../../assets/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../">
+  
+ 	<!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+</head>
+<!-- Cabecera -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="#"> <i class="fa fa-cab"></i> ActiveCab</a>
+    </div>
+    <div class="collapse navbar-collapse">
+
+    	<ul class="nav navbar-nav">
+  	    <!--<li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
+  	    <li><a href="#"><i class="fa fa-usd"></i> Servicios y tarifas</a></li> -->
+        <li> <%= link_to "Inicio", :controller => :home, :action => :index %></li>
+        <li> <%= link_to "Servicios y tarifas", :controller => :welcome, :action => :tarifas %></li>
+        <li> <%= link_to "Quiénes somos", :controller => :welcome, :action => :qs %></li>
+  	    <!--<li><a href="welcome/qs"><i class="fa fa-university"></i> Quiénes somos</a></li>-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Iniciar sesión</a></li>
+        <li><a href="#">Registrarse</a></li>
+      </ul>
+
+      <div class="navbar-collapse collapse">
+        
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!--Fin Cabecera -->
+
+<body>
+<br><br>
+
+
+
+<%= yield %>
+
+</body>
+
+
+<hr class="centrado">
+
+<footer id="footer" class="footer hidden-print">
+<br>
+
+  <div class="container text-center">
+    <div>
+      <i class="fa fa-mobile"></i> Contáctanos <a href="#">ActiveCab</a><br>      
+      <i class="fa fa-cog"></i> Creado por <a href="#"> APK Solution</a>
+    </div>
+    <div>      
+      <i class="fa fa-university"></i> Empresa <a href="#">Quiénes Somos</a>
+      <span class="hide-xs hide-sm">·</span><br class="hide-md hide-lg">
+      <i class="fa fa-usd"></i> Cotizar precio <a href="#">Planifica tu viaje</a>
+    </div>
+	<div>
+		<br><i class="fa fa-car fa-2x"></i>
+	</div>
+    <div class="amari">    		
+		© Copyright 2014 by ActiveCab. All Rights Reserved. 		
+	</div>
+  </div>
+  
+  
+</footer>
+        <script src="../../assets/bootstrap.min.js"></script>
+        <script src="../../assets/bootstrap.js"></script>
+
+<!-- Subir facil -->
+<div id='IrArriba'>
+<a href=''></a>
+</div>
+<!---->
+</html>

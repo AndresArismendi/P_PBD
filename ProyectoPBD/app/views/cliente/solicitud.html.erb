@@ -1,0 +1,36 @@
+#encoding: utf-8
+<h1>Cliente#solicitud</h1>
+<div class="centro"><h1>Bienvenido <%= @nombre %> </h1>
+<!--<%= @h_viaje %>
+<%= @o_viaje %>
+<%= @c_origen %>
+<%= @d_viaje %>
+<%= @c_destino %>
+<%= @c_pasajeros %>-->
+<%= @role %>
+
+<%= form_tag :action => 'solicitud' do %>
+	<p> Nombre: <br>
+	<%= text_field_tag 'nombre', @nombre %></p>
+	<p> Fecha de viaje: <br>
+	<%= text_field_tag 'fecha_viaje', @fecha %></p>
+	<p> Hora de viaje: <br>
+	<%= text_field_tag 'hora_viaje', @h_viaje %></p>
+	<p> Origen de viaje:<br>
+	<%= text_field_tag 'origen_viaje', @o_viaje %></p>
+	<p> Comuna de origen:<br>
+	<p><%= select_tag :role, options_for_select([["Cerrillos", "1"], ["Cerronavia", "2"]]) %></p>
+
+	<%= text_field_tag 'comuna_origen', @c_origen %></p>
+	<p> Destino de viaje:<br>
+	<%= text_field_tag 'destino_viaje', @d_viaje %></p>
+	<p> Comuna de destino:<br>
+	<%= text_field_tag 'comuna_destino', @c_destino %></p>
+	<p> Cantidad de pasajeros:<br>
+	<%= text_field_tag 'cantidad_pasajeros', @c_pasajeros %></p>
+	<%= submit_tag 'Enviar' %>
+
+<% end %>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
