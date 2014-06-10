@@ -4,6 +4,7 @@ class ClienteController < ApplicationController
   end
 
   def solicitud
+   	@usuario = 'Andrés'
    	@nombre = params[:nombre]
   	@fecha = params[:fecha_viaje]
   	@h_viaje = params[:hora_viaje]
