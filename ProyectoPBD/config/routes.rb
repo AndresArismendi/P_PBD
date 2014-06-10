@@ -1,4 +1,9 @@
 ActiveCab::Application.routes.draw do
+  get "gestiones/index"
+  get "gestiones/gestion_moviles"
+  get "gestiones/gestion_tarifas"
+  get "gestiones/gestion_informacion"
+  get "gestiones/gestion_convenios"
   get "operador/index"
   get "operador/solicitudes"
   get "operador/disp_conductor"
