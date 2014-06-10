@@ -20,6 +20,8 @@
 }
 
 footer{
+
+
   background: rgb(14,14,14); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(14,14,14,1) 0%, rgba(125,126,125,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(14,14,14,1)), color-stop(100%,rgba(125,126,125,1))); /* Chrome,Safari4+ */
@@ -33,28 +35,22 @@ footer{
   padding-bottom: 4rem;
 }
 .fa-car:hover,.amari:hover{
-  color: yellow;
-}
-
-#IrArriba {
-position: fixed;
-bottom: 30px;
-right: 30px;
-}
-#IrArriba a {
-width: 60px;
-height: 60px;
-display: block;
-background: url(http://lh5.googleusercontent.com/-luDGEoQ_WZE/T1Ak-gta5MI/AAAAAAAACPI/ojfEGiaNmGw/s60/flecha-arriba.png) no-repeat center center;
-opacity:0.6;
-}
-#IrArriba a:hover {
-width: 60px;
-height: 60px;
-display: block;
-opacity:0.8;
--webkit-transition-duration: 0.3s;
-background: url(http://lh5.googleusercontent.com/-luDGEoQ_WZE/T1Ak-gta5MI/AAAAAAAACPI/ojfEGiaNmGw/s60/flecha-arriba.png) no-repeat center center;
+     color: yellow;
+     text-decoration: none;
+     color: #000;
+     display: block;
+     font-size: 1.4rem;
+     text-align: center;
+     height: auto;
+     color: #FFF;
+     margin: auto;
+     transition: all 0.5s ease 0s;
+     transition-property: all;
+     transition-duration: 0.8s;
+     transition-timing-function: ease;
+     transition-delay: 0s;
+     height: 10%;
+     width: 50%;
 }
 
 

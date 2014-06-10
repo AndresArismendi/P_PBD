@@ -1,3 +1,77 @@
 <h1>Welcome#tarifas</h1>
-<p>Find me in app/views/welcome/tarifas.html.erb</p>
-<p>patouski</p>
+<br>
+<h1>Listado de tarifas</h1>
+<hr>
+<div class="container">
+        <div class="row">
+            <div class="col-lg-8 ">
+
+			<div class="panel panel-default">
+			      <!-- Default panel contents -->
+			   	<div class="panel-heading">Tabla de precios ActiveCab</div>
+
+
+			      <!-- Table -->
+			      <table class="table">
+			        <thead>
+			          <tr>
+			            <th>#</th>
+			            <th>Origen</th>
+			            <th>Destino</th>
+			            <th>Costo</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			          <tr>
+			            <td>1</td>
+			            <td>Santiago Centro</td>
+			            <td>Aeropuerto de Santiago</td>
+			            <td>17000</td>
+			          </tr>
+			          <tr>
+			            <td>2</td>
+			            <td>Cerro Navia</td>
+			            <td>Aeropuerto de Santiago</td>
+			            <td>20000</td>
+			          </tr>
+			          <tr>
+			            <td>3</td>
+			            <td>Providencia</td>
+			            <td>Aeropuerto de Santiago</td>
+			            <td>16000</td>
+			          </tr>
+			          <tr>
+			            <td>4</td>
+			            <td>Providencia</td>
+			            <td>Hotel Fundador</td>
+			            <td>16000</td>
+			          </tr>
+			          <tr>
+			            <td>5</td>
+			            <td>Quilicura</td>
+			            <td>Universidad de Santiago</td>
+			            <td>16000</td>
+			          </tr>
+			        </tbody>
+			      </table>
+			    </div>
+
+            </div>
+            <div class="col-lg-4 ">
+				<div class="centro">
+					<div class="fijo1">
+						<i class="fa fa-taxi fa-5x amari"></i>
+					</div><br><br>
+					<div class="fijo1">
+					    <div class="whitec"><button type="button" class="btn btn-default"> <%= link_to "Solicita un taxi", :controller => :cliente, :action => :solicitud %> </button>
+					    </div>
+					</div>
+				</div>
+
+
+            </div>
+
+        </div>      
+
+    </div>
+<br><br><br><br><br><br>
