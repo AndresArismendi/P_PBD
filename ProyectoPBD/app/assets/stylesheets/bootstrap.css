@@ -5,10 +5,41 @@
  */
 
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+.padre{
+  min-height: 800px;
 
+
+}
+#IrArriba {
+position: fixed;
+bottom: 30px;
+right: 30px;
+}
+#IrArriba a {
+width: 60px;
+height: 60px;
+display: block;
+background: url(http://lh5.googleusercontent.com/-luDGEoQ_WZE/T1Ak-gta5MI/AAAAAAAACPI/ojfEGiaNmGw/s60/flecha-arriba.png) no-repeat center center;
+opacity:0.6;
+}
+#IrArriba a:hover {
+width: 60px;
+height: 60px;
+display: block;
+opacity:0.8;
+-webkit-transition-duration: 0.3s;
+background: url(http://lh5.googleusercontent.com/-luDGEoQ_WZE/T1Ak-gta5MI/AAAAAAAACPI/ojfEGiaNmGw/s60/flecha-arriba.png) no-repeat center center;
+}
 
 
 /* propios */
+
+.fondoA{
+
+  background-image: url("../../assets/fondo1.jpg");
+
+
+}
 .centrado{
   
   margin-right: 10rem;
@@ -18,10 +49,13 @@
   
 
 }
+.center{
+  text-align: center;
+}
 
 footer{
 
-
+  display: block;
   background: rgb(14,14,14); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(14,14,14,1) 0%, rgba(125,126,125,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(14,14,14,1)), color-stop(100%,rgba(125,126,125,1))); /* Chrome,Safari4+ */
@@ -33,6 +67,7 @@ footer{
   color: grey;
   margin-bottom: 0rem; 
   padding-bottom: 4rem;
+  height: 20rem;
 }
 .fa-car:hover,.amari:hover{
      color: yellow;
@@ -49,11 +84,31 @@ footer{
      transition-duration: 0.8s;
      transition-timing-function: ease;
      transition-delay: 0s;
-     height: 10%;
+     height: 0%;
      width: 50%;
 }
 
+.pos{
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 
+}
+
+.backl{
+    background: rgb(254,252,234); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(241,218,54,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #000;
+    padding: 7rem;
+    border-radius: 5rem;
+
+
+}
 
 /* -----  */
 
@@ -91,7 +146,7 @@ template {
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
