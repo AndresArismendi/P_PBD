@@ -1,7 +1,8 @@
 <br>
 <div class="container">
-        <div class="row">
-            <div class="col-lg-6 ">
+    <div class="row">
+        <div class="col-lg-12 ">
+        	<div class="col-lg-6">
 				<ul class="nav nav-pills nav-stacked largo">
 				  <li class="active"> <%=link_to "Distancia y valor", :controller => :operador, :action => :index %> </li>
 				  <li> <%=link_to "Disponibilidad de conductores", :controller => :operador, :action => :disp_conductor %> </li>
@@ -9,41 +10,34 @@
 				  <li> <%=link_to "Lista de usuarios registrados", :controller => :operador, :action => :usuarios_reg %> </li>
 
 								
-			</ul>
+				</ul>
+			</div>
+			<div class = "col-lg-6">
+				<%= form_tag :action =>  'index' do %>
+				<p> Origen: <br>
+				<%= text_field_tag 'origen', @origen %></p>
+				<p> Destino: <br>
+				<%= text_field_tag 'destino', @destino %></p>
+				<%= submit_tag 'Solicitar tiempo y distancia' %>
+				<% end %>
 
+				<br>
+				<p>Origen: <%= @origin_addresses%></p>
+				<p>Destino: <%= @destination_addresses%></p>
+				<p>Si las direcciones no son correctas ingrese mayor información de origen y/o destino</p>
+				
+				<p>Distancia: <%= @distance_km%> Kms.</p>
+				<p>Duracion: <%= @duration_min%> minutos</p>
+				<p>Estado: <%= @status%></p>
+				<!--<p>result: <%= $result%></p>-->
+			</div>
+    	</div>
 
-        </div>
-
-    </div>      
-
-</div>
-
-<div class = "col-lg-6">
-	<br>
-	<br>
-    	<%= form_tag :action =>  'index' do %>
-		<p> Origen: <br>
-		<%= text_field_tag 'origen', @origen %></p>
-		<p> Destino: <br>
-		<%= text_field_tag 'destino', @destino %></p>
-		<%= submit_tag 'Solicitar tiempo y distancia' %>
-		<% end %>
-
-		<br>
-		<p>Destino: <%= @destination_addresses%></p>
-		<p>Origen: <%= @origin_addresses%></p>
-		<p>Si las direcciones no son correctas ingrese mayor información de origen y/o destino</p>
-		
-		<p>Distancia: <%= @distance%></p>
-		<p>Duracion: <%= @duration_min%> minutos</p>
-		<p>Estado: <%= @status%></p>
-		<p>result: <%= $result%></p>	
-
-
-
-
+	</div>      
 
 </div>
+
+
 
 
 
