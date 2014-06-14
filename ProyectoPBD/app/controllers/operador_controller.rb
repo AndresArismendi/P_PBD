@@ -27,7 +27,7 @@ class OperadorController < ApplicationController
   end
 
   def solicitudes
-
+  	@origen2= @origen	
 
 
   end
