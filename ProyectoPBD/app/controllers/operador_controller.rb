@@ -13,8 +13,8 @@ class OperadorController < ApplicationController
 	@data = @resp.body
 	$result = JSON.parse(@data)
 	
-	@destination_addresses = $result["destination_addresses"]
-	@origin_addresses = $result["origin_addresses"]
+	@destination_addresses = $result["destination_addresses"][0]
+	@origin_addresses = $result["origin_addresses"][0]
 	@status = $result['status']
 	#@distance = $result["rows"][0]
 	if (@status == "OK")
