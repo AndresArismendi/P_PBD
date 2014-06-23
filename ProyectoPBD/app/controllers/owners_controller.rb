@@ -7,7 +7,7 @@ class OwnersController < ApplicationController
     @owners = Owner.all
   end
 
-  # GET /owners/1
+   # GET /owners/1
   # GET /owners/1.json
   def show
   end
@@ -15,6 +15,11 @@ class OwnersController < ApplicationController
   # GET /owners/new
   def new
     @owner = Owner.new
+  end
+  
+  # GET /owners/conductor
+  def conductor
+    @owners = Owner.all
   end
 
   # GET /owners/1/edit

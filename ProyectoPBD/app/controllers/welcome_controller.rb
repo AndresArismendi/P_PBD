@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
   end
 
   def qs
+  	@owners= Owner.all
   end
 
   def tarifas
