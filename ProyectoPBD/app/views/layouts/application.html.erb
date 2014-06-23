@@ -28,7 +28,11 @@
 
 
 </head>
-<!-- Cabecera -->
+
+<% if user_signed_in? %>
+
+
+
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     
@@ -46,17 +50,18 @@
     </div>
     <div class="collapse navbar-collapse">
 
-    	<ul class="nav navbar-nav">
-  	    <!--<li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
-  	    <li><a href="#"><i class="fa fa-usd"></i> Servicios y tarifas</a></li> -->
+      <ul class="nav navbar-nav">
+        <!--<li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
+        <li><a href="#"><i class="fa fa-usd"></i> Servicios y tarifas</a></li> -->
         <li> <%= link_to "Inicio", :controller => :home, :action => :index %></li>
         <li> <%= link_to "Servicios y tarifas", :controller => :welcome, :action => :tarifas %></li>
         <li> <%= link_to "Quiénes somos", :controller => :welcome, :action => :qs %></li>
-  	    <!--<li><a href="welcome/qs"><i class="fa fa-university"></i> Quiénes somos</a></li>-->
+        <li> <%= link_to "Solicita un viaje", :controller => :welcome, :action => :qs %></li>
+        <!--<li><a href="welcome/qs"><i class="fa fa-university"></i> Quiénes somos</a></li>-->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li> <%=link_to "Iniciar sesión", :controller => :log, :action => :iniciar %> </li>
-        <li> <%=link_to "Registrarse", :controller => :log, :action => :registrar %> </li>
+        <li><a href=""> <%= current_user.email %> </a></li> 
+        <li> <%=link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %> </li>
 
         
       </ul>
@@ -69,15 +74,77 @@
 
   </div>
 </div>
+
+
+
+
+
+
+
+
+<!--Fin cabecera conectado-->
+<% else %>
+
+
+
+
+<!--Cabecera noconectado-->
+
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+
+      <a class="navbar-brand" href="#"> <i class="fa fa-cab"></i> ActiveCab</a>
+    </div>
+    <div class="collapse navbar-collapse">
+
+      <ul class="nav navbar-nav">
+        <!--<li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
+        <li><a href="#"><i class="fa fa-usd"></i> Servicios y tarifas</a></li> -->
+        <li> <%= link_to "Inicio", :controller => :home, :action => :index %></li>
+        <li> <%= link_to "Servicios y tarifas", :controller => :welcome, :action => :tarifas %></li>
+        <li> <%= link_to "Quiénes somos", :controller => :welcome, :action => :qs %></li>
+        <!--<li><a href="welcome/qs"><i class="fa fa-university"></i> Quiénes somos</a></li>-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li> <%=link_to 'Inicia Sesión', new_user_session_path %> </li>
+        <li> <%=link_to 'Crear Cuenta', new_user_registration_path %> </li>
+
+        
+      </ul>
+
+      <div class="navbar-collapse collapse">
+        
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!--Fin de cabecera no conectado-->
+<% end %>
+
 <!--Fin Cabecera -->
 <div class="padre">
 <body>
 <br><br>
-  <p class="notice"><%= notice %></p>
+  <!--<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
+-->
 <%= yield %>
-
+ <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
 </body>
 </div>
 

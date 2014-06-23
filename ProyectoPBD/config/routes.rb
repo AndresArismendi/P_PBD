@@ -1,4 +1,5 @@
 ActiveCab::Application.routes.draw do
+  devise_for :users
   get "gestiones/index"
   get "gestiones/gestion_moviles"
   get "gestiones/gestion_tarifas"
