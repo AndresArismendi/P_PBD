@@ -18,9 +18,9 @@
         <td><%= bill_detail.id_bill %></td>
         <td><%= bill_detail.id_conc %></td>
         <td><%= bill_detail.monto_det_fact %></td>
-        <td><%= link_to 'Show', bill_detail %></td>
-        <td><%= link_to 'Edit', edit_bill_detail_path(bill_detail) %></td>
-        <td><%= link_to 'Destroy', bill_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', bill_detail %></td>
+        <td><%= link_to 'Editar', edit_bill_detail_path(bill_detail) %></td>
+        <td><%= link_to 'Eliminar', bill_detail, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Bill detail', new_bill_detail_path %>
+<%= link_to 'Nuevo', new_bill_detail_path %>

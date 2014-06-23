@@ -26,9 +26,9 @@
         <td><%= enterprise_client.tel1_cli %></td>
         <td><%= enterprise_client.tel2_cli %></td>
         <td><%= enterprise_client.email_cli %></td>
-        <td><%= link_to 'Show', enterprise_client %></td>
-        <td><%= link_to 'Edit', edit_enterprise_client_path(enterprise_client) %></td>
-        <td><%= link_to 'Destroy', enterprise_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', enterprise_client %></td>
+        <td><%= link_to 'Editar', edit_enterprise_client_path(enterprise_client) %></td>
+        <td><%= link_to 'Eliminar', enterprise_client, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Enterprise client', new_enterprise_client_path %>
+<%= link_to 'Nuevo', new_enterprise_client_path %>

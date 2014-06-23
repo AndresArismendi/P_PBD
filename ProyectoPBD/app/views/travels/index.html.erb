@@ -26,9 +26,9 @@
         <td><%= travel.tiemp_est_via %></td>
         <td><%= travel.dist_est_via %></td>
         <td><%= travel.val_via %></td>
-        <td><%= link_to 'Show', travel %></td>
-        <td><%= link_to 'Edit', edit_travel_path(travel) %></td>
-        <td><%= link_to 'Destroy', travel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', travel %></td>
+        <td><%= link_to 'Editar', edit_travel_path(travel) %></td>
+        <td><%= link_to 'Eliminar', travel, method: :delete, data: { confirm: '¿Confirma eliminación??' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Travel', new_travel_path %>
+<%= link_to 'Nuevo', new_travel_path %>

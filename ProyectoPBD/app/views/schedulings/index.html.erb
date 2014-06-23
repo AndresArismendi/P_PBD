@@ -20,9 +20,9 @@
         <td><%= scheduling.run_driv %></td>
         <td><%= scheduling.run_cli %></td>
         <td><%= scheduling.cli_run_cli %></td>
-        <td><%= link_to 'Show', scheduling %></td>
-        <td><%= link_to 'Edit', edit_scheduling_path(scheduling) %></td>
-        <td><%= link_to 'Destroy', scheduling, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', scheduling %></td>
+        <td><%= link_to 'Editar', edit_scheduling_path(scheduling) %></td>
+        <td><%= link_to 'Eliminar', scheduling, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Scheduling', new_scheduling_path %>
+<%= link_to 'Nuevo', new_scheduling_path %>

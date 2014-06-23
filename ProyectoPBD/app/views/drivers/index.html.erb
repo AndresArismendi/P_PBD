@@ -26,9 +26,9 @@
         <td><%= driver.tel2_cond %></td>
         <td><%= driver.email_cond %></td>
         <td><%= driver.venc_licenc_cond %></td>
-        <td><%= link_to 'Show', driver %></td>
-        <td><%= link_to 'Edit', edit_driver_path(driver) %></td>
-        <td><%= link_to 'Destroy', driver, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', driver %></td>
+        <td><%= link_to 'Editar', edit_driver_path(driver) %></td>
+        <td><%= link_to 'Eliminar', driver, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Driver', new_driver_path %>
+<%= link_to 'Nuevo', new_driver_path %>

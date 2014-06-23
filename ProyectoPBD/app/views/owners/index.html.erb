@@ -43,9 +43,9 @@
         <td><%= owner.tel1_prop %></td>
         <td><%= owner.tel2_prop %></td>
         <td><%= owner.email_prop %></td>
-        <td><%= link_to 'Show', owner %></td>
-        <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
-        <td><%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', owner %></td>
+        <td><%= link_to 'Editar', edit_owner_path(owner) %></td>
+        <td><%= link_to 'Eliminar', owner, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -53,4 +53,4 @@
 
 <br>
 
-<%= link_to 'New Owner', new_owner_path %>
+<%= link_to 'Nuevo', new_owner_path %>

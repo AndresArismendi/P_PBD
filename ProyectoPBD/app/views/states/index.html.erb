@@ -14,9 +14,9 @@
     <% @states.each do |state| %>
       <tr>
         <td><%= state.nom_est %></td>
-        <td><%= link_to 'Show', state %></td>
-        <td><%= link_to 'Edit', edit_state_path(state) %></td>
-        <td><%= link_to 'Destroy', state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', state %></td>
+        <td><%= link_to 'Editar', edit_state_path(state) %></td>
+        <td><%= link_to 'Eliminar', state, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New State', new_state_path %>
+<%= link_to 'Nuevo', new_state_path %>

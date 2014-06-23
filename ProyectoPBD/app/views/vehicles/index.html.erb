@@ -24,9 +24,9 @@
         <td><%= vehicle.model_veh %></td>
         <td><%= vehicle.tipo_veh %></td>
         <td><%= vehicle.km_sem_veh %></td>
-        <td><%= link_to 'Show', vehicle %></td>
-        <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
-        <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', vehicle %></td>
+        <td><%= link_to 'Editar', edit_vehicle_path(vehicle) %></td>
+        <td><%= link_to 'Eliminar', vehicle, method: :delete, data: { confirm: '¿Confirma eliminación??' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Vehicle', new_vehicle_path %>
+<%= link_to 'Nuevo', new_vehicle_path %>

@@ -20,9 +20,9 @@
         <td><%= assigned.run_driv %></td>
         <td><%= assigned.ini_assigned %></td>
         <td><%= assigned.fin_assigned %></td>
-        <td><%= link_to 'Show', assigned %></td>
-        <td><%= link_to 'Edit', edit_assigned_path(assigned) %></td>
-        <td><%= link_to 'Destroy', assigned, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', assigned %></td>
+        <td><%= link_to 'Editar', edit_assigned_path(assigned) %></td>
+        <td><%= link_to 'Eliminar', assigned, method: :delete, data: { confirm: 'Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Assigned', new_assigned_path %>
+<%= link_to 'Nuevo', new_assigned_path %>

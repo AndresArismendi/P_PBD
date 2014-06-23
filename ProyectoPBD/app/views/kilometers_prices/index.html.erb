@@ -20,9 +20,9 @@
         <td><%= kilometers_price.ini_val_km %></td>
         <td><%= kilometers_price.fin_val_km %></td>
         <td><%= kilometers_price.estado_val_km %></td>
-        <td><%= link_to 'Show', kilometers_price %></td>
-        <td><%= link_to 'Edit', edit_kilometers_price_path(kilometers_price) %></td>
-        <td><%= link_to 'Destroy', kilometers_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', kilometers_price %></td>
+        <td><%= link_to 'Editar', edit_kilometers_price_path(kilometers_price) %></td>
+        <td><%= link_to 'Destruir', kilometers_price, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Kilometers price', new_kilometers_price_path %>
+<%= link_to 'Nuevo', new_kilometers_price_path %>

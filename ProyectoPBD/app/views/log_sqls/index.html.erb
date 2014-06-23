@@ -26,9 +26,9 @@
         <td><%= log_sql.dat_antes_log_sql %></td>
         <td><%= log_sql.dat_desp_log_sql %></td>
         <td><%= log_sql.ope_det_log_sql %></td>
-        <td><%= link_to 'Show', log_sql %></td>
-        <td><%= link_to 'Edit', edit_log_sql_path(log_sql) %></td>
-        <td><%= link_to 'Destroy', log_sql, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', log_sql %></td>
+        <td><%= link_to 'Editar', edit_log_sql_path(log_sql) %></td>
+        <td><%= link_to 'Eliminar', log_sql, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Log sql', new_log_sql_path %>
+<%= link_to 'Nuevo', new_log_sql_path %>

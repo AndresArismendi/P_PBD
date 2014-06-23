@@ -24,9 +24,9 @@
         <td><%= natural_client.tel1_cli %></td>
         <td><%= natural_client.tel2_cli %></td>
         <td><%= natural_client.email_cli %></td>
-        <td><%= link_to 'Show', natural_client %></td>
-        <td><%= link_to 'Edit', edit_natural_client_path(natural_client) %></td>
-        <td><%= link_to 'Destroy', natural_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', natural_client %></td>
+        <td><%= link_to 'Editar', edit_natural_client_path(natural_client) %></td>
+        <td><%= link_to 'Eliminar', natural_client, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Natural client', new_natural_client_path %>
+<%= link_to 'Nuevo', new_natural_client_path %>

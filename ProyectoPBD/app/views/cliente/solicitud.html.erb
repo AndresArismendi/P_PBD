@@ -9,25 +9,25 @@
 <%= @c_pasajeros %>-->
 <%= @role %>
 
-<%= form_tag :action => 'solicitud' do %>
+<%= form_tag :action => 'Solicitud' do %>
 	<p> Nombre: <br>
-	<%= text_field_tag 'nombre', @nombre %></p>
+	<%= text_field_tag 'Nombre', @nombre %></p>
 	<p> Fecha de viaje: <br>
-	<%= text_field_tag 'fecha_viaje', @fecha %></p>
+	<%= text_field_tag 'Fecha Viaje', @fecha %></p>
 	<p> Hora de viaje: <br>
-	<%= text_field_tag 'hora_viaje', @h_viaje %></p>
+	<%= text_field_tag 'Hora Viaje', @h_viaje %></p>
 	<p> Origen de viaje:<br>
-	<%= text_field_tag 'origen_viaje', @o_viaje %></p>
+	<%= text_field_tag 'Origen Viaje', @o_viaje %></p>
 	<p> Comuna de origen:<br>
 	<p><%= select_tag :role, options_for_select([["Cerrillos", "1"], ["Cerronavia", "2"]]) %></p>
 
-	<%= text_field_tag 'comuna_origen', @c_origen %></p>
+	<%= text_field_tag 'Comuna Origen', @c_origen %></p>
 	<p> Destino de viaje:<br>
-	<%= text_field_tag 'destino_viaje', @d_viaje %></p>
+	<%= text_field_tag 'Destino Viaje', @d_viaje %></p>
 	<p> Comuna de destino:<br>
-	<%= text_field_tag 'comuna_destino', @c_destino %></p>
+	<%= text_field_tag 'Comuna Destino', @c_destino %></p>
 	<p> Cantidad de pasajeros:<br>
-	<%= text_field_tag 'cantidad_pasajeros', @c_pasajeros %></p>
+	<%= text_field_tag 'Cantidad Pasajeros', @c_pasajeros %></p>
 	<%= submit_tag 'Enviar' %>
 
 <% end %>

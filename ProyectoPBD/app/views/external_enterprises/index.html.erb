@@ -34,9 +34,9 @@
         <td><%= external_enterprise.ini_conv_emp %></td>
         <td><%= external_enterprise.fin_conv_emp %></td>
         <td><%= external_enterprise.descrip_conv_emp %></td>
-        <td><%= link_to 'Show', external_enterprise %></td>
-        <td><%= link_to 'Edit', edit_external_enterprise_path(external_enterprise) %></td>
-        <td><%= link_to 'Destroy', external_enterprise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', external_enterprise %></td>
+        <td><%= link_to 'Editar', edit_external_enterprise_path(external_enterprise) %></td>
+        <td><%= link_to 'Eliminar', external_enterprise, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -44,4 +44,4 @@
 
 <br>
 
-<%= link_to 'New External enterprise', new_external_enterprise_path %>
+<%= link_to 'Nuevo', new_external_enterprise_path %>

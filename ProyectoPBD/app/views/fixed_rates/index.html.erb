@@ -18,9 +18,9 @@
         <td><%= fixed_rate.ori_tar %></td>
         <td><%= fixed_rate.dest_tar %></td>
         <td><%= fixed_rate.costo_tar %></td>
-        <td><%= link_to 'Show', fixed_rate %></td>
-        <td><%= link_to 'Edit', edit_fixed_rate_path(fixed_rate) %></td>
-        <td><%= link_to 'Destroy', fixed_rate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', fixed_rate %></td>
+        <td><%= link_to 'Editar', edit_fixed_rate_path(fixed_rate) %></td>
+        <td><%= link_to 'Eliminar', fixed_rate, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Fixed rate', new_fixed_rate_path %>
+<%= link_to 'Nuevo', new_fixed_rate_path %>

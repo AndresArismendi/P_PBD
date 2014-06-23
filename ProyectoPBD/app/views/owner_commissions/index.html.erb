@@ -18,9 +18,9 @@
         <td><%= owner_commission.porcent_comi_prop %></td>
         <td><%= owner_commission.ini_comi_prop %></td>
         <td><%= owner_commission.fin_comi_prop %></td>
-        <td><%= link_to 'Show', owner_commission %></td>
-        <td><%= link_to 'Edit', edit_owner_commission_path(owner_commission) %></td>
-        <td><%= link_to 'Destroy', owner_commission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', owner_commission %></td>
+        <td><%= link_to 'Editar', edit_owner_commission_path(owner_commission) %></td>
+        <td><%= link_to 'Eliminar', owner_commission, method: :delete, data: { confirm: 'A¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Owner commission', new_owner_commission_path %>
+<%= link_to 'Nuevo', new_owner_commission_path %>

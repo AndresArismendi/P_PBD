@@ -16,9 +16,9 @@
       <tr>
         <td><%= scheduling_block.ini_bloq %></td>
         <td><%= scheduling_block.fin_bloq %></td>
-        <td><%= link_to 'Show', scheduling_block %></td>
-        <td><%= link_to 'Edit', edit_scheduling_block_path(scheduling_block) %></td>
-        <td><%= link_to 'Destroy', scheduling_block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', scheduling_block %></td>
+        <td><%= link_to 'Editar', edit_scheduling_block_path(scheduling_block) %></td>
+        <td><%= link_to 'Eliminar', scheduling_block, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Scheduling block', new_scheduling_block_path %>
+<%= link_to 'Nuevo', new_scheduling_block_path %>
