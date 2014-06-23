@@ -147,7 +147,6 @@
     -->
 
 
-<%@owners.each do |n| %>
 <!-- Split button -->
 <div class="btn-group">
   <button type="button" class="btn btn-danger">Action</button>
@@ -155,15 +154,20 @@
     <span class="caret"></span>
     <span class="sr-only">Toggle Dropdown</span>
   </button>
+
   <ul class="dropdown-menu" role="menu">
+  <%@owners.each do |n| %>
+
 			<li><strong>Nombre: <%=n.nom_prop%></strong><br></li>
-			<li><strong>Apellidos: <%=n.apells_prop%></strong><br></li>
+		<!--	<li><strong>Apellidos: <%=n.apells_prop%></strong><br></li>
 			<li><strong>Telefono 1: <%=n.tel1_prop%></strong><br></li>
 			<li><strong>Telefono 2: <%=n.tel2_prop%></strong><br></li>
-			<li><strong>Email: <%=n.email_prop%></strong><br></li>
+			<li><strong>Email: <%=n.email_prop%></strong><br></li> -->
+  <%end%>
+
   </ul>
+
 </div>
-<%end%>
 
 
 
