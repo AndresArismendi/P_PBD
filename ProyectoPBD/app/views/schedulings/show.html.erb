@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id off veh:</strong>
+  <%= @scheduling.id_off_veh %>
+</p>
+
+<p>
+  <strong>Run driv:</strong>
+  <%= @scheduling.run_driv %>
+</p>
+
+<p>
+  <strong>Run cli:</strong>
+  <%= @scheduling.run_cli %>
+</p>
+
+<p>
+  <strong>Cli run cli:</strong>
+  <%= @scheduling.cli_run_cli %>
+</p>
+
+<%= link_to 'Edit', edit_scheduling_path(@scheduling) %> |
+<%= link_to 'Back', schedulings_path %>

@@ -1,0 +1,45 @@
+<h1>Listing travel_requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Run cli</th>
+      <th>Cli run cli</th>
+      <th>Dir orig sol</th>
+      <th>Dir dest sol</th>
+      <th>Com orig sol</th>
+      <th>Com dest sol</th>
+      <th>Cant pasaj sol</th>
+      <th>Fecha crea sol</th>
+      <th>Fecha serv sol</th>
+      <th>Est sol</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @travel_requests.each do |travel_request| %>
+      <tr>
+        <td><%= travel_request.run_cli %></td>
+        <td><%= travel_request.cli_run_cli %></td>
+        <td><%= travel_request.dir_orig_sol %></td>
+        <td><%= travel_request.dir_dest_sol %></td>
+        <td><%= travel_request.com_orig_sol %></td>
+        <td><%= travel_request.com_dest_sol %></td>
+        <td><%= travel_request.cant_pasaj_sol %></td>
+        <td><%= travel_request.fecha_crea_sol %></td>
+        <td><%= travel_request.fecha_serv_sol %></td>
+        <td><%= travel_request.est_sol %></td>
+        <td><%= link_to 'Show', travel_request %></td>
+        <td><%= link_to 'Edit', edit_travel_request_path(travel_request) %></td>
+        <td><%= link_to 'Destroy', travel_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Travel request', new_travel_request_path %>

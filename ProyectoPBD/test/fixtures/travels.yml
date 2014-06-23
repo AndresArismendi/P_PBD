@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  run_driv: MyString
+  id_trav_req: 1
+  id_bill_det: 1
+  hora_ini_via: 2014-06-23 01:12:08
+  tiemp_est_via: 1
+  dist_est_via: 1.5
+  val_via: 1
+
+two:
+  run_driv: MyString
+  id_trav_req: 1
+  id_bill_det: 1
+  hora_ini_via: 2014-06-23 01:12:08
+  tiemp_est_via: 1
+  dist_est_via: 1.5
+  val_via: 1

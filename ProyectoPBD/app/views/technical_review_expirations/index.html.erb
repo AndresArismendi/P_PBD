@@ -1,0 +1,29 @@
+<h1>Listing technical_review_expirations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mes venc rev tec</th>
+      <th>Num venc rev tec</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @technical_review_expirations.each do |technical_review_expiration| %>
+      <tr>
+        <td><%= technical_review_expiration.mes_venc_rev_tec %></td>
+        <td><%= technical_review_expiration.num_venc_rev_tec %></td>
+        <td><%= link_to 'Show', technical_review_expiration %></td>
+        <td><%= link_to 'Edit', edit_technical_review_expiration_path(technical_review_expiration) %></td>
+        <td><%= link_to 'Destroy', technical_review_expiration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Technical review expiration', new_technical_review_expiration_path %>

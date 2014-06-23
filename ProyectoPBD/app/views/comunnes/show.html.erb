@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom comun:</strong>
+  <%= @comunne.nom_comun %>
+</p>
+
+<p>
+  <strong>Num comun:</strong>
+  <%= @comunne.num_comun %>
+</p>
+
+<%= link_to 'Edit', edit_comunne_path(@comunne) %> |
+<%= link_to 'Back', comunnes_path %>

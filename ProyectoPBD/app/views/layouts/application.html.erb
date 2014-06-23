@@ -60,7 +60,7 @@
         <!--<li><a href="welcome/qs"><i class="fa fa-university"></i> Quiénes somos</a></li>-->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href=""> <%= current_user.email %> </a></li> 
+        <li><%= link_to  current_user.email, edit_user_registration_path %></li>
         <li> <%=link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %> </li>
 
         
@@ -142,6 +142,8 @@
   <!--<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 -->
+
+
 <%= yield %>
  <p class="notice"><%= notice %></p>
  <p class="alert"><%= alert %></p>

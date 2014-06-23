@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ini bloq:</strong>
+  <%= @scheduling_block.ini_bloq %>
+</p>
+
+<p>
+  <strong>Fin bloq:</strong>
+  <%= @scheduling_block.fin_bloq %>
+</p>
+
+<%= link_to 'Edit', edit_scheduling_block_path(@scheduling_block) %> |
+<%= link_to 'Back', scheduling_blocks_path %>

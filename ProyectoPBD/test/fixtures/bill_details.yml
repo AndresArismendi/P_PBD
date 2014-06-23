@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_bill: 1
+  id_conc: 1
+  monto_det_fact: 1
+
+two:
+  id_bill: 1
+  id_conc: 1
+  monto_det_fact: 1

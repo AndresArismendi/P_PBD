@@ -1,0 +1,39 @@
+<h1>Listing travels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Run driv</th>
+      <th>Id trav req</th>
+      <th>Id bill det</th>
+      <th>Hora ini via</th>
+      <th>Tiemp est via</th>
+      <th>Dist est via</th>
+      <th>Val via</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @travels.each do |travel| %>
+      <tr>
+        <td><%= travel.run_driv %></td>
+        <td><%= travel.id_trav_req %></td>
+        <td><%= travel.id_bill_det %></td>
+        <td><%= travel.hora_ini_via %></td>
+        <td><%= travel.tiemp_est_via %></td>
+        <td><%= travel.dist_est_via %></td>
+        <td><%= travel.val_via %></td>
+        <td><%= link_to 'Show', travel %></td>
+        <td><%= link_to 'Edit', edit_travel_path(travel) %></td>
+        <td><%= link_to 'Destroy', travel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Travel', new_travel_path %>

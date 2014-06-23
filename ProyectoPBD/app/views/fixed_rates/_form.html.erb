@@ -1,0 +1,29 @@
+<%= form_for(@fixed_rate) do |f| %>
+  <% if @fixed_rate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fixed_rate.errors.count, "error") %> prohibited this fixed_rate from being saved:</h2>
+
+      <ul>
+      <% @fixed_rate.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ori_tar %><br>
+    <%= f.text_field :ori_tar %>
+  </div>
+  <div class="field">
+    <%= f.label :dest_tar %><br>
+    <%= f.text_field :dest_tar %>
+  </div>
+  <div class="field">
+    <%= f.label :costo_tar %><br>
+    <%= f.number_field :costo_tar %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

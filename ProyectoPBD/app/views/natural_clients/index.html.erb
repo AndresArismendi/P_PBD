@@ -1,0 +1,37 @@
+<h1>Listing natural_clients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Run cli</th>
+      <th>Nom cli</th>
+      <th>Apells cli</th>
+      <th>Tel1 cli</th>
+      <th>Tel2 cli</th>
+      <th>Email cli</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @natural_clients.each do |natural_client| %>
+      <tr>
+        <td><%= natural_client.run_cli %></td>
+        <td><%= natural_client.nom_cli %></td>
+        <td><%= natural_client.apells_cli %></td>
+        <td><%= natural_client.tel1_cli %></td>
+        <td><%= natural_client.tel2_cli %></td>
+        <td><%= natural_client.email_cli %></td>
+        <td><%= link_to 'Show', natural_client %></td>
+        <td><%= link_to 'Edit', edit_natural_client_path(natural_client) %></td>
+        <td><%= link_to 'Destroy', natural_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Natural client', new_natural_client_path %>

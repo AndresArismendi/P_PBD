@@ -1,0 +1,37 @@
+<h1>Listing owners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Run own</th>
+      <th>Nom prop</th>
+      <th>Apells prop</th>
+      <th>Tel1 prop</th>
+      <th>Tel2 prop</th>
+      <th>Email prop</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @owners.each do |owner| %>
+      <tr>
+        <td><%= owner.run_own %></td>
+        <td><%= owner.nom_prop %></td>
+        <td><%= owner.apells_prop %></td>
+        <td><%= owner.tel1_prop %></td>
+        <td><%= owner.tel2_prop %></td>
+        <td><%= owner.email_prop %></td>
+        <td><%= link_to 'Show', owner %></td>
+        <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
+        <td><%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Owner', new_owner_path %>

@@ -1,0 +1,31 @@
+<h1>Listing fixed_rates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ori tar</th>
+      <th>Dest tar</th>
+      <th>Costo tar</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fixed_rates.each do |fixed_rate| %>
+      <tr>
+        <td><%= fixed_rate.ori_tar %></td>
+        <td><%= fixed_rate.dest_tar %></td>
+        <td><%= fixed_rate.costo_tar %></td>
+        <td><%= link_to 'Show', fixed_rate %></td>
+        <td><%= link_to 'Edit', edit_fixed_rate_path(fixed_rate) %></td>
+        <td><%= link_to 'Destroy', fixed_rate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fixed rate', new_fixed_rate_path %>

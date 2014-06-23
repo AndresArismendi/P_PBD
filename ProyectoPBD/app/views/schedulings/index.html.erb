@@ -1,0 +1,33 @@
+<h1>Listing schedulings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id off veh</th>
+      <th>Run driv</th>
+      <th>Run cli</th>
+      <th>Cli run cli</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schedulings.each do |scheduling| %>
+      <tr>
+        <td><%= scheduling.id_off_veh %></td>
+        <td><%= scheduling.run_driv %></td>
+        <td><%= scheduling.run_cli %></td>
+        <td><%= scheduling.cli_run_cli %></td>
+        <td><%= link_to 'Show', scheduling %></td>
+        <td><%= link_to 'Edit', edit_scheduling_path(scheduling) %></td>
+        <td><%= link_to 'Destroy', scheduling, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scheduling', new_scheduling_path %>

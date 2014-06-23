@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ori tar:</strong>
+  <%= @fixed_rate.ori_tar %>
+</p>
+
+<p>
+  <strong>Dest tar:</strong>
+  <%= @fixed_rate.dest_tar %>
+</p>
+
+<p>
+  <strong>Costo tar:</strong>
+  <%= @fixed_rate.costo_tar %>
+</p>
+
+<%= link_to 'Edit', edit_fixed_rate_path(@fixed_rate) %> |
+<%= link_to 'Back', fixed_rates_path %>

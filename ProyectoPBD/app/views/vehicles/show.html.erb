@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Run own:</strong>
+  <%= @vehicle.run_own %>
+</p>
+
+<p>
+  <strong>Pat veh:</strong>
+  <%= @vehicle.pat_veh %>
+</p>
+
+<p>
+  <strong>Mar veh:</strong>
+  <%= @vehicle.mar_veh %>
+</p>
+
+<p>
+  <strong>Model veh:</strong>
+  <%= @vehicle.model_veh %>
+</p>
+
+<p>
+  <strong>Tipo veh:</strong>
+  <%= @vehicle.tipo_veh %>
+</p>
+
+<p>
+  <strong>Km sem veh:</strong>
+  <%= @vehicle.km_sem_veh %>
+</p>
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

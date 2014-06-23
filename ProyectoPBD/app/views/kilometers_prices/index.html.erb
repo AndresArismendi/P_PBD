@@ -1,0 +1,33 @@
+<h1>Listing kilometers_prices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Val km</th>
+      <th>Ini val km</th>
+      <th>Fin val km</th>
+      <th>Estado val km</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kilometers_prices.each do |kilometers_price| %>
+      <tr>
+        <td><%= kilometers_price.val_km %></td>
+        <td><%= kilometers_price.ini_val_km %></td>
+        <td><%= kilometers_price.fin_val_km %></td>
+        <td><%= kilometers_price.estado_val_km %></td>
+        <td><%= link_to 'Show', kilometers_price %></td>
+        <td><%= link_to 'Edit', edit_kilometers_price_path(kilometers_price) %></td>
+        <td><%= link_to 'Destroy', kilometers_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kilometers price', new_kilometers_price_path %>

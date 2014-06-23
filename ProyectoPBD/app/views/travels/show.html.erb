@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Run driv:</strong>
+  <%= @travel.run_driv %>
+</p>
+
+<p>
+  <strong>Id trav req:</strong>
+  <%= @travel.id_trav_req %>
+</p>
+
+<p>
+  <strong>Id bill det:</strong>
+  <%= @travel.id_bill_det %>
+</p>
+
+<p>
+  <strong>Hora ini via:</strong>
+  <%= @travel.hora_ini_via %>
+</p>
+
+<p>
+  <strong>Tiemp est via:</strong>
+  <%= @travel.tiemp_est_via %>
+</p>
+
+<p>
+  <strong>Dist est via:</strong>
+  <%= @travel.dist_est_via %>
+</p>
+
+<p>
+  <strong>Val via:</strong>
+  <%= @travel.val_via %>
+</p>
+
+<%= link_to 'Edit', edit_travel_path(@travel) %> |
+<%= link_to 'Back', travels_path %>

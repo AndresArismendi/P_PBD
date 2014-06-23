@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Val km:</strong>
+  <%= @kilometers_price.val_km %>
+</p>
+
+<p>
+  <strong>Ini val km:</strong>
+  <%= @kilometers_price.ini_val_km %>
+</p>
+
+<p>
+  <strong>Fin val km:</strong>
+  <%= @kilometers_price.fin_val_km %>
+</p>
+
+<p>
+  <strong>Estado val km:</strong>
+  <%= @kilometers_price.estado_val_km %>
+</p>
+
+<%= link_to 'Edit', edit_kilometers_price_path(@kilometers_price) %> |
+<%= link_to 'Back', kilometers_prices_path %>

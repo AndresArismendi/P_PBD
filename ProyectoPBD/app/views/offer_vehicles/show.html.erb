@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id veh:</strong>
+  <%= @offer_vehicle.id_veh %>
+</p>
+
+<p>
+  <strong>Id block:</strong>
+  <%= @offer_vehicle.id_block %>
+</p>
+
+<p>
+  <strong>Est oferta veh:</strong>
+  <%= @offer_vehicle.est_oferta_veh %>
+</p>
+
+<%= link_to 'Edit', edit_offer_vehicle_path(@offer_vehicle) %> |
+<%= link_to 'Back', offer_vehicles_path %>

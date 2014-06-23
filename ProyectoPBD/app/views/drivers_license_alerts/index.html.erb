@@ -1,0 +1,27 @@
+<h1>Listing drivers_license_alerts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plant alert licenc</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drivers_license_alerts.each do |drivers_license_alert| %>
+      <tr>
+        <td><%= drivers_license_alert.plant_alert_licenc %></td>
+        <td><%= link_to 'Show', drivers_license_alert %></td>
+        <td><%= link_to 'Edit', edit_drivers_license_alert_path(drivers_license_alert) %></td>
+        <td><%= link_to 'Destroy', drivers_license_alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drivers license alert', new_drivers_license_alert_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rut ent:</strong>
+  <%= @bill.rut_ent %>
+</p>
+
+<p>
+  <strong>Fecha fact:</strong>
+  <%= @bill.fecha_fact %>
+</p>
+
+<p>
+  <strong>Total fact:</strong>
+  <%= @bill.total_fact %>
+</p>
+
+<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>

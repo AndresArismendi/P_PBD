@@ -1,0 +1,47 @@
+<h1>Listing external_enterprises</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rut ent</th>
+      <th>Giro emp</th>
+      <th>Nom emp</th>
+      <th>Dir emp</th>
+      <th>Tel1 emp</th>
+      <th>Tel2 emp</th>
+      <th>Email emp</th>
+      <th>Est conv emp</th>
+      <th>Ini conv emp</th>
+      <th>Fin conv emp</th>
+      <th>Descrip conv emp</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @external_enterprises.each do |external_enterprise| %>
+      <tr>
+        <td><%= external_enterprise.rut_ent %></td>
+        <td><%= external_enterprise.giro_emp %></td>
+        <td><%= external_enterprise.nom_emp %></td>
+        <td><%= external_enterprise.dir_emp %></td>
+        <td><%= external_enterprise.tel1_emp %></td>
+        <td><%= external_enterprise.tel2_emp %></td>
+        <td><%= external_enterprise.email_emp %></td>
+        <td><%= external_enterprise.est_conv_emp %></td>
+        <td><%= external_enterprise.ini_conv_emp %></td>
+        <td><%= external_enterprise.fin_conv_emp %></td>
+        <td><%= external_enterprise.descrip_conv_emp %></td>
+        <td><%= link_to 'Show', external_enterprise %></td>
+        <td><%= link_to 'Edit', edit_external_enterprise_path(external_enterprise) %></td>
+        <td><%= link_to 'Destroy', external_enterprise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New External enterprise', new_external_enterprise_path %>

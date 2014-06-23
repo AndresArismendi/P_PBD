@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Run cli:</strong>
+  <%= @enterprise_client.run_cli %>
+</p>
+
+<p>
+  <strong>Rut ent:</strong>
+  <%= @enterprise_client.rut_ent %>
+</p>
+
+<p>
+  <strong>Nom cli:</strong>
+  <%= @enterprise_client.nom_cli %>
+</p>
+
+<p>
+  <strong>Apells cli:</strong>
+  <%= @enterprise_client.apells_cli %>
+</p>
+
+<p>
+  <strong>Tel1 cli:</strong>
+  <%= @enterprise_client.tel1_cli %>
+</p>
+
+<p>
+  <strong>Tel2 cli:</strong>
+  <%= @enterprise_client.tel2_cli %>
+</p>
+
+<p>
+  <strong>Email cli:</strong>
+  <%= @enterprise_client.email_cli %>
+</p>
+
+<%= link_to 'Edit', edit_enterprise_client_path(@enterprise_client) %> |
+<%= link_to 'Back', enterprise_clients_path %>

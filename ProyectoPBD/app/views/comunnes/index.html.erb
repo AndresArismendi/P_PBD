@@ -1,0 +1,29 @@
+<h1>Listing comunnes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom comun</th>
+      <th>Num comun</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comunnes.each do |comunne| %>
+      <tr>
+        <td><%= comunne.nom_comun %></td>
+        <td><%= comunne.num_comun %></td>
+        <td><%= link_to 'Show', comunne %></td>
+        <td><%= link_to 'Edit', edit_comunne_path(comunne) %></td>
+        <td><%= link_to 'Destroy', comunne, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comunne', new_comunne_path %>

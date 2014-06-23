@@ -1,4 +1,56 @@
 ActiveCab::Application.routes.draw do
+  resources :bills
+
+  resources :bill_details
+
+  resources :concepts
+
+  resources :states
+
+  resources :state_histories
+
+  resources :travels
+
+  resources :travel_requests
+
+  resources :enterprise_clients
+
+  resources :natural_clients
+
+  resources :external_enterprises
+
+  resources :owners
+
+  resources :vehicles
+
+  resources :assigneds
+
+  resources :drivers
+
+  resources :scheduling_blocks
+
+  resources :offer_vehicles
+
+  resources :schedulings
+
+  resources :comunnes
+
+  resources :fixed_rates
+
+  resources :owner_commissions
+
+  resources :technical_review_expirations
+
+  resources :kilometers_prices
+
+  resources :base_prices
+
+  resources :technical_review_alerts
+
+  resources :drivers_license_alerts
+
+  resources :log_sqls
+
   devise_for :users
   get "gestiones/index"
   get "gestiones/gestion_moviles"

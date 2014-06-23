@@ -1,0 +1,41 @@
+<%= form_for(@natural_client) do |f| %>
+  <% if @natural_client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@natural_client.errors.count, "error") %> prohibited this natural_client from being saved:</h2>
+
+      <ul>
+      <% @natural_client.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :run_cli %><br>
+    <%= f.text_field :run_cli %>
+  </div>
+  <div class="field">
+    <%= f.label :nom_cli %><br>
+    <%= f.text_field :nom_cli %>
+  </div>
+  <div class="field">
+    <%= f.label :apells_cli %><br>
+    <%= f.text_field :apells_cli %>
+  </div>
+  <div class="field">
+    <%= f.label :tel1_cli %><br>
+    <%= f.text_field :tel1_cli %>
+  </div>
+  <div class="field">
+    <%= f.label :tel2_cli %><br>
+    <%= f.text_field :tel2_cli %>
+  </div>
+  <div class="field">
+    <%= f.label :email_cli %><br>
+    <%= f.text_field :email_cli %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

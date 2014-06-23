@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mes venc rev tec:</strong>
+  <%= @technical_review_expiration.mes_venc_rev_tec %>
+</p>
+
+<p>
+  <strong>Num venc rev tec:</strong>
+  <%= @technical_review_expiration.num_venc_rev_tec %>
+</p>
+
+<%= link_to 'Edit', edit_technical_review_expiration_path(@technical_review_expiration) %> |
+<%= link_to 'Back', technical_review_expirations_path %>

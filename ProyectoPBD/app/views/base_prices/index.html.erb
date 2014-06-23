@@ -1,0 +1,33 @@
+<h1>Listing base_prices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Val base</th>
+      <th>Ini val base</th>
+      <th>Fin val base</th>
+      <th>Estado val base</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @base_prices.each do |base_price| %>
+      <tr>
+        <td><%= base_price.val_base %></td>
+        <td><%= base_price.ini_val_base %></td>
+        <td><%= base_price.fin_val_base %></td>
+        <td><%= base_price.estado_val_base %></td>
+        <td><%= link_to 'Show', base_price %></td>
+        <td><%= link_to 'Edit', edit_base_price_path(base_price) %></td>
+        <td><%= link_to 'Destroy', base_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Base price', new_base_price_path %>
