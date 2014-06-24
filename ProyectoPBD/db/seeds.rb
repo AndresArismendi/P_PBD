@@ -5,11 +5,12 @@
 #
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+#agregar todas las comunas de maipú
 
   	Comunne.create nom_comun: "Cerrillos", num_comun: 1
-	Comunne.create nom_comun: "Cerro Navia", num_comun: 2
- 	Comunne.create nom_comun: "Conchali", num_comun: 3
- 	Comunne.create nom_comun: "El Bosque", num_comun: 4 
+  	Comunne.create nom_comun: "Cerro Navia", num_comun: 2
+   	Comunne.create nom_comun: "Conchali", num_comun: 3
+   	Comunne.create nom_comun: "El Bosque", num_comun: 4 
   	Comunne.create nom_comun: "Estacion Central", num_comun: 5
   	Comunne.create nom_comun: "Huechuraba", num_comun: 6
   	Comunne.create nom_comun: "Independencia", num_comun: 7
@@ -45,3 +46,9 @@
   	Comunne.create nom_comun: "San Jose de Maipo", num_comun: 37
 
 
+#Agregar los recorridos fijos en tarigas
+
+  FixedRate.create ori_tar: "Santiago Centro" dest_tar: "Aeropuerto" costo_tar: 17000 
+  FixedRate.create ori_tar: "Cerro Navia" dest_tar: "Aeropuerto" costo_tar: 20000
+  FixedRate.create ori_tar: "Providencia" dest_tar: "Aeropuerto" costo_tar: 16000 
+  FixedRate.create ori_tar: "Providencia" dest_tar: "Hotel Fundador" costo_tar: 16000

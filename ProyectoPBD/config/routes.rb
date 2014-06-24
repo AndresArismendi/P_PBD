@@ -1,4 +1,7 @@
 ActiveCab::Application.routes.draw do
+  get "admin/index"
+  get "admin/costos_otros"
+  get "admin/usuarios"
   resources :bills
 
   resources :bill_details

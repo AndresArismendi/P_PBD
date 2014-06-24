@@ -1,7 +1,8 @@
+
+<div class="container marg2">
 <br>
 <h1>Listado de tarifas</h1>
 <hr>
-<div class="container">
         <div class="row">
             <div class="col-lg-8 ">
 
@@ -21,36 +22,14 @@
 			          </tr>
 			        </thead>
 			        <tbody>
-			          <tr>
-			            <td>1</td>
-			            <td>Santiago Centro</td>
-			            <td>Aeropuerto de Santiago</td>
-			            <td>17000</td>
-			          </tr>
-			          <tr>
-			            <td>2</td>
-			            <td>Cerro Navia</td>
-			            <td>Aeropuerto de Santiago</td>
-			            <td>20000</td>
-			          </tr>
-			          <tr>
-			            <td>3</td>
-			            <td>Providencia</td>
-			            <td>Aeropuerto de Santiago</td>
-			            <td>16000</td>
-			          </tr>
-			          <tr>
-			            <td>4</td>
-			            <td>Providencia</td>
-			            <td>Hotel Fundador</td>
-			            <td>16000</td>
-			          </tr>
-			          <tr>
-			            <td>5</td>
-			            <td>Quilicura</td>
-			            <td>Universidad de Santiago</td>
-			            <td>16000</td>
-			          </tr>
+			        <%@fixed_rates.each do |n| %>
+						<tr>
+				            <td><%=n.id_fix_rat%></td>
+				            <td><%=n.ori_tar%></td>
+				            <td><%=n.dest_tar%></td>
+				            <td><%=n.costo_tar%></td>
+			          	</tr>						
+					<%end%>
 			        </tbody>
 			      </table>
 			    </div>
@@ -72,5 +51,5 @@
 
         </div>      
 
+
     </div>
-<br><br><br><br><br><br>

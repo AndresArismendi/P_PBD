@@ -7,6 +7,8 @@ class WelcomeController < ApplicationController
   end
 
   def tarifas
+    @fixed_rates = FixedRate.all
+
   end
 
   def contacto
