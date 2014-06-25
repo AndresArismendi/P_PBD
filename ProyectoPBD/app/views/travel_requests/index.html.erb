@@ -1,9 +1,10 @@
-<h1>Listing travel_requests</h1>
+<% if user_signed_in? and current_user.tipo == 'cli_nat' %>
 
 <table>
   <thead>
     <tr>
       <th>Run cli</th>
+      <th>Cli run cli</th>
       <th>Dir orig sol</th>
       <th>Dir dest sol</th>
       <th>Com orig sol</th>
@@ -41,3 +42,7 @@
 <br>
 
 <%= link_to 'New Travel request', new_travel_request_path %>
+<% else %>
+<h1>Inicia sesión</h1>
+
+<%end%>

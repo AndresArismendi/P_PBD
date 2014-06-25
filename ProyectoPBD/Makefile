@@ -9,9 +9,9 @@ scaffold_amarillo:
 
 
 scaffold_rojo:
-	rails g scaffold travel_requests run_cli:string cli_run_cli:string dir_orig_sol:string dir_dest_sol:string com_orig_sol:string com_dest_sol:string cant_pasaj_sol:integer fecha_crea_sol:date fecha_serv_sol:date est_sol:string --no-migration
+	rails g scaffold travel_requests run_cli:string dir_orig_sol:string dir_dest_sol:string com_orig_sol:string com_dest_sol:string cant_pasaj_sol:integer fecha_crea_sol:date fecha_serv_sol:date est_sol:string --no-migration
 
-	rails g scaffold travels run_driv:string id_trav_req:integer id_bill_det:integer hora_ini_via:time tiemp_est_via:integer dist_est_via:float val_via:integer --no-migration
+	rails g scaffold travels run_driv:string id_trav_req:integer hora_ini_via:time tiemp_est_via:integer dist_est_via:float val_via:integer --no-migration
 
 	rails g scaffold state_histories id_trav:integer id_stat:integer --no-migration
 
@@ -22,14 +22,16 @@ scaffold_rojo:
 scaffold_celeste:
 	rails g scaffold external_enterprises rut_ent:string giro_emp:string nom_emp:string dir_emp:string tel1_emp:string tel2_emp:string email_emp:string est_conv_emp:string ini_conv_emp:date fin_conv_emp:date descrip_conv_emp:text --no-migration	
 
-	rails g scaffold natural_clients run_cli:string nom_cli:string apells_cli:string tel1_cli:string tel2_cli:string email_cli:string --no-migration
+	rails g scaffold natural_clients run_cli:string --no-migration
 
-	rails g scaffold enterprise_clients run_cli:string rut_ent:string nom_cli:string apells_cli:string tel1_cli:string tel2_cli:string email_cli:string --no-migration
+	rails g scaffold enterprise_clients run_cli:string rut_ent:string --no-migration
+
+	rails g scaffold clients run_cli:string nom_cli:string apells_cli:string tel1_cli:string tel2_cli:string email_cli:string --no-migration
 
 	
 
 scaffold_verde:
-	rails g scaffold schedulings id_off_veh:integer run_driv:string run_cli:string cli_run_cli:string --no-migration
+	rails g scaffold schedulings id_off_veh:integer run_driv:string run_cli:string --no-migration
 
 	rails g scaffold offer_vehicles id_veh:integer id_block:integer est_oferta_veh:string --no-migration
 
@@ -92,6 +94,7 @@ destroy_celeste:
 
 	rails destroy scaffold enterprise_clients
 
+	rails destroy scaffold clients
 	
 
 destroy_verde:

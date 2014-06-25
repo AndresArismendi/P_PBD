@@ -69,6 +69,6 @@ class SchedulingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scheduling_params
-      params.require(:scheduling).permit(:id_off_veh, :run_driv, :run_cli)
+      params.require(:scheduling).permit(:id_off_veh, :run_driv, :run_cli, :cli_run_cli)
     end
 end
