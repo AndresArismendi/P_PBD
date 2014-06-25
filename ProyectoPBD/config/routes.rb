@@ -1,4 +1,5 @@
 ActiveCab::Application.routes.draw do
+  
   resources :schedulings
 
   resources :clients
@@ -137,6 +138,6 @@ ActiveCab::Application.routes.draw do
   #   end
   post ':controller(/:action(/:id))'
   get ':controller(/:action(/:id))'  
- # match ':controller(/:action(/:id))'  
- 
+  # match ':controller(/:action(/:id))'  
+   
 end
