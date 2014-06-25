@@ -6,11 +6,6 @@
 </p>
 
 <p>
-  <strong>Cli run cli:</strong>
-  <%= @travel_request.cli_run_cli %>
-</p>
-
-<p>
   <strong>Dir orig sol:</strong>
   <%= @travel_request.dir_orig_sol %>
 </p>
@@ -50,5 +45,5 @@
   <%= @travel_request.est_sol %>
 </p>
 
-<%= link_to 'Editar', edit_travel_request_path(@travel_request) %> |
-<%= link_to 'Volver', travel_requests_path %>
+<%= link_to 'Edit', edit_travel_request_path(@travel_request) %> |
+<%= link_to 'Back', travel_requests_path %>

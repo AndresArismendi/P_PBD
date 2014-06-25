@@ -4,10 +4,8 @@ one:
   id_off_veh: 1
   run_driv: MyString
   run_cli: MyString
-  cli_run_cli: MyString
 
 two:
   id_off_veh: 1
   run_driv: MyString
   run_cli: MyString
-  cli_run_cli: MyString

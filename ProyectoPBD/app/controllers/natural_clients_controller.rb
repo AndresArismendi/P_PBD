@@ -69,6 +69,6 @@ class NaturalClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def natural_client_params
-      params.require(:natural_client).permit(:run_cli, :nom_cli, :apells_cli, :tel1_cli, :tel2_cli, :email_cli)
+      params.require(:natural_client).permit(:run_cli)
     end
 end

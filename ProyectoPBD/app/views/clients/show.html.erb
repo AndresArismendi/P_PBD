@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Run cli:</strong>
+  <%= @client.run_cli %>
+</p>
+
+<p>
+  <strong>Nom cli:</strong>
+  <%= @client.nom_cli %>
+</p>
+
+<p>
+  <strong>Apells cli:</strong>
+  <%= @client.apells_cli %>
+</p>
+
+<p>
+  <strong>Tel1 cli:</strong>
+  <%= @client.tel1_cli %>
+</p>
+
+<p>
+  <strong>Tel2 cli:</strong>
+  <%= @client.tel2_cli %>
+</p>
+
+<p>
+  <strong>Email cli:</strong>
+  <%= @client.email_cli %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

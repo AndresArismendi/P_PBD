@@ -1,98 +1,53 @@
+<%= form_for(@travel_request) do |f| %>
+  <% if @travel_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@travel_request.errors.count, "error") %> prohibited this travel_request from being saved:</h2>
 
-<% if user_signed_in? %>
-<div class="container marg2">
-  <br>
-  <hr class="centrado">
-  <br><br>
-    <div class="row">
-      <div class="col-lg-12 cent1">
-        <h1>Bienvenido <%=current_user.nombre%> <%=current_user.rut %>
-</h1>     
-
-          <div class="row">
-            <div class="col-lg-6 col-md-4 col-xs-0 cent1">
-              <h1>Realiza tu reserva llenando el siguiente formulario</h1>
-
-                <%= form_for(@travel_request) do |f| %>
-                  <% if @travel_request.errors.any? %>
-                    <div id="error_explanation">
-                      <h2><%= pluralize(@travel_request.errors.count, "error") %> prohibited this travel_request from being saved:</h2>
-
-                      <ul>
-                      <% @travel_request.errors.full_messages.each do |msg| %>
-                        <li><%= msg %></li>
-                      <% end %>
-                      </ul>
-                    </div>
-                  <% end %>
-
-
-                
-                 <!-- <div class="field">
-                    <%= f.label :run_cli %><br>
-                    <%= f.text_field :run_cli %>
-                  </div>
-                  <div class="field">
-                    <%= f.label :cli_run_cli %><br>
-                    <%= f.text_field :cli_run_cli %>
-                  </div> -->
-                  <div class="field">
-                    <%= f.label :dir_orig_sol %><br>
-                    <%= f.text_field :dir_orig_sol %>
-                  </div>
-                  <div class="field">
-                    <%= f.label :dir_dest_sol %><br>
-                    <%= f.text_field :dir_dest_sol %>
-                  </div>
-                  <div class="field">
-                    <%= f.label :com_orig_sol %><br>
-                    <%= f.text_field :com_orig_sol %>
-                  </div>
-                  <div class="field">
-                    <%= f.label :com_dest_sol %><br>
-                    <%= f.text_field :com_dest_sol %>
-                  </div>
-                  <div class="field">
-                    <%= f.label :cant_pasaj_sol %><br>
-                    <%= f.number_field :cant_pasaj_sol %>
-                  </div>
-                  <div class="field">
-                    <%= f.label :fecha_crea_sol %><br>
-                    <%= f.date_select :fecha_crea_sol %>
-                  </div>
-                  <div class="field">
-                    <%= f.label :fecha_serv_sol %><br>
-                    <%= f.date_select :fecha_serv_sol %>
-                  </div>
-                  <div class="field">
-                    <%= f.label :est_sol %><br>
-                    <%= f.text_field :est_sol %>
-                  </div>
-                  <div class="actions">
-                    <%= f.submit %>
-                  </div>
-
-
-
-
-            </div>
-            <div class="col-lg-6 col-md-4 col-xs-0">
-
-
-
-            </div>
-          </div>
-      </div>
+      <ul>
+      <% @travel_request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
     </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :run_cli %><br>
+    <%= f.text_field :run_cli %>
   </div>
-
-
-
-
-<% end %>
-
-<% else %>
-
-<p>Inicia Sesión</p>
-
+  <div class="field">
+    <%= f.label :dir_orig_sol %><br>
+    <%= f.text_field :dir_orig_sol %>
+  </div>
+  <div class="field">
+    <%= f.label :dir_dest_sol %><br>
+    <%= f.text_field :dir_dest_sol %>
+  </div>
+  <div class="field">
+    <%= f.label :com_orig_sol %><br>
+    <%= f.text_field :com_orig_sol %>
+  </div>
+  <div class="field">
+    <%= f.label :com_dest_sol %><br>
+    <%= f.text_field :com_dest_sol %>
+  </div>
+  <div class="field">
+    <%= f.label :cant_pasaj_sol %><br>
+    <%= f.number_field :cant_pasaj_sol %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_crea_sol %><br>
+    <%= f.date_select :fecha_crea_sol %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_serv_sol %><br>
+    <%= f.date_select :fecha_serv_sol %>
+  </div>
+  <div class="field">
+    <%= f.label :est_sol %><br>
+    <%= f.text_field :est_sol %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

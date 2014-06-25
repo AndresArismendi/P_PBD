@@ -69,6 +69,6 @@ class TravelRequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def travel_request_params
-      params.require(:travel_request).permit(:run_cli, :cli_run_cli, :dir_orig_sol, :dir_dest_sol, :com_orig_sol, :com_dest_sol, :cant_pasaj_sol, :fecha_crea_sol, :fecha_serv_sol, :est_sol)
+      params.require(:travel_request).permit(:run_cli, :dir_orig_sol, :dir_dest_sol, :com_orig_sol, :com_dest_sol, :cant_pasaj_sol, :fecha_crea_sol, :fecha_serv_sol, :est_sol)
     end
 end

@@ -18,7 +18,7 @@ class TravelRequestsControllerTest < ActionController::TestCase
 
   test "should create travel_request" do
     assert_difference('TravelRequest.count') do
-      post :create, travel_request: { cant_pasaj_sol: @travel_request.cant_pasaj_sol, cli_run_cli: @travel_request.cli_run_cli, com_dest_sol: @travel_request.com_dest_sol, com_orig_sol: @travel_request.com_orig_sol, dir_dest_sol: @travel_request.dir_dest_sol, dir_orig_sol: @travel_request.dir_orig_sol, est_sol: @travel_request.est_sol, fecha_crea_sol: @travel_request.fecha_crea_sol, fecha_serv_sol: @travel_request.fecha_serv_sol, run_cli: @travel_request.run_cli }
+      post :create, travel_request: { cant_pasaj_sol: @travel_request.cant_pasaj_sol, com_dest_sol: @travel_request.com_dest_sol, com_orig_sol: @travel_request.com_orig_sol, dir_dest_sol: @travel_request.dir_dest_sol, dir_orig_sol: @travel_request.dir_orig_sol, est_sol: @travel_request.est_sol, fecha_crea_sol: @travel_request.fecha_crea_sol, fecha_serv_sol: @travel_request.fecha_serv_sol, run_cli: @travel_request.run_cli }
     end
 
     assert_redirected_to travel_request_path(assigns(:travel_request))
@@ -35,7 +35,7 @@ class TravelRequestsControllerTest < ActionController::TestCase
   end
 
   test "should update travel_request" do
-    patch :update, id: @travel_request, travel_request: { cant_pasaj_sol: @travel_request.cant_pasaj_sol, cli_run_cli: @travel_request.cli_run_cli, com_dest_sol: @travel_request.com_dest_sol, com_orig_sol: @travel_request.com_orig_sol, dir_dest_sol: @travel_request.dir_dest_sol, dir_orig_sol: @travel_request.dir_orig_sol, est_sol: @travel_request.est_sol, fecha_crea_sol: @travel_request.fecha_crea_sol, fecha_serv_sol: @travel_request.fecha_serv_sol, run_cli: @travel_request.run_cli }
+    patch :update, id: @travel_request, travel_request: { cant_pasaj_sol: @travel_request.cant_pasaj_sol, com_dest_sol: @travel_request.com_dest_sol, com_orig_sol: @travel_request.com_orig_sol, dir_dest_sol: @travel_request.dir_dest_sol, dir_orig_sol: @travel_request.dir_orig_sol, est_sol: @travel_request.est_sol, fecha_crea_sol: @travel_request.fecha_crea_sol, fecha_serv_sol: @travel_request.fecha_serv_sol, run_cli: @travel_request.run_cli }
     assert_redirected_to travel_request_path(assigns(:travel_request))
   end
 

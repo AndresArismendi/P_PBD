@@ -1,10 +1,9 @@
-<% if user_signed_in? %>
+<h1>Listing travel_requests</h1>
 
 <table>
   <thead>
     <tr>
       <th>Run cli</th>
-      <th>Cli run cli</th>
       <th>Dir orig sol</th>
       <th>Dir dest sol</th>
       <th>Com orig sol</th>
@@ -23,7 +22,6 @@
     <% @travel_requests.each do |travel_request| %>
       <tr>
         <td><%= travel_request.run_cli %></td>
-        <td><%= travel_request.cli_run_cli %></td>
         <td><%= travel_request.dir_orig_sol %></td>
         <td><%= travel_request.dir_dest_sol %></td>
         <td><%= travel_request.com_orig_sol %></td>
@@ -43,7 +41,3 @@
 <br>
 
 <%= link_to 'New Travel request', new_travel_request_path %>
-<% else %>
-<h1>Inicia sesión</h1>
-
-<%end%>

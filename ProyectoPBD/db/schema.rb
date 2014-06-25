@@ -55,6 +55,17 @@ ActiveRecord::Schema.define(version: 20140625044208) do
   add_index "bills", ["id_bil"], name: "bills_pk", unique: true, using: :btree
   add_index "bills", ["rut_ent"], name: "relationship_10_fk", using: :btree
 
+  create_table "clients", id: false, force: true do |t|
+    t.string "run_cli",    limit: 40, null: false
+    t.string "nom_cli",    limit: 40
+    t.string "apells_cli", limit: 40
+    t.string "tel1_cli",   limit: 40
+    t.string "tel2_cli",   limit: 40
+    t.string "email_cli",  limit: 40
+  end
+
+  add_index "clients", ["run_cli"], name: "clients_pk", unique: true, using: :btree
+
   create_table "comunnes", primary_key: "id_comun", force: true do |t|
     t.string  "nom_comun", limit: 50
     t.integer "num_comun"
@@ -75,28 +86,22 @@ ActiveRecord::Schema.define(version: 20140625044208) do
     t.string "tel1_cond",        limit: 40
     t.string "tel2_cond",        limit: 40
     t.string "email_cond",       limit: 40
-    t.date   "venc_licenc_cond"
+    t.string "venc_licenc_cond", limit: 40
   end
 
   add_index "drivers", ["run_driv"], name: "drivers_pk", unique: true, using: :btree
 
   create_table "drivers_license_alerts", primary_key: "id_mens_alert_licenc", force: true do |t|
-    t.text "plant_alert_licenc"
+    t.string "plant_alert_licenc", limit: 1024
   end
 
   add_index "drivers_license_alerts", ["id_mens_alert_licenc"], name: "drivers_license_alerts_pk", unique: true, using: :btree
 
   create_table "enterprise_clients", id: false, force: true do |t|
-    t.string "run_cli",    limit: 40, null: false
-    t.string "rut_ent",    limit: 40
-    t.string "nom_cli",    limit: 40
-    t.string "apells_cli", limit: 40
-    t.string "tel1_cli",   limit: 40
-    t.string "tel2_cli",   limit: 40
-    t.string "email_cli",  limit: 40
+    t.string "run_cli", limit: 40, null: false
+    t.string "rut_ent", limit: 40
   end
 
-  add_index "enterprise_clients", ["run_cli"], name: "enterprise_clients_pk", unique: true, using: :btree
   add_index "enterprise_clients", ["rut_ent"], name: "relationship_20_fk", using: :btree
 
   create_table "external_enterprises", id: false, force: true do |t|
@@ -145,15 +150,8 @@ ActiveRecord::Schema.define(version: 20140625044208) do
   add_index "log_sqls", ["id_log_sql"], name: "log_sqls_pk", unique: true, using: :btree
 
   create_table "natural_clients", id: false, force: true do |t|
-    t.string "run_cli",    limit: 40, null: false
-    t.string "nom_cli",    limit: 40
-    t.string "apells_cli", limit: 40
-    t.string "tel1_cli",   limit: 40
-    t.string "tel2_cli",   limit: 40
-    t.string "email_cli",  limit: 40
+    t.string "run_cli", limit: 40, null: false
   end
-
-  add_index "natural_clients", ["run_cli"], name: "natural_clients_pk", unique: true, using: :btree
 
   create_table "offer_vehicles", primary_key: "id_off_veh", force: true do |t|
     t.integer "id_veh"
@@ -177,8 +175,7 @@ ActiveRecord::Schema.define(version: 20140625044208) do
     t.string "run_own",     limit: 40, null: false
     t.string "nom_prop",    limit: 40
     t.string "apells_prop", limit: 40
-    t.string "tel1_prop",   limit: 40
-    t.string "tel2_prop",   limit: 40
+    t.string "tel_prop",    limit: 40
     t.string "email_prop",  limit: 40
   end
 
@@ -193,14 +190,12 @@ ActiveRecord::Schema.define(version: 20140625044208) do
 
   create_table "schedulings", id: false, force: true do |t|
     t.integer "id_off_veh"
-    t.string  "run_driv",    limit: 40
-    t.string  "run_cli",     limit: 40
-    t.string  "cli_run_cli", limit: 40
+    t.string  "run_driv",   limit: 40
+    t.string  "run_cli",    limit: 40
   end
 
-  add_index "schedulings", ["cli_run_cli"], name: "relationship_12_fk", using: :btree
   add_index "schedulings", ["id_off_veh"], name: "relationship_17_fk", using: :btree
-  add_index "schedulings", ["run_cli"], name: "relationship_23_fk", using: :btree
+  add_index "schedulings", ["run_cli"], name: "relationship_12_fk", using: :btree
   add_index "schedulings", ["run_driv"], name: "relationship_11_fk", using: :btree
 
   create_table "state_histories", id: false, force: true do |t|
@@ -218,7 +213,7 @@ ActiveRecord::Schema.define(version: 20140625044208) do
   add_index "states", ["id_stat"], name: "states_pk", unique: true, using: :btree
 
   create_table "technical_review_alerts", primary_key: "id_tec_rev", force: true do |t|
-    t.text "plant_alert_rev_tec"
+    t.string "plant_alert_rev_tec", limit: 1024
   end
 
   add_index "technical_review_alerts", ["id_tec_rev"], name: "technical_review_alerts_pk", unique: true, using: :btree
@@ -240,7 +235,6 @@ ActiveRecord::Schema.define(version: 20140625044208) do
 
   create_table "travel_requests", primary_key: "id_trav_req", force: true do |t|
     t.string  "run_cli",        limit: 40
-    t.string  "cli_run_cli",    limit: 40
     t.string  "dir_orig_sol",   limit: 60
     t.string  "dir_dest_sol",   limit: 60
     t.string  "com_orig_sol",   limit: 60
@@ -251,21 +245,18 @@ ActiveRecord::Schema.define(version: 20140625044208) do
     t.string  "est_sol",        limit: 20
   end
 
-  add_index "travel_requests", ["cli_run_cli"], name: "relationship_4_fk", using: :btree
   add_index "travel_requests", ["id_trav_req"], name: "travel_requests_pk", unique: true, using: :btree
-  add_index "travel_requests", ["run_cli"], name: "relationship_14_fk", using: :btree
+  add_index "travel_requests", ["run_cli"], name: "relationship_4_fk", using: :btree
 
   create_table "travels", primary_key: "id_trav", force: true do |t|
     t.string  "run_driv",      limit: 40
     t.integer "id_trav_req",              null: false
-    t.integer "id_bill_det",              null: false
-    t.time    "hora_ini_via"
-    t.integer "tiemp_est_via"
+    t.date    "hora_ini_via"
+    t.time    "tiemp_est_via"
     t.float   "dist_est_via"
     t.integer "val_via"
   end
 
-  add_index "travels", ["id_bill_det"], name: "relationship_9_fk", using: :btree
   add_index "travels", ["id_trav"], name: "travels_pk", unique: true, using: :btree
   add_index "travels", ["id_trav_req"], name: "relationship_2_fk", using: :btree
   add_index "travels", ["run_driv"], name: "relationship_13_fk", using: :btree

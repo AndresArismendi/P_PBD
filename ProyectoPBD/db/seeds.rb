@@ -46,7 +46,7 @@
   	Comunne.create nom_comun: "San Jose de Maipo", num_comun: 37
 
 
-#Agregar los recorridos fijos en tarigas
+#Agregar los recorridos fijos en tarifas
 
   FixedRate.create ori_tar: "Santiago Centro" dest_tar: "Aeropuerto" costo_tar: 17000 
   FixedRate.create ori_tar: "Cerro Navia" dest_tar: "Aeropuerto" costo_tar: 20000

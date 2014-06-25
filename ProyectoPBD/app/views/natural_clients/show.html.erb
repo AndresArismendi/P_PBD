@@ -5,30 +5,5 @@
   <%= @natural_client.run_cli %>
 </p>
 
-<p>
-  <strong>Nom cli:</strong>
-  <%= @natural_client.nom_cli %>
-</p>
-
-<p>
-  <strong>Apells cli:</strong>
-  <%= @natural_client.apells_cli %>
-</p>
-
-<p>
-  <strong>Tel1 cli:</strong>
-  <%= @natural_client.tel1_cli %>
-</p>
-
-<p>
-  <strong>Tel2 cli:</strong>
-  <%= @natural_client.tel2_cli %>
-</p>
-
-<p>
-  <strong>Email cli:</strong>
-  <%= @natural_client.email_cli %>
-</p>
-
-<%= link_to 'Editar', edit_natural_client_path(@natural_client) %> |
-<%= link_to 'Volver', natural_clients_path %>
+<%= link_to 'Edit', edit_natural_client_path(@natural_client) %> |
+<%= link_to 'Back', natural_clients_path %>

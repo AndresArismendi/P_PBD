@@ -69,6 +69,6 @@ class EnterpriseClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def enterprise_client_params
-      params.require(:enterprise_client).permit(:run_cli, :rut_ent, :nom_cli, :apells_cli, :tel1_cli, :tel2_cli, :email_cli)
+      params.require(:enterprise_client).permit(:run_cli, :rut_ent)
     end
 end

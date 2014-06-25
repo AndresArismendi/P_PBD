@@ -18,7 +18,7 @@ class TravelsControllerTest < ActionController::TestCase
 
   test "should create travel" do
     assert_difference('Travel.count') do
-      post :create, travel: { dist_est_via: @travel.dist_est_via, hora_ini_via: @travel.hora_ini_via, id_bill_det: @travel.id_bill_det, id_trav_req: @travel.id_trav_req, run_driv: @travel.run_driv, tiemp_est_via: @travel.tiemp_est_via, val_via: @travel.val_via }
+      post :create, travel: { dist_est_via: @travel.dist_est_via, hora_ini_via: @travel.hora_ini_via, id_trav_req: @travel.id_trav_req, run_driv: @travel.run_driv, tiemp_est_via: @travel.tiemp_est_via, val_via: @travel.val_via }
     end
 
     assert_redirected_to travel_path(assigns(:travel))
@@ -35,7 +35,7 @@ class TravelsControllerTest < ActionController::TestCase
   end
 
   test "should update travel" do
-    patch :update, id: @travel, travel: { dist_est_via: @travel.dist_est_via, hora_ini_via: @travel.hora_ini_via, id_bill_det: @travel.id_bill_det, id_trav_req: @travel.id_trav_req, run_driv: @travel.run_driv, tiemp_est_via: @travel.tiemp_est_via, val_via: @travel.val_via }
+    patch :update, id: @travel, travel: { dist_est_via: @travel.dist_est_via, hora_ini_via: @travel.hora_ini_via, id_trav_req: @travel.id_trav_req, run_driv: @travel.run_driv, tiemp_est_via: @travel.tiemp_est_via, val_via: @travel.val_via }
     assert_redirected_to travel_path(assigns(:travel))
   end
 

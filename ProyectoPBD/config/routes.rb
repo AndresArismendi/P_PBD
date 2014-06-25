@@ -1,25 +1,27 @@
 ActiveCab::Application.routes.draw do
+  resources :schedulings
+
+  resources :clients
+
+  resources :enterprise_clients
+
+  resources :natural_clients
+
+  resources :travels
+
+  resources :travel_requests
+
   devise_for :users
   get "admin/index"
   get "admin/costos_otros"
   get "admin/usuarios"
   resources :bills
 
-  resources :bill_details
-
   resources :concepts
 
   resources :states
 
   resources :state_histories
-
-  resources :travels
-
-  resources :travel_requests
-
-  resources :enterprise_clients
-
-  resources :natural_clients
 
   resources :external_enterprises
 
@@ -34,8 +36,6 @@ ActiveCab::Application.routes.draw do
   resources :scheduling_blocks
 
   resources :offer_vehicles
-
-  resources :schedulings
 
   resources :comunnes
 

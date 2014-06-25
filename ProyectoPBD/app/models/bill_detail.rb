@@ -4,5 +4,4 @@ class BillDetail < ActiveRecord::Base
 
     belongs_to :bill, :class_name => 'Bill', :foreign_key => :id_bil    
     belongs_to :concept, :class_name => 'Concept', :foreign_key => :id_conc    
-    has_many :travels, :class_name => 'Travel', :foreign_key => :id_bill_det    
 end

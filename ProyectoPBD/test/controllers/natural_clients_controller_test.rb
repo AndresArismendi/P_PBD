@@ -18,7 +18,7 @@ class NaturalClientsControllerTest < ActionController::TestCase
 
   test "should create natural_client" do
     assert_difference('NaturalClient.count') do
-      post :create, natural_client: { apells_cli: @natural_client.apells_cli, email_cli: @natural_client.email_cli, nom_cli: @natural_client.nom_cli, run_cli: @natural_client.run_cli, tel1_cli: @natural_client.tel1_cli, tel2_cli: @natural_client.tel2_cli }
+      post :create, natural_client: { run_cli: @natural_client.run_cli }
     end
 
     assert_redirected_to natural_client_path(assigns(:natural_client))
@@ -35,7 +35,7 @@ class NaturalClientsControllerTest < ActionController::TestCase
   end
 
   test "should update natural_client" do
-    patch :update, id: @natural_client, natural_client: { apells_cli: @natural_client.apells_cli, email_cli: @natural_client.email_cli, nom_cli: @natural_client.nom_cli, run_cli: @natural_client.run_cli, tel1_cli: @natural_client.tel1_cli, tel2_cli: @natural_client.tel2_cli }
+    patch :update, id: @natural_client, natural_client: { run_cli: @natural_client.run_cli }
     assert_redirected_to natural_client_path(assigns(:natural_client))
   end
 

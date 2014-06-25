@@ -5,11 +5,6 @@
     <tr>
       <th>Run cli</th>
       <th>Rut ent</th>
-      <th>Nom cli</th>
-      <th>Apells cli</th>
-      <th>Tel1 cli</th>
-      <th>Tel2 cli</th>
-      <th>Email cli</th>
       <th></th>
       <th></th>
       <th></th>
@@ -21,14 +16,9 @@
       <tr>
         <td><%= enterprise_client.run_cli %></td>
         <td><%= enterprise_client.rut_ent %></td>
-        <td><%= enterprise_client.nom_cli %></td>
-        <td><%= enterprise_client.apells_cli %></td>
-        <td><%= enterprise_client.tel1_cli %></td>
-        <td><%= enterprise_client.tel2_cli %></td>
-        <td><%= enterprise_client.email_cli %></td>
-        <td><%= link_to 'Ver', enterprise_client %></td>
-        <td><%= link_to 'Editar', edit_enterprise_client_path(enterprise_client) %></td>
-        <td><%= link_to 'Eliminar', enterprise_client, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        <td><%= link_to 'Show', enterprise_client %></td>
+        <td><%= link_to 'Edit', edit_enterprise_client_path(enterprise_client) %></td>
+        <td><%= link_to 'Destroy', enterprise_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +26,4 @@
 
 <br>
 
-<%= link_to 'Nuevo', new_enterprise_client_path %>
+<%= link_to 'New Enterprise client', new_enterprise_client_path %>

@@ -18,7 +18,7 @@ class SchedulingsControllerTest < ActionController::TestCase
 
   test "should create scheduling" do
     assert_difference('Scheduling.count') do
-      post :create, scheduling: { cli_run_cli: @scheduling.cli_run_cli, id_off_veh: @scheduling.id_off_veh, run_cli: @scheduling.run_cli, run_driv: @scheduling.run_driv }
+      post :create, scheduling: { id_off_veh: @scheduling.id_off_veh, run_cli: @scheduling.run_cli, run_driv: @scheduling.run_driv }
     end
 
     assert_redirected_to scheduling_path(assigns(:scheduling))
@@ -35,7 +35,7 @@ class SchedulingsControllerTest < ActionController::TestCase
   end
 
   test "should update scheduling" do
-    patch :update, id: @scheduling, scheduling: { cli_run_cli: @scheduling.cli_run_cli, id_off_veh: @scheduling.id_off_veh, run_cli: @scheduling.run_cli, run_driv: @scheduling.run_driv }
+    patch :update, id: @scheduling, scheduling: { id_off_veh: @scheduling.id_off_veh, run_cli: @scheduling.run_cli, run_driv: @scheduling.run_driv }
     assert_redirected_to scheduling_path(assigns(:scheduling))
   end
 
