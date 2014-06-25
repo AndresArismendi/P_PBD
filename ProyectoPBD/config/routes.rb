@@ -1,4 +1,5 @@
 ActiveCab::Application.routes.draw do
+  devise_for :users
   get "admin/index"
   get "admin/costos_otros"
   get "admin/usuarios"
@@ -54,7 +55,6 @@ ActiveCab::Application.routes.draw do
 
   resources :log_sqls
 
-  devise_for :users
   get "gestiones/index"
   get "gestiones/gestion_moviles"
   get "gestiones/gestion_tarifas"

@@ -1,4 +1,4 @@
-<h1>Listing travel_requests</h1>
+<% if user_signed_in? %>
 
 <table>
   <thead>
@@ -43,3 +43,7 @@
 <br>
 
 <%= link_to 'New Travel request', new_travel_request_path %>
+<% else %>
+<h1>Inicia sesión</h1>
+
+<%end%>

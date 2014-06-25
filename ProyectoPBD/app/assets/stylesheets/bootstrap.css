@@ -86,7 +86,8 @@ background: url(http://lh5.googleusercontent.com/-luDGEoQ_WZE/T1Ak-gta5MI/AAAAAA
 }
 
 .shd{
-  box-shadow: 0 0 6px #ccc;
+  
+  box-shadow: inset 5px 5px 20px 5px #CCCCCC;
 
 
 }
@@ -140,6 +141,16 @@ footer{
   padding-bottom: 10rem;
 
 }
+.derecha{
+  text-align: right;
+}
+.izquierda{
+  text-align: left;
+}
+.centro1{
+  text-align: center;
+}
+
 
 .backl{
     background: rgb(254,252,234); /* Old browsers */
