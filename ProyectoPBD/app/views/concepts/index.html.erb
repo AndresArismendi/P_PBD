@@ -32,9 +32,9 @@
       <% @concepts.each do |concept| %>
         <tr>
           <td><%= concept.nom_conc %></td>
-          <td><%= link_to 'Ver', concept %></td>
-          <td><%= link_to 'Editar', edit_concept_path(concept) %></td>
-          <td><%= link_to 'Eliminar', concept, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+          <td><%= button_to 'Ver', concept, :method => 'get', :class => 'btn btn-info' %></td>
+          <td><%= button_to 'Editar', edit_concept_path(concept), :method => 'get', :class => 'btn btn-warning' %></td>
+          <td><%= button_to 'Eliminar', concept, method: :delete, data: { confirm: '¿Confirma eliminación?' }, :class => 'btn btn-danger' %></td>
         </tr>
       <% end %>
     </tbody>
@@ -42,6 +42,6 @@
 
   <br>
 
-  <%= link_to 'Nuevo', new_concept_path %>
+  <%= button_to 'Nuevo', new_concept_path, :method => 'get', :class => 'btn btn-default' %>
 
 </div></div></div></div>

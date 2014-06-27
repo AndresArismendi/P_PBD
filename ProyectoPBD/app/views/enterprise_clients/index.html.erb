@@ -34,9 +34,9 @@
         <tr>
           <td><%= enterprise_client.run_cli %></td>
           <td><%= enterprise_client.rut_ent %></td>
-          <td><%= link_to 'Show', enterprise_client %></td>
-          <td><%= link_to 'Edit', edit_enterprise_client_path(enterprise_client) %></td>
-          <td><%= link_to 'Destroy', enterprise_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= button_to 'Ver', enterprise_client, :method => 'get', :class => 'btn btn-info'%></td>
+          <td><%= button_to 'Editar', edit_enterprise_client_path(enterprise_client), :method => 'get', :class => 'btn btn-warning' %></td>
+          <td><%= button_to 'Eliminar', enterprise_client, method: :delete, data: { confirm: '¿Confirma eliminación?' }, :class => 'btn btn-danger' %></td>
         </tr>
       <% end %>
     </tbody>
@@ -44,7 +44,7 @@
 
   <br>
 
-  <%= link_to 'New Enterprise client', new_enterprise_client_path %>
+  <%= button_to 'Nuevo', new_enterprise_client_path, :method => 'get', :class => 'btn btn-default' %>
 
 <% end %>
 

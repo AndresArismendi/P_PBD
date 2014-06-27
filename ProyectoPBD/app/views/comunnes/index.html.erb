@@ -35,9 +35,9 @@
         <tr>
           <td><%= comunne.nom_comun %></td>
           <td><%= comunne.num_comun %></td>
-          <td><%= link_to 'Ver', comunne %></td>
-          <td><%= link_to 'Editar', edit_comunne_path(comunne) %></td>
-          <td><%= link_to 'Eliminar', comunne, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+          <td><%= button_to 'Ver', comunne, :method => 'get', :class => 'btn btn-info' %></td>
+          <td><%= button_to 'Editar', edit_comunne_path(comunne), :method => 'get', :class => 'btn btn-warning' %></td>
+          <td><%= button_to 'Eliminar', comunne, method: :delete, data: { confirm: '¿Confirma eliminación?' }, :class => 'btn btn-danger' %></td>
         </tr>
       <% end %>
     </tbody>
@@ -45,7 +45,7 @@
 
   <br>
 
-  <%= link_to 'Nuevo', new_comunne_path %>
+  <%= button_to 'Nuevo', new_comunne_path, :method => 'get', :class => 'btn btn-default' %>
 
 <% end %>
 </div></div></div></div>

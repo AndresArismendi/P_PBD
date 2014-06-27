@@ -36,9 +36,9 @@
           <td><%= owner_commission.porcent_comi_prop %></td>
           <td><%= owner_commission.ini_comi_prop %></td>
           <td><%= owner_commission.fin_comi_prop %></td>
-          <td><%= link_to 'Ver', owner_commission %></td>
-          <td><%= link_to 'Editar', edit_owner_commission_path(owner_commission) %></td>
-          <td><%= link_to 'Eliminar', owner_commission, method: :delete, data: { confirm: 'A¿Confirma eliminación?' } %></td>
+          <td><%= button_to 'Ver', owner_commission , :method => 'get', :class => 'btn btn-info'%></td>
+          <td><%= button_to 'Editar', edit_owner_commission_path(owner_commission)  , :method => 'get', :class => 'btn btn-warning'%></td>
+          <td><%= button_to 'Eliminar', owner_commission, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger'%></td>
         </tr>
       <% end %>
     </tbody>
@@ -46,7 +46,7 @@
 
   <br>
 
-  <%= link_to 'Nuevo', new_owner_commission_path %>
+  <%= button_to 'Nuevo', new_owner_commission_path , :method => 'get', :class => 'btn btn-default' %>
 
 <% end %>
 </div></div></div></div>

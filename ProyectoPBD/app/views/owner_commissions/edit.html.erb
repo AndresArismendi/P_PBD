@@ -4,7 +4,7 @@
 
 	<%= render 'form' %>
 
-	<%= link_to 'Ver', @owner_commission %> |
-	<%= link_to 'Volver', owner_commissions_path %>
+	<%= button_to 'Ver', @owner_commission, :method => 'get', :class => 'btn btn-info'%> |
+	<%= button_to 'Volver', owner_commissions_path, :method => 'get', :class => 'btn btn-default' %>
 
 <% end %>

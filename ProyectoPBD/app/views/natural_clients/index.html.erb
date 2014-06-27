@@ -33,9 +33,9 @@
       <% @natural_clients.each do |natural_client| %>
         <tr>
           <td><%= natural_client.run_cli %></td>
-          <td><%= link_to 'Show', natural_client %></td>
-          <td><%= link_to 'Edit', edit_natural_client_path(natural_client) %></td>
-          <td><%= link_to 'Destroy', natural_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= button_to 'Ver', natural_client , :method => 'get', :class => 'btn btn-info'%></td>
+          <td><%= button_to 'Editar', edit_natural_client_path(natural_client) , :method => 'get', :class => 'btn btn-warning'%></td>
+          <td><%= button_to 'Eliminar', natural_client, method: :delete, data: { confirm: '¿Confirma eliminación?' }, :class => 'btn btn-danger' %></td>
         </tr>
       <% end %>
     </tbody>
@@ -43,7 +43,7 @@
 
   <br>
 
-  <%= link_to 'New Natural client', new_natural_client_path %>
+  <%= button_to 'Nuevo', new_natural_client_path , :method => 'get', :class => 'btn btn-default' %>
 
 <% end %>
 </div></div></div></div>

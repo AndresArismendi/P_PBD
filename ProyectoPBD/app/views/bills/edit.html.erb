@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Ver', @bill %> |
-<%= link_to 'Volver', bills_path %>
+<%= button_to 'Ver', @bill, :method => 'get', :class => 'btn btn-info' %> |
+<%= button_to 'Volver', bills_path, :method => 'get', :class => 'btn btn-default' %>

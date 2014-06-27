@@ -50,9 +50,9 @@
         <td><%= external_enterprise.ini_conv_emp %></td>
         <td><%= external_enterprise.fin_conv_emp %></td>
         <td><%= external_enterprise.descrip_conv_emp %></td>
-        <td><%= link_to 'Ver', external_enterprise %></td>
-        <td><%= link_to 'Editar', edit_external_enterprise_path(external_enterprise) %></td>
-        <td><%= link_to 'Eliminar', external_enterprise, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        <td><%= button_to 'Ver', external_enterprise , :method => 'get', :class => 'btn btn-info'%></td>
+        <td><%= button_to 'Editar', edit_external_enterprise_path(external_enterprise), :method => 'get', :class => 'btn btn-warning'%></td>
+        <td><%= button_to 'Eliminar', external_enterprise, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger'%></td>
       </tr>
     <% end %>
   </tbody>
@@ -60,5 +60,4 @@
 
 <br>
 
-<%= link_to 'Nuevo', new_external_enterprise_path %>
-</div></div></div></div>
+<%= button_to 'Nuevo', new_external_enterprise_path, :method => 'get', :class => 'btn btn-default' %>

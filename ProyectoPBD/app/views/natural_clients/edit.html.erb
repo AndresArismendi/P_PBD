@@ -4,7 +4,7 @@
 
 	<%= render 'form' %>
 
-	<%= link_to 'Show', @natural_client %> |
-	<%= link_to 'Back', natural_clients_path %>
+	<%= button_to 'Ver', @natural_client , :method => 'get', :class => 'btn btn-info'%> |
+	<%= button_to 'Volver', natural_clients_path , :method => 'get', :class => 'btn btn-default'%>
 
 <% end %>

@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @travel_request %> |
-<%= link_to 'Back', travel_requests_path %>
+<%= button_to 'Ver', @travel_request , :method => 'get', :class => 'btn btn-info'%> |
+<%= button_to 'Volver', travel_requests_path, :method => 'get', :class => 'btn btn-default' %>

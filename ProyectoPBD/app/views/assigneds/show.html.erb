@@ -20,5 +20,5 @@
   <%= @assigned.fin_assigned %>
 </p>
 
-<%= link_to 'Editar', edit_assigned_path(@assigned) %> |
-<%= link_to 'Volver', assigneds_path %>
+<%= button_to 'Editar', edit_assigned_path(@assigned), :method => 'get', :class => 'btn btn-warning' %> |
+<%= button_to 'Volver', assigneds_path, :method => 'get', :class => 'btn btn-default' %>

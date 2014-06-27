@@ -4,7 +4,7 @@
 
 	<%= render 'form' %>
 
-	<%= link_to 'Ver', @technical_review_alert %> |
-	<%= link_to 'Volver', technical_review_alerts_path %>
+	<%= button_to 'Ver', @technical_review_alert , :method => 'get', :class => 'btn btn-info' %> |
+	<%= button_to 'Volver', technical_review_alerts_path , :method => 'get', :class => 'btn btn-default'%>
 
 <% end %>

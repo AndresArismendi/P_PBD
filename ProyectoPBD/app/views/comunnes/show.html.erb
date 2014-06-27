@@ -12,7 +12,7 @@
 	  <%= @comunne.num_comun %>
 	</p>
 
-	<%= link_to 'Editar', edit_comunne_path(@comunne) %> |
-	<%= link_to 'Volver', comunnes_path %>
+	<%= button_to 'Editar', edit_comunne_path(@comunne), :method => 'get', :class => 'btn btn-warning' %> |
+	<%= button_to 'Volver', comunnes_path, :method => 'get', :class => 'btn btn-default' %>
 
 <% end %>

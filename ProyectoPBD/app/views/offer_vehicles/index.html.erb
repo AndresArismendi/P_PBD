@@ -34,9 +34,9 @@
         <td><%= offer_vehicle.id_veh %></td>
         <td><%= offer_vehicle.id_block %></td>
         <td><%= offer_vehicle.est_oferta_veh %></td>
-        <td><%= link_to 'Ver', offer_vehicle %></td>
-        <td><%= link_to 'Editar', edit_offer_vehicle_path(offer_vehicle) %></td>
-        <td><%= link_to 'Eliminar', offer_vehicle, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        <td><%= button_to 'Ver', offer_vehicle , :method => 'get', :class => 'btn btn-info'%></td>
+        <td><%= button_to 'Editar', edit_offer_vehicle_path(offer_vehicle) , :method => 'get', :class => 'btn btn-warning'%></td>
+        <td><%= button_to 'Eliminar', offer_vehicle, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger'%></td>
       </tr>
     <% end %>
   </tbody>
@@ -44,6 +44,4 @@
 
 <br>
 
-<%= link_to 'Nuevo', new_offer_vehicle_path %>
-
-</div></div></div></div>
+<%= button_to 'Nuevo', new_offer_vehicle_path , :method => 'get', :class => 'btn btn-default'%>

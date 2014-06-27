@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Ver', @external_enterprise %> |
-<%= link_to 'Volver', external_enterprises_path %>
+<%= button_to 'Ver', @external_enterprise , :method => 'get', :class => 'btn btn-info'%> |
+<%= button_to 'Volver', external_enterprises_path, :method => 'get', :class => 'btn btn-default' %>

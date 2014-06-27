@@ -33,9 +33,9 @@
       <tr>
         <td><%= state_history.id_trav %></td>
         <td><%= state_history.id_stat %></td>
-        <td><%= link_to 'Show', state_history %></td>
-        <td><%= link_to 'Editar', edit_state_history_path(state_history) %></td>
-        <td><%= link_to 'Eliminar', state_history, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        <td><%= button_to 'Ver', state_history , :method => 'get', :class => 'btn btn-info'%></td>
+        <td><%= button_to 'Editar', edit_state_history_path(state_history) , :method => 'get', :class => 'btn btn-warning'%></td>
+        <td><%= button_to 'Eliminar', state_history, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger'%></td>
       </tr>
     <% end %>
   </tbody>
@@ -43,5 +43,4 @@
 
 <br>
 
-<%= link_to 'Nuevo', new_state_history_path %>
-</div></div></div>
+<%= button_to 'Nuevo', new_state_history_path, :method => 'get', :class => 'btn btn-default'%>

@@ -33,9 +33,9 @@
       <% @technical_review_alerts.each do |technical_review_alert| %>
         <tr>
           <td><%= technical_review_alert.plant_alert_rev_tec %></td>
-          <td><%= link_to 'Ver', technical_review_alert %></td>
-          <td><%= link_to 'Editar', edit_technical_review_alert_path(technical_review_alert) %></td>
-          <td><%= link_to 'Eliminar', technical_review_alert, method: :delete, data: { confirm: '¿Confirma eliminación??' } %></td>
+          <td><%= button_to 'Ver', technical_review_alert , :method => 'get', :class => 'btn btn-info'%></td>
+          <td><%= button_to 'Editar', edit_technical_review_alert_path(technical_review_alert), :method => 'get', :class => 'btn btn-warning'%></td>
+          <td><%= button_to 'Eliminar', technical_review_alert, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger' %></td>
         </tr>
       <% end %>
     </tbody>
@@ -43,7 +43,7 @@
 
   <br>
 
-  <%= link_to 'Nuevo', new_technical_review_alert_path %>
+  <%= button_to 'Nuevo', new_technical_review_alert_path , :method => 'get', :class => 'btn btn-default' %>
 
 <% end %>
 </div></div></div></div>

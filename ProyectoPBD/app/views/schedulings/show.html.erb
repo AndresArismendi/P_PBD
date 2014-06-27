@@ -15,5 +15,5 @@
   <%= @scheduling.run_cli %>
 </p>
 
-<%= link_to 'Edit', edit_scheduling_path(@scheduling) %> |
-<%= link_to 'Back', schedulings_path %>
+<%= button_to 'Editar', edit_scheduling_path(@scheduling) , :method => 'get', :class => 'btn btn-warning'%> |
+<%= button_to 'Volver', schedulings_path , :method => 'get', :class => 'btn btn-default'%>

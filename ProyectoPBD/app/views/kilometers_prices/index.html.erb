@@ -38,9 +38,11 @@
           <td><%= kilometers_price.ini_val_km %></td>
           <td><%= kilometers_price.fin_val_km %></td>
           <td><%= kilometers_price.estado_val_km %></td>
+
           <td><%= button_to 'Ver', kilometers_price, :method=>'get', :class=>'btn btn-info' %></td>
           <td><%= button_to 'Editar', edit_kilometers_price_path(kilometers_price), :method=>'get', :class=>'btn btn-warning' %></td>
           <td><%= button_to 'Destruir', kilometers_price, method: :delete, data: { confirm: '¿Confirma eliminación?' }, :method=>'get', :class=>'btn btn-danger' %></td>
+
         </tr>
       <% end %>
     </tbody>
@@ -48,7 +50,9 @@
 
   <br>
 
+
   <%= button_to 'Nuevo', new_kilometers_price_path, :method=>'get', :class=>'btn btn-default' %>
+
 
 <% end %>
 

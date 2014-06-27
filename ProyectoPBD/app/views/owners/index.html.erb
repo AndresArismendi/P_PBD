@@ -14,17 +14,8 @@
       <li><strong>Telefono 1: <%=n.tel1_prop%></strong><br></li>
       <li><strong>Telefono 2: <%=n.tel2_prop%></strong><br></li>
       <li><strong>Email: <%=n.email_prop%></strong><br></li>
-      
-
-
-
 </ul>     
 <%end%>
-
-
-
-
-
 <table>
   <thead>
     <tr>
@@ -49,15 +40,13 @@
         <td><%= owner.tel1_prop %></td>
         <td><%= owner.tel2_prop %></td>
         <td><%= owner.email_prop %></td>
-        <td><%= link_to 'Ver', owner %></td>
-        <td><%= link_to 'Editar', edit_owner_path(owner) %></td>
-        <td><%= link_to 'Eliminar', owner, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        <td><%= button_to 'Ver', owner  , :method => 'get', :class => 'btn btn-info'%></td>
+        <td><%= button_to 'Editar', edit_owner_path(owner) , :method => 'get', :class => 'btn btn-warning'%></td>
+        <td><%= button_to 'Eliminar', owner, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger'%></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'Nuevo', new_owner_path %>
-</div></div></div>
+<%= button_to 'Nuevo', new_owner_path, :method => 'get', :class => 'btn btn-default' %>

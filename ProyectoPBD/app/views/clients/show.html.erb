@@ -30,5 +30,5 @@
   <%= @client.email_cli %>
 </p>
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<%= button_to 'Editar', edit_client_path(@client), :method => 'get', :class => 'btn btn-warning' %> |
+<%= button_to 'Volver', clients_path, :method => 'get', :class => 'btn btn-default' %>

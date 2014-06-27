@@ -35,9 +35,9 @@
         <td><%= scheduling.id_off_veh %></td>
         <td><%= scheduling.run_driv %></td>
         <td><%= scheduling.run_cli %></td>
-        <td><%= link_to 'Show', scheduling %></td>
-        <td><%= link_to 'Edit', edit_scheduling_path(scheduling) %></td>
-        <td><%= link_to 'Destroy', scheduling, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Ver', scheduling  , :method => 'get', :class => 'btn btn-info'%></td>
+        <td><%= button_to 'Editar', edit_scheduling_path(scheduling) , :method => 'get', :class => 'btn btn-warning'%></td>
+        <td><%= button_to 'Eliminar', scheduling, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger'%></td>
       </tr>
     <% end %>
   </tbody>
@@ -45,5 +45,4 @@
 
 <br>
 
-<%= link_to 'New Scheduling', new_scheduling_path %>
-</div></div></div></div>
+<%= button_to 'Nuevo', new_scheduling_path, :method => 'get', :class => 'btn btn-default'%>

@@ -4,6 +4,6 @@
 
 	<%= render 'form' %>
 
-	<%= link_to 'Show', @enterprise_client %> |
-	<%= link_to 'Back', enterprise_clients_path %>
+	<%= button_to 'Ver', @enterprise_client, :method => 'get', :class => 'btn btn-info' %> |
+	<%= button_to 'Volver', enterprise_clients_path, :method => 'get', :class => 'btn btn-default' %>
 <% end %>

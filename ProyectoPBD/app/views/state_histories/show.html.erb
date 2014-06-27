@@ -10,5 +10,5 @@
   <%= @state_history.id_stat %>
 </p>
 
-<%= link_to 'Editar', edit_state_history_path(@state_history) %> |
-<%= link_to 'Volver', state_histories_path %>
+<%= button_to 'Editar', edit_state_history_path(@state_history) , :method => 'get', :class => 'btn btn-warning'%> |
+<%= button_to 'Volver', state_histories_path , :method => 'get', :class => 'btn btn-default'%>

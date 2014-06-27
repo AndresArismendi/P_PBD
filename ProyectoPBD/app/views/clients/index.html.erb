@@ -41,9 +41,9 @@
         <td><%= client.tel1_cli %></td>
         <td><%= client.tel2_cli %></td>
         <td><%= client.email_cli %></td>
-        <td><%= link_to 'Show', client %></td>
-        <td><%= link_to 'Edit', edit_client_path(client) %></td>
-        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Ver', client , :method => 'get', :class => 'btn btn-info'%></td>
+        <td><%= button_to 'Editar', edit_client_path(client), :method => 'get', :class => 'btn btn-warning' %></td>
+        <td><%= button_to 'Eliminar', client, method: :delete, data: { confirm: '¿Confirma eliminación?' }, :class => 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -51,5 +51,4 @@
 
 <br>
 
-<%= link_to 'New Client', new_client_path %>
-</div></div></div></div>
+<%= button_to 'Nuevo', new_client_path, :method => 'get', :class => 'btn btn-default' %>

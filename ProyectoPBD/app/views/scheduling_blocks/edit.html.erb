@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Ver', @scheduling_block %> |
-<%= link_to 'Volver', scheduling_blocks_path %>
+<%= button_to 'Ver', @scheduling_block , :method => 'get', :class => 'btn btn-info'%> |
+<%= button_to 'Volver', scheduling_blocks_path , :method => 'get', :class => 'btn btn-default'%>

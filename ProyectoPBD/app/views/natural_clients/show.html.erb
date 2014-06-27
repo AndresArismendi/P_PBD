@@ -7,7 +7,7 @@
 	  <%= @natural_client.run_cli %>
 	</p>
 
-	<%= link_to 'Edit', edit_natural_client_path(@natural_client) %> |
-	<%= link_to 'Back', natural_clients_path %>
+	<%= button_to 'Editar', edit_natural_client_path(@natural_client), :method => 'get', :class => 'btn btn-warning'%> |
+	<%= button_to 'Volver', natural_clients_path, :method => 'get', :class => 'btn btn-default' %>
 
 <% end %>
