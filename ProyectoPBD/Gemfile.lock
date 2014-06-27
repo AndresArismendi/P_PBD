@@ -43,7 +43,6 @@ GEM
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
     erubis (2.7.0)
-    exception_handler (0.3.45)
     execjs (2.1.0)
     hike (1.2.3)
     i18n (0.6.9)
@@ -124,7 +123,6 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise (= 3.0.0)
-  exception_handler
   jbuilder (~> 1.2)
   jquery-rails
   pg
