@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Ver', @driver %> |
-<%= link_to 'Volver', drivers_path %>
+<%= button_to 'Ver', @driver, :method => 'get', :class => 'btn btn-info' %> |
+<%= button_to 'Volver', drivers_path, :method => 'get', :class => 'btn btn-default' %>

@@ -22,9 +22,9 @@
         <td><%= base_price.ini_val_base %></td>
         <td><%= base_price.fin_val_base %></td>
         <td><%= base_price.estado_val_base %></td>
-        <td><%= link_to 'Ver', base_price %></td>
-        <td><%= link_to 'Editar', edit_base_price_path(base_price) %></td>
-        <td><%= link_to 'Eliminar', base_price, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        <td><%= button_to 'Ver', base_price, :method => 'get', :class => 'btn btn-info' %></td>
+        <td><%= button_to 'Editar', edit_base_price_path(base_price), :method => 'get', :class => 'btn btn-warning' %></td>
+        <td><%= button_to 'Eliminar', base_price, method: :delete, data: { confirm: '¿Confirma eliminación?' }, :class => 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,6 +32,6 @@
 
 <br>
 
-<%= link_to 'Nuevo', new_base_price_path %>
+<%= button_to 'Nuevo', new_base_price_path, :method => 'get', :class => 'btn btn-default' %>
 
 <% end %>

@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @scheduling %> |
-<%= link_to 'Back', schedulings_path %>
+<%= button_to 'Ver', @scheduling , :method => 'get', :class => 'btn btn-info'%> |
+<%= button_to 'Volver', schedulings_path, :method => 'get', :class => 'btn btn-default'%>

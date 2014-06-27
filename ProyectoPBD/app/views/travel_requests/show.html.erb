@@ -45,5 +45,5 @@
   <%= @travel_request.est_sol %>
 </p>
 
-<%= link_to 'Edit', edit_travel_request_path(@travel_request) %> |
-<%= link_to 'Back', travel_requests_path %>
+<%= button_to 'Editar', edit_travel_request_path(@travel_request) , :method => 'get', :class => 'btn btn-warning' %> |
+<%= button_to 'Volver', travel_requests_path , :method => 'get', :class => 'btn btn-default'%>

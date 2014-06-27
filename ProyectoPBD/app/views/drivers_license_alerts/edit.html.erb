@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Ver', @drivers_license_alert %> |
-<%= link_to 'Volver', drivers_license_alerts_path %>
+<%= button_to 'Ver', @drivers_license_alert , :method => 'get', :class => 'btn btn-info'%> |
+<%= button_to 'Volver', drivers_license_alerts_path, :method => 'get', :class => 'btn btn-default' %>

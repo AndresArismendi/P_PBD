@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Ver', @assigned %> |
-<%= link_to 'Volver', assigneds_path %>
+<%= button_to 'Ver', @assigned, :method => 'get', :class => 'btn btn-info'%> |
+<%= button_to 'Volver', assigneds_path, :method => 'get', :class => 'btn btn-default' %>

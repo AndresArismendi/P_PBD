@@ -30,5 +30,5 @@
   <%= @vehicle.km_sem_veh %>
 </p>
 
-<%= link_to 'Editar', edit_vehicle_path(@vehicle) %> |
-<%= link_to 'Volver', vehicles_path %>
+<%= link_to 'Editar', edit_vehicle_path(@vehicle), :method => 'get', :class => 'btn btn-info' %> |
+<%= link_to 'Volver', vehicles_path, :method => 'get', :class => 'btn btn-default' %>

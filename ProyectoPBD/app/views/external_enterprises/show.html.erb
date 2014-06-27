@@ -55,5 +55,5 @@
   <%= @external_enterprise.descrip_conv_emp %>
 </p>
 
-<%= link_to 'Editar', edit_external_enterprise_path(@external_enterprise) %> |
-<%= link_to 'Volver', external_enterprises_path %>
+<%= button_to 'Editar', edit_external_enterprise_path(@external_enterprise), :method => 'get', :class => 'btn btn-warning' %>
+<%= button_to 'Volver', external_enterprises_path, :method => 'get', :class => 'btn btn-default' %>

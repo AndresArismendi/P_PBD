@@ -35,5 +35,5 @@
   <%= @driver.venc_licenc_cond %>
 </p>
 
-<%= link_to 'Editar', edit_driver_path(@driver) %> |
-<%= link_to 'Volver', drivers_path %>
+<%= button_to 'Editar', edit_driver_path(@driver), :method => 'get', :class => 'btn btn-warning' %> |
+<%= button_to 'Volver', drivers_path, :method => 'get', :class => 'btn btn-default'%>

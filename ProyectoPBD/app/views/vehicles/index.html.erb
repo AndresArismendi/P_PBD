@@ -1,14 +1,14 @@
 <h1>Listing vehicles</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Run own</th>
-      <th>Pat veh</th>
-      <th>Mar veh</th>
-      <th>Model veh</th>
-      <th>Tipo veh</th>
-      <th>Km sem veh</th>
+      <th>RUN DUEÑO</th>
+      <th>PATENTE VEHÍCULO</th>
+      <th>MARCA VEHÍCULO</th>
+      <th>MODELO VEHÍCULO</th>
+      <th>TIPO VEHÍCULO</th>
+      <th>KIL</th> <!--CREO QUE NO VA-->
       <th></th>
       <th></th>
       <th></th>
@@ -24,9 +24,9 @@
         <td><%= vehicle.model_veh %></td>
         <td><%= vehicle.tipo_veh %></td>
         <td><%= vehicle.km_sem_veh %></td>
-        <td><%= link_to 'Ver', vehicle %></td>
-        <td><%= link_to 'Editar', edit_vehicle_path(vehicle) %></td>
-        <td><%= link_to 'Eliminar', vehicle, method: :delete, data: { confirm: '¿Confirma eliminación??' } %></td>
+        <td><%= button_to 'Ver', vehicle , :method => 'get', :class => 'btn btn-info'%></td>
+        <td><%= button_to 'Editar', edit_vehicle_path(vehicle), :method => 'get', :class => 'btn btn-warning' %></td>
+        <td><%= button_to 'Eliminar', vehicle, method: :delete, data: { confirm: '¿Confirma eliminación?' }, :class => 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'Nuevo', new_vehicle_path %>
+<%= button_to 'Nuevo', new_vehicle_path , :method => 'get', :class => 'btn btn-default'%>

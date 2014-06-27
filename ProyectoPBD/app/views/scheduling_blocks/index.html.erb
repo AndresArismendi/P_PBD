@@ -16,9 +16,9 @@
       <tr>
         <td><%= scheduling_block.ini_bloq %></td>
         <td><%= scheduling_block.fin_bloq %></td>
-        <td><%= link_to 'Ver', scheduling_block %></td>
-        <td><%= link_to 'Editar', edit_scheduling_block_path(scheduling_block) %></td>
-        <td><%= link_to 'Eliminar', scheduling_block, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        <td><%= button_to 'Ver', scheduling_block , :method => 'get', :class => 'btn btn-info'%></td>
+        <td><%= button_to 'Editar', edit_scheduling_block_path(scheduling_block)  , :method => 'get', :class => 'btn btn-warning'%></td>
+        <td><%= button_to 'Eliminar', scheduling_block, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger'%></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'Nuevo', new_scheduling_block_path %>
+<%= button_to 'Nuevo', new_scheduling_block_path , :method => 'get', :class => 'btn btn-default'%>

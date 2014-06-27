@@ -22,7 +22,7 @@
   <%= @base_price.estado_val_base %>
 </p>
 
-<%= link_to 'Editar', edit_base_price_path(@base_price) %> |
-<%= link_to 'Volver', base_prices_path %>
+<%= button_to 'Editar', edit_base_price_path(@base_price), :method => 'get', :class => 'btn btn-warning' %> |
+<%= button_to 'Volver', base_prices_path, :method => 'get', :class => 'btn btn-default' %>
 
 <% end %>

@@ -12,7 +12,7 @@
 	  <%= @enterprise_client.rut_ent %>
 	</p>
 
-	<%= link_to 'Edit', edit_enterprise_client_path(@enterprise_client) %> |
-	<%= link_to 'Back', enterprise_clients_path %>
+	<%= button_to 'Editar', edit_enterprise_client_path(@enterprise_client), :method => 'get', :class => 'btn btn-warning' %> |
+	<%= button_to 'Volver', enterprise_clients_path, :method => 'get', :class => 'btn btn-default' %>
 
 <% end %>

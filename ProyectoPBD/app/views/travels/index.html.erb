@@ -24,9 +24,9 @@
         <td><%= travel.tiemp_est_via %></td>
         <td><%= travel.dist_est_via %></td>
         <td><%= travel.val_via %></td>
-        <td><%= link_to 'Show', travel %></td>
-        <td><%= link_to 'Edit', edit_travel_path(travel) %></td>
-        <td><%= link_to 'Destroy', travel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Ver', travel , :method => 'get', :class => 'btn btn-info'%></td>
+        <td><%= button_to 'Editar', edit_travel_path(travel) , :method => 'get', :class => 'btn btn-warning' %></td>
+        <td><%= button_to 'Eliminar', travel, method: :delete, data: { confirm: '¿Confirma eliminación?'} , :class => 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Travel', new_travel_path %>
+<%= button_to 'Nuevo', new_travel_path , :method => 'get', :class => 'btn btn-default' %>

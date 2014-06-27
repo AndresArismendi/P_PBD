@@ -5,5 +5,5 @@
   <%= @state.nom_est %>
 </p>
 
-<%= link_to 'Editar', edit_state_path(@state) %> |
-<%= link_to 'Volver', states_path %>
+<%= button_to 'Editar', edit_state_path(@state), :method => 'get', :class => 'btn btn-warning' %> |
+<%= button_to 'Volver', states_path , :method => 'get', :class => 'btn btn-default'%>

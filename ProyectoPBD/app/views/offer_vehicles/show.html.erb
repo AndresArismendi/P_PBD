@@ -15,5 +15,5 @@
   <%= @offer_vehicle.est_oferta_veh %>
 </p>
 
-<%= link_to 'Editar', edit_offer_vehicle_path(@offer_vehicle) %> |
-<%= link_to 'Volver', offer_vehicles_path %>
+<%= button_to 'Editar', edit_offer_vehicle_path(@offer_vehicle) , :method => 'get', :class => 'btn btn-warning'%> |
+<%= button_to 'Volver', offer_vehicles_path , :method => 'get', :class => 'btn btn-default'%>

@@ -7,6 +7,6 @@
 	  <%= @concept.nom_conc %>
 	</p>
 
-	<%= link_to 'Editar', edit_concept_path(@concept) %> |
-	<%= link_to 'Volver', concepts_path %>
+	<%= button_to 'Editar', edit_concept_path(@concept) , :method => 'get', :class => 'btn btn-warning'%> |
+	<%= button_to 'Volver', concepts_path, :method => 'get', :class => 'btn btn-default' %>
 

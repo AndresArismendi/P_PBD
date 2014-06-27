@@ -17,7 +17,7 @@
 	  <%= @owner_commission.fin_comi_prop %>
 	</p>
 
-	<%= link_to 'Editar', edit_owner_commission_path(@owner_commission) %> |
-	<%= link_to 'Volver', owner_commissions_path %>
+	<%= button_to 'Editar', edit_owner_commission_path(@owner_commission) , :method => 'get', :class => 'btn btn-warning'%> |
+	<%= button_to 'Volver', owner_commissions_path  , :method => 'get', :class => 'btn btn-default'%>
 
 <% end %>

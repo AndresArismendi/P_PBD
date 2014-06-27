@@ -9,8 +9,8 @@
 
 				<%= render 'form' %>
 
-				<%= link_to 'Ver', @fixed_rate %> |
-				<%= link_to 'Volver', fixed_rates_path %>
+				<%= button_to 'Ver', @fixed_rate , :method => 'get', :class => 'btn btn-info'%> |
+				<%= button_to 'Volver', fixed_rates_pat , :method => 'get', :class => 'btn btn-default' %>
 
 			</div>
 		</div>

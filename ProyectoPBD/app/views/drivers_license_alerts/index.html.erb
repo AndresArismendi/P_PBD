@@ -14,9 +14,9 @@
     <% @drivers_license_alerts.each do |drivers_license_alert| %>
       <tr>
         <td><%= drivers_license_alert.plant_alert_licenc %></td>
-        <td><%= link_to 'Ver', drivers_license_alert %></td>
-        <td><%= link_to 'Editar', edit_drivers_license_alert_path(drivers_license_alert) %></td>
-        <td><%= link_to 'Eliminar', drivers_license_alert, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        <td><%= button_to 'Ver', drivers_license_alert, :method => 'get', :class => 'btn btn-info' %></td>
+        <td><%= button_to 'Editar', edit_drivers_license_alert_path(drivers_license_alert), :method => 'get', :class => 'btn btn-warning' %></td>
+        <td><%= button_to 'Eliminar', drivers_license_alert, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'Nuevo', new_drivers_license_alert_path %>
+<%= button_to 'Nuevo', new_drivers_license_alert_path, :method => 'get', :class => 'btn btn-default' %>
