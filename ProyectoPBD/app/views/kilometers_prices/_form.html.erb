@@ -1,33 +1,37 @@
-<%= form_for(@kilometers_price) do |f| %>
-  <% if @kilometers_price.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@kilometers_price.errors.count, "error") %> prohibited this kilometers_price from being saved:</h2>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-      <ul>
-      <% @kilometers_price.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <%= form_for(@kilometers_price) do |f| %>
+    <% if @kilometers_price.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@kilometers_price.errors.count, "error") %> prohibited this kilometers_price from being saved:</h2>
+
+        <ul>
+        <% @kilometers_price.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :val_km %><br>
+      <%= f.number_field :val_km %>
+    </div>
+    <div class="field">
+      <%= f.label :ini_val_km %><br>
+      <%= f.date_select :ini_val_km %>
+    </div>
+    <div class="field">
+      <%= f.label :fin_val_km %><br>
+      <%= f.date_select :fin_val_km %>
+    </div>
+    <div class="field">
+      <%= f.label :estado_val_km %><br>
+      <%= f.text_field :estado_val_km %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :val_km %><br>
-    <%= f.number_field :val_km %>
-  </div>
-  <div class="field">
-    <%= f.label :ini_val_km %><br>
-    <%= f.date_select :ini_val_km %>
-  </div>
-  <div class="field">
-    <%= f.label :fin_val_km %><br>
-    <%= f.date_select :fin_val_km %>
-  </div>
-  <div class="field">
-    <%= f.label :estado_val_km %><br>
-    <%= f.text_field :estado_val_km %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

@@ -1,25 +1,28 @@
-<%= form_for(@enterprise_client) do |f| %>
-  <% if @enterprise_client.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@enterprise_client.errors.count, "error") %> prohibited this enterprise_client from being saved:</h2>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-      <ul>
-      <% @enterprise_client.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <%= form_for(@enterprise_client) do |f| %>
+    <% if @enterprise_client.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@enterprise_client.errors.count, "error") %> prohibited this enterprise_client from being saved:</h2>
+
+        <ul>
+        <% @enterprise_client.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :run_cli %><br>
+      <%= f.text_field :run_cli %>
+    </div>
+    <div class="field">
+      <%= f.label :rut_ent %><br>
+      <%= f.text_field :rut_ent %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :run_cli %><br>
-    <%= f.text_field :run_cli %>
-  </div>
-  <div class="field">
-    <%= f.label :rut_ent %><br>
-    <%= f.text_field :rut_ent %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

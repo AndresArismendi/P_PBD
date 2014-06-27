@@ -1,6 +1,9 @@
-<h1>Editing enterprise_client</h1>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-<%= render 'form' %>
+	<h1>Editing enterprise_client</h1>
 
-<%= link_to 'Show', @enterprise_client %> |
-<%= link_to 'Back', enterprise_clients_path %>
+	<%= render 'form' %>
+
+	<%= link_to 'Show', @enterprise_client %> |
+	<%= link_to 'Back', enterprise_clients_path %>
+<% end %>

@@ -1,29 +1,33 @@
-<h1>Listing enterprise_clients</h1>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Run cli</th>
-      <th>Rut ent</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <h1>Listing enterprise_clients</h1>
 
-  <tbody>
-    <% @enterprise_clients.each do |enterprise_client| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= enterprise_client.run_cli %></td>
-        <td><%= enterprise_client.rut_ent %></td>
-        <td><%= link_to 'Show', enterprise_client %></td>
-        <td><%= link_to 'Edit', edit_enterprise_client_path(enterprise_client) %></td>
-        <td><%= link_to 'Destroy', enterprise_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Run cli</th>
+        <th>Rut ent</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @enterprise_clients.each do |enterprise_client| %>
+        <tr>
+          <td><%= enterprise_client.run_cli %></td>
+          <td><%= enterprise_client.rut_ent %></td>
+          <td><%= link_to 'Show', enterprise_client %></td>
+          <td><%= link_to 'Edit', edit_enterprise_client_path(enterprise_client) %></td>
+          <td><%= link_to 'Destroy', enterprise_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Enterprise client', new_enterprise_client_path %>
+  <br>
+
+  <%= link_to 'New Enterprise client', new_enterprise_client_path %>
+
+<% end %>

@@ -1,27 +1,31 @@
-<h1>Listing technical_review_alerts</h1>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Plant alert rev tec</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <h1>Listing technical_review_alerts</h1>
 
-  <tbody>
-    <% @technical_review_alerts.each do |technical_review_alert| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= technical_review_alert.plant_alert_rev_tec %></td>
-        <td><%= link_to 'Ver', technical_review_alert %></td>
-        <td><%= link_to 'Editar', edit_technical_review_alert_path(technical_review_alert) %></td>
-        <td><%= link_to 'Eliminar', technical_review_alert, method: :delete, data: { confirm: '¿Confirma eliminación??' } %></td>
+        <th>Plant alert rev tec</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @technical_review_alerts.each do |technical_review_alert| %>
+        <tr>
+          <td><%= technical_review_alert.plant_alert_rev_tec %></td>
+          <td><%= link_to 'Ver', technical_review_alert %></td>
+          <td><%= link_to 'Editar', edit_technical_review_alert_path(technical_review_alert) %></td>
+          <td><%= link_to 'Eliminar', technical_review_alert, method: :delete, data: { confirm: '¿Confirma eliminación??' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'Nuevo', new_technical_review_alert_path %>
+  <br>
+
+  <%= link_to 'Nuevo', new_technical_review_alert_path %>
+
+<% end %>

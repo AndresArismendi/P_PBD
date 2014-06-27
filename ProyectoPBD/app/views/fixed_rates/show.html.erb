@@ -1,19 +1,30 @@
-<p id="notice"><%= notice %></p>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
+  <div class="container marg2">
+    <br>
+    <br><br>
+        <div class="row">
+            <div class="col-lg-12 ">   
 
-<p>
-  <strong>Ori tar:</strong>
-  <%= @fixed_rate.ori_tar %>
-</p>
+	<p id="notice"><%= notice %></p>
+	<p>
+	  <strong>Ori tar:</strong>
+	  <%= @fixed_rate.ori_tar %>
+	</p>
 
-<p>
-  <strong>Dest tar:</strong>
-  <%= @fixed_rate.dest_tar %>
-</p>
+	<p>
+	  <strong>Dest tar:</strong>
+	  <%= @fixed_rate.dest_tar %>
+	</p>
 
-<p>
-  <strong>Costo tar:</strong>
-  <%= @fixed_rate.costo_tar %>
-</p>
+	<p>
+	  <strong>Costo tar:</strong>
+	  <%= @fixed_rate.costo_tar %>
+	</p>
 
-<%= link_to 'Editar', edit_fixed_rate_path(@fixed_rate) %> |
-<%= link_to 'Volver', fixed_rates_path %>
+	<%= link_to 'Editar', edit_fixed_rate_path(@fixed_rate) %> |
+	<%= link_to 'Volver', fixed_rates_path %>
+		</div>
+	</div>
+</div>
+
+<% end %>

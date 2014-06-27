@@ -1,3 +1,5 @@
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
+
 <h1>Listing base_prices</h1>
 
 <table>
@@ -31,3 +33,5 @@
 <br>
 
 <%= link_to 'Nuevo', new_base_price_path %>
+
+<% end %>

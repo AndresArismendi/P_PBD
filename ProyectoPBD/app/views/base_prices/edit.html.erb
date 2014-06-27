@@ -1,6 +1,10 @@
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
+
 <h1>Editing base_price</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Ver', @base_price %> |
 <%= link_to 'Volver', base_prices_path %>
+
+<% end %> 

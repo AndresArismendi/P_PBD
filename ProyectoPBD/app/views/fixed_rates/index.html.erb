@@ -1,31 +1,58 @@
-<h1>Listing fixed_rates</h1>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
+  <div class="container marg2">
+    <br>
+    <br><br>
+        <div class="row">
+            <div class="col-lg-12 ">   
 
-<table>
-  <thead>
-    <tr>
-      <th>Ori tar</th>
-      <th>Dest tar</th>
-      <th>Costo tar</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+      <h1>Lista de viajes de costo fijo</h1>
+      <hr>
+<div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Lista de viajes de costo fijo</div>
+      <div class="panel-body">
+        <p class="center"> En esta sección es posible modificar los viajes de costo fijo perteneciente a ActiveCab.<br>
+        El resultado de estas modificaciones se reflejan en la vista "Servicios y tarifas".
+        </p>
+      </div>
 
-  <tbody>
-    <% @fixed_rates.each do |fixed_rate| %>
-      <tr>
-        <td><%= fixed_rate.ori_tar %></td>
-        <td><%= fixed_rate.dest_tar %></td>
-        <td><%= fixed_rate.costo_tar %></td>
-        <td><%= link_to 'Ver', fixed_rate %></td>
-        <td><%= link_to 'Editar', edit_fixed_rate_path(fixed_rate) %></td>
-        <td><%= link_to 'Eliminar', fixed_rate, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
-      </tr>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Origen</th>
+            <th>Destino</th>
+            <th>Costo</th>
+            <th>Agregar</th>
+            <th>Modificar</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @cont = 0%>
+          <% @fixed_rates.each do |fixed_rate| %>
+            <tr>
+              <td><%= @cont %></td>
+              <td><%= fixed_rate.ori_tar %></td>
+              <td><%= fixed_rate.dest_tar %></td>
+              <td><%= fixed_rate.costo_tar %></td>
+              <td><%= button_to 'Ver', fixed_rate, :method=>'get', :class=>"btn btn-info" %></td>
+              <td><%= button_to 'Editar', edit_fixed_rate_path(fixed_rate), :method=> 'get' ,:class=>"btn btn-warning" %></td>
+              <td><%= button_to 'Eliminar', fixed_rate, method: :delete, data: { confirm: '¿Confirma eliminación?' }, :class=>"btn btn-danger" %></td>
+              <%@cont = @cont + 1%>
+            </tr>
+            <% end %>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+      
+      <%= link_to 'Nuevo Registro', new_fixed_rate_path, :class=>"btn btn-default centro1" %>
+
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'Nuevo', new_fixed_rate_path %>
+</div></div></div>    

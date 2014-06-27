@@ -1,31 +1,35 @@
-<h1>Listing owner_commissions</h1>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Porcent comi prop</th>
-      <th>Ini comi prop</th>
-      <th>Fin comi prop</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <h1>Listing owner_commissions</h1>
 
-  <tbody>
-    <% @owner_commissions.each do |owner_commission| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= owner_commission.porcent_comi_prop %></td>
-        <td><%= owner_commission.ini_comi_prop %></td>
-        <td><%= owner_commission.fin_comi_prop %></td>
-        <td><%= link_to 'Ver', owner_commission %></td>
-        <td><%= link_to 'Editar', edit_owner_commission_path(owner_commission) %></td>
-        <td><%= link_to 'Eliminar', owner_commission, method: :delete, data: { confirm: 'A¿Confirma eliminación?' } %></td>
+        <th>Porcent comi prop</th>
+        <th>Ini comi prop</th>
+        <th>Fin comi prop</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @owner_commissions.each do |owner_commission| %>
+        <tr>
+          <td><%= owner_commission.porcent_comi_prop %></td>
+          <td><%= owner_commission.ini_comi_prop %></td>
+          <td><%= owner_commission.fin_comi_prop %></td>
+          <td><%= link_to 'Ver', owner_commission %></td>
+          <td><%= link_to 'Editar', edit_owner_commission_path(owner_commission) %></td>
+          <td><%= link_to 'Eliminar', owner_commission, method: :delete, data: { confirm: 'A¿Confirma eliminación?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'Nuevo', new_owner_commission_path %>
+  <br>
+
+  <%= link_to 'Nuevo', new_owner_commission_path %>
+
+<% end %>

@@ -1,5 +1,9 @@
-<h1>New technical_review_alert</h1>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-<%= render 'form' %>
+	<h1>New technical_review_alert</h1>
 
-<%= link_to 'Volver', technical_review_alerts_path %>
+	<%= render 'form' %>
+
+	<%= link_to 'Volver', technical_review_alerts_path %>
+
+<% end %>

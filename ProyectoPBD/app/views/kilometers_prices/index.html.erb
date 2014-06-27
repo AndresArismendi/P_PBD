@@ -1,33 +1,37 @@
-<h1>Listing kilometers_prices</h1>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Val km</th>
-      <th>Ini val km</th>
-      <th>Fin val km</th>
-      <th>Estado val km</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <h1>Listing kilometers_prices</h1>
 
-  <tbody>
-    <% @kilometers_prices.each do |kilometers_price| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= kilometers_price.val_km %></td>
-        <td><%= kilometers_price.ini_val_km %></td>
-        <td><%= kilometers_price.fin_val_km %></td>
-        <td><%= kilometers_price.estado_val_km %></td>
-        <td><%= link_to 'Ver', kilometers_price %></td>
-        <td><%= link_to 'Editar', edit_kilometers_price_path(kilometers_price) %></td>
-        <td><%= link_to 'Destruir', kilometers_price, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        <th>Val km</th>
+        <th>Ini val km</th>
+        <th>Fin val km</th>
+        <th>Estado val km</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @kilometers_prices.each do |kilometers_price| %>
+        <tr>
+          <td><%= kilometers_price.val_km %></td>
+          <td><%= kilometers_price.ini_val_km %></td>
+          <td><%= kilometers_price.fin_val_km %></td>
+          <td><%= kilometers_price.estado_val_km %></td>
+          <td><%= link_to 'Ver', kilometers_price %></td>
+          <td><%= link_to 'Editar', edit_kilometers_price_path(kilometers_price) %></td>
+          <td><%= link_to 'Destruir', kilometers_price, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'Nuevo', new_kilometers_price_path %>
+  <br>
+
+  <%= link_to 'Nuevo', new_kilometers_price_path %>
+
+<% end %>

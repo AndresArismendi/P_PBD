@@ -1,3 +1,4 @@
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
 <div class="container marg2">
 		<br><br><br>
 
@@ -8,7 +9,7 @@
 
 				<div class="row cn1">
 					<div class="col-lg-4 ">
-						<%= link_to image_tag("http://fc01.deviantart.net/fs70/f/2011/252/e/b/chauffeur_hat_by_pukey187-d49bahz.png", :height=> 150, :class=>'img-circle img-borde'), :controller => 'concepts'%>
+						<%= link_to image_tag("http://fc01.deviantart.net/fs70/f/2011/252/e/b/chauffeur_hat_by_pukey187-d49bahz.png", :height=> 150, :class=>'img-circle img-borde'), :controller => 'drivers'%>
 
 						<h3>Conductores</h3>
 						<hr>
@@ -20,7 +21,7 @@
 
 					</div>
 					<div class="col-lg-4 ">
-						<%= link_to image_tag("https://cdn0.iconfinder.com/data/icons/online-shopping-3/78/Shopping_icons_vector-14-512.png", :height=> 150, :class=>'img-circle img-borde'), :controller => 'concepts'%>
+						<%= link_to image_tag("https://cdn0.iconfinder.com/data/icons/online-shopping-3/78/Shopping_icons_vector-14-512.png", :height=> 150, :class=>'img-circle img-borde'), :controller => 'users'%>
 
 						<h3>Operadores</h3>
 												<hr>
@@ -30,7 +31,7 @@
 
 					</div>
 					<div class="col-lg-4 ">
-						<%= link_to image_tag("http://www.nocedal.cl/nuevo-sitio/wp-content/themes/nocedal_theme/img/cumple_icon_big.png", :height=> 150, :class=>'img-circle img-borde'), :controller => 'concepts'%>
+						<%= link_to image_tag("http://www.nocedal.cl/nuevo-sitio/wp-content/themes/nocedal_theme/img/cumple_icon_big.png", :height=> 150, :class=>'img-circle img-borde'), :controller => 'external_enterprise'%>
 
 						<h3>Empresas</h3>
 												<hr>
@@ -47,7 +48,7 @@
             <div class="col-lg-12 ">
 				<div class="row cn1">
 					<div class="col-lg-4 ">
-						<%= link_to image_tag("http://www.s3p.es/docs/servicios/noticia-1380094853.png", :height=> 150, :class=>'img-circle img-borde'), :controller => 'concepts'%>
+						<%= link_to image_tag("http://www.s3p.es/docs/servicios/noticia-1380094853.png", :height=> 150, :class=>'img-circle img-borde'), :controller => 'natural_clients'%>
 
 
 						<h3>Cliente Natural</h3>
@@ -60,7 +61,7 @@
 
 					</div>
 					<div class="col-lg-4 ">
-						<%= link_to image_tag("http://www.orbitalpharma.com/clientes_files/icon-service.jpg", :height=> 150, :class=>'img-circle img-borde'), :controller => 'concepts'%>
+						<%= link_to image_tag("http://www.orbitalpharma.com/clientes_files/icon-service.jpg", :height=> 150, :class=>'img-circle img-borde'), :controller => 'enterprise_clients'%>
 
 						<h3>Cliente Empresa</h3>
 												<hr>
@@ -85,3 +86,5 @@
 			</div>
 		</div>	
 </div>
+<% end %>
+

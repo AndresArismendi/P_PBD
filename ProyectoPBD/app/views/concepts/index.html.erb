@@ -1,27 +1,30 @@
-<h1>Listing concepts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nom conc</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @concepts.each do |concept| %>
+  <h1>Listing concepts</h1>
+
+  <table>
+    <thead>
       <tr>
-        <td><%= concept.nom_conc %></td>
-        <td><%= link_to 'Ver', concept %></td>
-        <td><%= link_to 'Editar', edit_concept_path(concept) %></td>
-        <td><%= link_to 'Eliminar', concept, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        <th>Nom conc</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @concepts.each do |concept| %>
+        <tr>
+          <td><%= concept.nom_conc %></td>
+          <td><%= link_to 'Ver', concept %></td>
+          <td><%= link_to 'Editar', edit_concept_path(concept) %></td>
+          <td><%= link_to 'Eliminar', concept, method: :delete, data: { confirm: '¿Confirma eliminación?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'Nuevo', new_concept_path %>
+  <br>
+
+  <%= link_to 'Nuevo', new_concept_path %>
+

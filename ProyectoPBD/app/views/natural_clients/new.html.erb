@@ -1,5 +1,9 @@
-<h1>New natural_client</h1>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-<%= render 'form' %>
+	<h1>New natural_client</h1>
 
-<%= link_to 'Back', natural_clients_path %>
+	<%= render 'form' %>
+
+	<%= link_to 'Back', natural_clients_path %>
+
+<% end %>

@@ -1,9 +1,13 @@
-<p id="notice"><%= notice %></p>
+<% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-<p>
-  <strong>Run cli:</strong>
-  <%= @natural_client.run_cli %>
-</p>
+	<p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_natural_client_path(@natural_client) %> |
-<%= link_to 'Back', natural_clients_path %>
+	<p>
+	  <strong>Run cli:</strong>
+	  <%= @natural_client.run_cli %>
+	</p>
+
+	<%= link_to 'Edit', edit_natural_client_path(@natural_client) %> |
+	<%= link_to 'Back', natural_clients_path %>
+
+<% end %>
