@@ -11,8 +11,8 @@
           <div class="container">
             <div class="carousel-caption">
               <h1><b>ActiveCab</b></h1>
-              <p>Un servicio de alta velocidad y comodidad <code>http://www.activecab.cl</code> Pida un taxi sin necesidad de gastar en una llamada telefónica</p>
-              <p><a class="btn btn-lg btn-primary" href="../cliente/solicitud" role="button">Pida un taxi AQUÍ</a></p>
+              <p>Un servicio de alta velocidad y comodidad <code>http://www.activecab.cl</code>Pida un taxi sin necesidad de gastar en una llamada telefónica</p>
+              <p><%= button_to 'Solicitud', {:controller => :travel_requests, :action=> :new} , :class => "btn btn-lg btn-primary"  %></p>
             </div>
           </div>
         </div>
@@ -23,7 +23,7 @@
             <div class="carousel-caption">
               <b><h1>Confía en la experiencia.</h1></b>
               <p>Una empresa dedicada con más de 25 años de experiencia y calidad en el área del transporte de pasajeros</p>
-              <p><a class="btn btn-lg btn-primary" href="../welcome/qs" role="button">Leer más</a></p>
+              <p><%= button_to 'Quienes somos', {:controller => :welcome, :action=> :qs} , :class => "btn btn-lg btn-primary"  %></p>
             </div>
           </div>
         </div>
@@ -33,8 +33,8 @@
           <div class="container">
             <div class="carousel-caption">
               <p><h1>Precios a tu alcance.</h1></p>
-              <p>Paga un precio justo de acuerdo a la distancia recorrida, ActiveCab permite que veas tarifas fijas de acuerdo a tu viaje a realizar</p>
-              <p><a class="btn btn-lg btn-primary" href="../welcome/tarifas" role="button">Servicios y tarifas</a></p>
+              <p>Paga un precio justo de acuerdo a la distancia recorrida, ActiveCab permite que veas tarifas fijas de acuerdo a tu viaje</p>
+              <p><%= button_to 'Servicios y Tarifas', {:controller => :welcome, :action=> :tarifas} , :class => "btn btn-lg btn-primary"%></p>
             </div>
           </div>
         </div>
@@ -48,8 +48,8 @@
       <hr class="featurette-divider">
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Trabaja con nosotros <span class="text-muted">ActiveCab.</span></h2>
-          <p class="lead">¿Necesitas un servicio de transporte para tu empresa?, ActiveCab tiene la solución, realiza un convenio con nosotros y consigue los <b>mejores precios</b>.</p>
+          <h2 class="featurette-heading">¿Necesitas un servicio de transporte para tu empresa? <span class="text-muted"></span></h2>
+          <p class="lead">ActiveCab tiene la solución, realiza un convenio con nosotros y consigue los <b>mejores precios</b>.</p>
         </div>
         <div class="col-md-5">
         <br><br><br><br><br>
@@ -65,7 +65,7 @@
           <img src="../../assets/phone.png" alt="" class="img-rounded cent-ver" height="100%">
         </div>
         <div class="col-md-7">
-          <h2 class="featurette-heading">Solicitar viajes en radio taxi nunca fue tan fácil. <span class="text-muted">Pruebalo tu mismo!.</span></h2>
+          <h2 class="featurette-heading">Solicitar viajes en radio taxi nunca fue tan fácil. <span class="text-muted">Pruebalo tu mismo!</span></h2>
           <p class="lead">
             Prueba el Sistema de ActiveCab y solicita tu viaje llenando un <b>sencillo</b> formulario, y espera nuestra respuesta. 
 
@@ -77,8 +77,9 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <h2 class="featurette-heading">Accede desde cualquier dispositivo<span class="text-muted">Checkmate.</span></h2>Inténtalo ya!
           <p class="lead">
+            Prueba accediendo a nuestra web desde tu notebook, tablet o smartphone; con acceso a Internet y solicita tu servicio de RadioTaxis
               
           </p>
         </div>
