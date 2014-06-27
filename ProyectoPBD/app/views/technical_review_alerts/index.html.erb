@@ -1,11 +1,28 @@
+<div class="container marg2">
+    <br>
+    <br><br>
+        <div class="row">
+            <div class="col-lg-12 ">
+
 <% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-  <h1>Listing technical_review_alerts</h1>
+  <h1>Listado de alertas de revisión técnica</h1>
 
-  <table>
+  <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Lista de alertas de revisión técnica</div>
+      <div class="panel-body">
+        <p class="center"> En esta sección es posible modificar las alertas de revisión técnica que se emitiran cuando un vehículo deba asistir.<br>
+        
+        </p>
+      </div>
+
+      <!-- Table -->
+      <table class="table">
+
     <thead>
       <tr>
-        <th>Plant alert rev tec</th>
+        <th>Alertas de revisión técnica</th>
         <th></th>
         <th></th>
         <th></th>
@@ -29,3 +46,4 @@
   <%= link_to 'Nuevo', new_technical_review_alert_path %>
 
 <% end %>
+</div></div></div></div>

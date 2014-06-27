@@ -1,21 +1,37 @@
-<% if user_signed_in? and current_user.tipo == 'cli_nat' %>
+<div class="container marg2">
+    <br>
+    <br><br>
+        <div class="row">
+            <div class="col-lg-12 ">
 
-<table>
+<% if user_signed_in? and current_user.tipo == 'cli_nat' %>
+<h1>Lista de solicitudes</h1>
+<div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Lista de solicitudes</div>
+      <div class="panel-body">
+        <p class="center"> En esta sección es posible modificar las solicitudes de viajes realizadas por los usuarios.<br>
+        
+        </p>
+      </div>
+
+      <!-- Table -->
+      <table class="table">
+
   <thead>
     <tr>
-      <th>Run cli</th>
-      <th>Cli run cli</th>
-      <th>Dir orig sol</th>
-      <th>Dir dest sol</th>
-      <th>Com orig sol</th>
-      <th>Com dest sol</th>
-      <th>Cant pasaj sol</th>
-      <th>Fecha crea sol</th>
-      <th>Fecha serv sol</th>
-      <th>Est sol</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Rut cliente</th>
+      <th>Dirección origen</th>
+      <th>Dirirección destino</th>
+      <th>Comuna origen</th>
+      <th>Comuma destino</th>
+      <th>Cantidad pasajeros</th>
+      <th>Fecha creación</th>
+      <th>Fecha servicio</th>
+      <th>Estado solicitud</th>
+      <th>Mostrar</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
     </tr>
   </thead>
 
@@ -46,3 +62,4 @@
 <h1>Inicia sesión</h1>
 
 <%end%>
+</div></div></div></div>

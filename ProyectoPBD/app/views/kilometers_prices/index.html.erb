@@ -1,14 +1,30 @@
+<div class="container marg2">
+    <br>
+    <br><br>
+        <div class="row">
+            <div class="col-lg-12 ">
+
 <% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-  <h1>Listing kilometers_prices</h1>
+  <h1>Listado de precios por kilometro</h1>
 
-  <table>
+  <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Lista de precios por kilometro</div>
+      <div class="panel-body">
+        <p class="center"> En esta sección es posible modificar el costo de kilometro.<br>
+        
+        </p>
+      </div>
+
+      <!-- Table -->
+      <table class="table">
     <thead>
       <tr>
-        <th>Val km</th>
-        <th>Ini val km</th>
-        <th>Fin val km</th>
-        <th>Estado val km</th>
+        <th>Valor</th>
+        <th>Fecha inicio valor</th>
+        <th>Fecha término valor</th>
+        <th>Estado valor</th>
         <th></th>
         <th></th>
         <th></th>
@@ -35,3 +51,5 @@
   <%= button_to 'Nuevo', new_kilometers_price_path, :method=>'get', :class=>'btn btn-default' %>
 
 <% end %>
+
+</div></div></div></div>

@@ -1,14 +1,30 @@
+<div class="container marg2">
+    <br>
+    <br><br>
+        <div class="row">
+            <div class="col-lg-12 ">
+
 <h1>Listing vehicles</h1>
 
-<table>
+<div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Lista de vehículos</div>
+      <div class="panel-body">
+        <p class="center"> En esta sección es posible modificar los vehículos que asociados a ActiveCab.<br>
+        Cada vehículo esta asociado a un dueño, la modificación de estos datos se refleja en la vista de cada conductor.
+        </p>
+      </div>
+
+      <!-- Table -->
+      <table class="table">
   <thead>
     <tr>
-      <th>Run own</th>
-      <th>Pat veh</th>
-      <th>Mar veh</th>
-      <th>Model veh</th>
-      <th>Tipo veh</th>
-      <th>Km sem veh</th>
+      <th>Rut dueño</th>
+      <th>Patente vehículo</th>
+      <th>Marca vehículo</th>
+      <th>Modelo vehículo</th>
+      <th>Tipo vehículo</th>
+      <th>Km semanal vehículo</th>
       <th></th>
       <th></th>
       <th></th>
@@ -35,3 +51,4 @@
 <br>
 
 <%= link_to 'Nuevo', new_vehicle_path %>
+</div></div></div></div>

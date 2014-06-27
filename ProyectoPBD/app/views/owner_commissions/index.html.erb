@@ -1,13 +1,29 @@
+<div class="container marg2">
+    <br>
+    <br><br>
+        <div class="row">
+            <div class="col-lg-12 ">
+
 <% if user_signed_in? and current_user.tipo == 'administrador' %>
 
-  <h1>Listing owner_commissions</h1>
+  <h1>Listado de comisión de dueños de vehículos</h1>
 
-  <table>
+  <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Lista de comisiones</div>
+      <div class="panel-body">
+        <p class="center"> En esta sección es posible modificar la comisión que recibirán los dueños, la ganancia que estos tendrán como retribución al entregar su(s) vehículo(s) como prestamo a ActiveCab.<br>
+        
+        </p>
+      </div>
+
+      <!-- Table -->
+      <table class="table">
     <thead>
       <tr>
-        <th>Porcent comi prop</th>
-        <th>Ini comi prop</th>
-        <th>Fin comi prop</th>
+        <th>Porcentaje de comisión</th>
+        <th>Fecha inicio comisión</th>
+        <th>Fecha término comisión</th>
         <th></th>
         <th></th>
         <th></th>
@@ -33,3 +49,4 @@
   <%= link_to 'Nuevo', new_owner_commission_path %>
 
 <% end %>
+</div></div></div></div>

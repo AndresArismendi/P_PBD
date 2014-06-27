@@ -1,14 +1,30 @@
+<div class="container marg2">
+    <br>
+    <br><br>
+        <div class="row">
+            <div class="col-lg-12 ">
+
 <h1>Listing travels</h1>
 
-<table>
+<div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Lista de viajes</div>
+      <div class="panel-body">
+        <p class="center"> En esta sección es posible modificar los viajes.<br>
+        
+        </p>
+      </div>
+
+      <!-- Table -->
+      <table class="table">
   <thead>
     <tr>
-      <th>Run driv</th>
-      <th>Id trav req</th>
-      <th>Hora ini via</th>
-      <th>Tiemp est via</th>
-      <th>Dist est via</th>
-      <th>Val via</th>
+      <th>Rut conductor</th>
+      <th>Id solicitud</th>
+      <th>Hora inicio</th>
+      <th>Tiempo estimado</th>
+      <th>Distancia estimada</th>
+      <th>Validez</th>
       <th></th>
       <th></th>
       <th></th>
@@ -35,3 +51,4 @@
 <br>
 
 <%= link_to 'New Travel', new_travel_path %>
+</div></div></div></div>
