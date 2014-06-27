@@ -4,7 +4,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Ver', @kilometers_price %> |
-<%= link_to 'Volver', kilometers_prices_path %>
+<%= button_to 'Ver', @kilometers_price, :method=>'get', :class=>'btn btn-info' %> |
+<%= button_to 'Volver', kilometers_prices_path, :method=>'get', :class=>'btn btn-default' %>
 
 <% end %>

@@ -21,8 +21,8 @@
 	  <%= @fixed_rate.costo_tar %>
 	</p>
 
-	<%= link_to 'Editar', edit_fixed_rate_path(@fixed_rate) %> |
-	<%= link_to 'Volver', fixed_rates_path %>
+	<%= button_to 'Editar', edit_fixed_rate_path(@fixed_rate), :method=>'get', :class=>'btn btn-warning' %> |
+	<%= button_to 'Volver', fixed_rates_path, :method=>'get', :class=>'btn btn-default' %>
 		</div>
 	</div>
 </div>
