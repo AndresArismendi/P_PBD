@@ -1,14 +1,46 @@
+<div class="container marg2					
+
 <% if user_signed_in? and current_user.tipo == 'cli_nat' %>
-<h1>Nueva Solicitud de Viaje</h1>
 
-<%= render 'form' %>
+    <br>
+    <br><br>
+        <div class="row">
+            <div class="col-lg-12 ">
+            <h1>Nueva Solicitud de Viaje</h1>
+				<div class="col-lg-4">
+				
+					<%= render 'form' %>
 
-<%= button_to 'Volver', travel_requests_path , :method => 'get', :class => 'btn btn-default'%>
-<% end %>
+					<%= button_to 'Volver', travel_requests_path , :method => 'get', :class => 'btn btn-default'%>
+	
 
 
+					
+					
 
-<div class="alert alert-success" role="alert">
-<br>
-      <strong>CUIDADO!</strong> para realizar la solicitud de taxis <%=link_to "debes estar REGISTRADO", {:controller=> :users, :action=>:sign_up}, :class=> "alert-link" %> como usuario, crea una cuenta de forma gratuita o <%=link_to "Inicia Sesión", {:controller=> :users, :action=>:sign_in}, :class=>"alert-link"%></a>.
+
+				
+				</div
+				<div class="col-lg-4">
+
+				
+
+					
+				</div>	
+				<div class="col-lg-4">
+
+					
+				</div>	
+				
+			</div>
+				</div>
+		
 </div>
+
+
+<% else %>
+				<div class="alert alert-success" role="alert">
+					  <br>
+				      <strong>CUIDADO!</strong> para realizar la solicitud de taxis <%=link_to "debes estar REGISTRADO", {:controller=> :users, :action=>:sign_up}, :class=> "alert-link" %> como usuario, crea una cuenta de forma gratuita o <%=link_to "Inicia Sesión", {:controller=> :users, :action=>:sign_in}, :class=>"alert-link"%></a>.
+				</div>
+<% end %>
