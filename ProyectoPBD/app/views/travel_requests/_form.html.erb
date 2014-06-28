@@ -11,9 +11,15 @@
     </div>
   <% end %>
 
+
+
   <div class="field">
-    <%= f.label :run_cli %><br>
-    <%= f.text_field :run_cli %>
+
+  <p>  <%= f.label :RUT_cliente   %>  <%= current_user.rut%></p><br>
+    <%= f.hidden_field :run_cli, :value => current_user.rut  %>
+
+    
+      
   </div>
   <div class="field">
     <%= f.label :dir_orig_sol %><br>
@@ -47,6 +53,7 @@
     <%= f.label :est_sol %><br>
     <%= f.text_field :est_sol %>
   </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
