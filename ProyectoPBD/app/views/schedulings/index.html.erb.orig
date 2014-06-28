@@ -45,6 +45,7 @@
 
 <br>
 
+</div></div></div></div>
+
 <%= button_to 'Nuevo', new_scheduling_path, :method => 'get', :class => 'btn btn-default'%>
 
-</div></div></div></div>

@@ -1,0 +1,57 @@
+<div class="container marg2">
+    <br>
+    <br><br>
+        <div class="row">
+            <div class="col-lg-12 ">
+
+<h1>Listado de dueños</h1>
+
+<%@owners.each do |n| %>
+
+<ul>
+      <li><strong>Nombre: <%=n.nom_prop%></strong><br></li>
+      <li><strong>Apellidos: <%=n.apells_prop%></strong><br></li>
+      <li><strong>Telefono 1: <%=n.tel1_prop%></strong><br></li>
+      <li><strong>Telefono 2: <%=n.tel2_prop%></strong><br></li>
+      <li><strong>Email: <%=n.email_prop%></strong><br></li>
+</ul>     
+<%end%>
+<table>
+  <thead>
+    <tr>
+      <th>Run own</th>
+      <th>Nom prop</th>
+      <th>Apells prop</th>
+      <th>Tel1 prop</th>
+      <th>Tel2 prop</th>
+      <th>Email prop</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @owners.each do |owner| %>
+      <tr>
+        <td><%= owner.run_own %></td>
+        <td><%= owner.nom_prop %></td>
+        <td><%= owner.apells_prop %></td>
+        <td><%= owner.tel1_prop %></td>
+        <td><%= owner.tel2_prop %></td>
+        <td><%= owner.email_prop %></td>
+        <td><%= button_to 'Ver', owner  , :method => 'get', :class => 'btn btn-info'%></td>
+        <td><%= button_to 'Editar', edit_owner_path(owner) , :method => 'get', :class => 'btn btn-warning'%></td>
+        <td><%= button_to 'Eliminar', owner, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger'%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+</div></div></div>
+
+<%= button_to 'Nuevo', new_owner_path, :method => 'get', :class => 'btn btn-default' %>
+

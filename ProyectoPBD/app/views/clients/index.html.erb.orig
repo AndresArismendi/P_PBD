@@ -33,15 +33,6 @@
   </thead>
 
   <tbody>
-
-
-  <%@users.each do |user| %>
-    <% if(user.rut == "1-9" and user.tipo == 'cli_nat') %>
-      <%= user.nombre %>
-      <%= user.tipo %>
-    <% end %>
-
-  <% end %>
     <% @clients.each do |client| %>
       <tr>
         <td><%= client.run_cli %></td>
@@ -60,5 +51,7 @@
 
 <br>
 
-<%= button_to 'Nuevo', new_client_path, :method => 'get', :class => 'btn btn-default' %>
 </div></div></div></div>
+
+<%= button_to 'Nuevo', new_client_path, :method => 'get', :class => 'btn btn-default' %>
+

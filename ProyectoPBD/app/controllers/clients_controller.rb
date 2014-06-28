@@ -5,6 +5,7 @@ class ClientsController < ApplicationController
   # GET /clients.json
   def index
     @clients = Client.all
+    @users =User.all
   end
 
   # GET /clients/1
@@ -20,6 +21,7 @@ class ClientsController < ApplicationController
   # GET /clients/1/edit
   def edit
   end
+  
 
   # POST /clients
   # POST /clients.json

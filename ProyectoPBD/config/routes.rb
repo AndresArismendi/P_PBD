@@ -1,5 +1,6 @@
 ActiveCab::Application.routes.draw do
   
+  get "roles/index"
   resources :schedulings
 
   resources :clients
