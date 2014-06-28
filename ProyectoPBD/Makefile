@@ -43,7 +43,7 @@ scaffold_verde:
 
 	rails g scaffold vehicles run_own:string pat_veh:string mar_veh:string model_veh:string tipo_veh:string km_sem_veh:integer --no-migration
 
-	rails g scaffold owners run_own:string nom_prop:string apells_prop:string tel1_prop:string tel2_prop:string email_prop:string --no-migration
+	rails g scaffold owners run_own:string nom_prop:string apells_prop:string tel_prop:string email_prop:string --no-migration
 
 scaffold_rosado:
 	rails g scaffold log_sqls tms_log_sql:date tabla_log_sql:string operac_log_sql:string usuar_log_sql:string dat_antes_log_sql:string dat_desp_log_sql:string ope_det_log_sql:string --no-migration

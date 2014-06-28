@@ -7,7 +7,7 @@ class OwnersController < ApplicationController
     @owners = Owner.all
   end
 
-   # GET /owners/1
+  # GET /owners/1
   # GET /owners/1.json
   def show
   end
@@ -15,11 +15,6 @@ class OwnersController < ApplicationController
   # GET /owners/new
   def new
     @owner = Owner.new
-  end
-  
-  # GET /owners/conductor
-  def conductor
-    @owners = Owner.all
   end
 
   # GET /owners/1/edit
@@ -74,6 +69,6 @@ class OwnersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def owner_params
-      params.require(:owner).permit(:run_own, :nom_prop, :apells_prop, :tel1_prop, :tel2_prop, :email_prop)
+      params.require(:owner).permit(:run_own, :nom_prop, :apells_prop, :tel_prop, :email_prop)
     end
 end

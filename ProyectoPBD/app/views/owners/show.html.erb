@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Run propietario:</strong>
+  <%= @owner.run_own %>
+</p>
+
+<p>
+  <strong>Nombre propietario:</strong>
+  <%= @owner.nom_prop %>
+</p>
+
+<p>
+  <strong>Apellidos propietario:</strong>
+  <%= @owner.apells_prop %>
+</p>
+
+<p>
+  <strong>Teléfono propietario:</strong>
+  <%= @owner.tel_prop %>
+</p>
+
+<p>
+  <strong>Email propietario:</strong>
+  <%= @owner.email_prop %>
+</p>
+
+<%= button_to 'Editar', edit_owner_path(@owner), :method => 'get', :class => 'btn btn-warning' %> 
+<%= button_to 'Volver', owners_path, :method => 'get', :class => 'btn btn-default' %>

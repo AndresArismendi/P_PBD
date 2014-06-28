@@ -18,7 +18,7 @@ class OwnersControllerTest < ActionController::TestCase
 
   test "should create owner" do
     assert_difference('Owner.count') do
-      post :create, owner: { apells_prop: @owner.apells_prop, email_prop: @owner.email_prop, nom_prop: @owner.nom_prop, run_own: @owner.run_own, tel1_prop: @owner.tel1_prop, tel2_prop: @owner.tel2_prop }
+      post :create, owner: { apells_prop: @owner.apells_prop, email_prop: @owner.email_prop, nom_prop: @owner.nom_prop, run_own: @owner.run_own, tel_prop: @owner.tel_prop }
     end
 
     assert_redirected_to owner_path(assigns(:owner))
@@ -35,7 +35,7 @@ class OwnersControllerTest < ActionController::TestCase
   end
 
   test "should update owner" do
-    patch :update, id: @owner, owner: { apells_prop: @owner.apells_prop, email_prop: @owner.email_prop, nom_prop: @owner.nom_prop, run_own: @owner.run_own, tel1_prop: @owner.tel1_prop, tel2_prop: @owner.tel2_prop }
+    patch :update, id: @owner, owner: { apells_prop: @owner.apells_prop, email_prop: @owner.email_prop, nom_prop: @owner.nom_prop, run_own: @owner.run_own, tel_prop: @owner.tel_prop }
     assert_redirected_to owner_path(assigns(:owner))
   end
 
