@@ -1,34 +1,34 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Run driv:</strong>
+  <strong>Run conductor:</strong>
   <%= @travel.run_driv %>
 </p>
 
 <p>
-  <strong>Id trav req:</strong>
+  <strong>Id solicitud viaje:</strong>
   <%= @travel.id_trav_req %>
 </p>
 
 <p>
-  <strong>Hora ini via:</strong>
+  <strong>Hora inicio viaje:</strong>
   <%= @travel.hora_ini_via %>
 </p>
 
 <p>
-  <strong>Tiemp est via:</strong>
+  <strong>Tiempo estimado viaje:</strong>
   <%= @travel.tiemp_est_via %>
 </p>
 
 <p>
-  <strong>Dist est via:</strong>
+  <strong>Distancia estimada viaje:</strong>
   <%= @travel.dist_est_via %>
 </p>
 
 <p>
-  <strong>Val via:</strong>
+  <strong>Valor viaje:</strong>
   <%= @travel.val_via %>
 </p>
 
-<%= link_to 'Editar', edit_travel_path(@travel) , :method => 'get', :class => 'btn btn-warning' %> |
-<%= link_to 'Volver', travels_path , :method => 'get', :class => 'btn btn-default' %>
+<%= button_to 'Editar', edit_travel_path(@travel) , :method => 'get', :class => 'btn btn-warning' %> |
+<%= button_to 'Volver', travels_path , :method => 'get', :class => 'btn btn-default' %>

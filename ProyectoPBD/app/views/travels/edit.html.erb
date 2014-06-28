@@ -1,6 +1,6 @@
-<h1>Editing travel</h1>
+<h1>Editar Viaje</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Ver', @travel , :method => 'get', :class => 'btn btn-info' %> |
-<%= link_to 'Volver', travels_path , :method => 'get', :class => 'btn btn-default' %>
+<%= button_to 'Ver', @travel , :method => 'get', :class => 'btn btn-info' %> |
+<%= button_to 'Volver', travels_path , :method => 'get', :class => 'btn btn-default' %>
