@@ -197,6 +197,58 @@
 
 <!--Fin cabecera conectado como administrador-->
 
+<!--############################################-->
+
+<!--Inicio cabecera conectado como conductor-->
+
+
+<% elsif user_signed_in? and current_user.tipo == 'conductor'%>
+
+
+
+<div class="navbar navbar-inverse navbar-fixed-top bl1" role="navigation">
+  <div class="container">
+    
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+
+      <a class="navbar-brand" href="#"> <i class="fa fa-cab"></i> ActiveCab</a>
+    </div>
+    <div class="collapse navbar-collapse">
+
+      <ul class="nav navbar-nav">
+        <!--<li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
+        <li><a href="#"><i class="fa fa-usd"></i> Servicios y tarifas</a></li> -->
+        <li> <%= link_to "Inicio", :controller => :home, :action => :index %></li>
+        <li> <%= link_to "Servicios y tarifas", :controller => :welcome, :action => :tarifas %></li>
+        <li> <%= link_to "Quiénes somos", :controller => :welcome, :action => :qs %></li>
+        <li> <%= link_to "Ver Viajes", :controller => :conductor%></li>
+        <!--<li><a href="welcome/qs"><i class="fa fa-university"></i> Quiénes somos</a></li>-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to  current_user.nombre, edit_user_registration_path %></li>
+        <li> <%=link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %> </li>
+
+        
+      </ul>
+
+      <div class="navbar-collapse collapse">
+        
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!--Fin cabecera conectado como conductor-->
 <% else%>
 
 <!--Cabecera noconectado-->

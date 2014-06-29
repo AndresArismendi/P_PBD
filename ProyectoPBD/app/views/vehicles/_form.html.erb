@@ -12,8 +12,9 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Run_propietario %><br>
-    <%= f.text_field :run_own %>
+    <%= f.label :Propietario %><br>
+    <!--<%= f.text_field :run_own %> -->
+    <p><%= f.select :run_own, options_for_select(@owners.collect{ |oww| ["Nombre: "+oww.nom_prop+", Rut: "+oww.run_own ,oww.run_own] })%></p>
   </div>
   <div class="field">
     <%= f.label :Patente_Vehículo %><br>
