@@ -11,10 +11,10 @@
 
 <p id="notice"><%= notice %></p>
 
-<!--<p>
+<p>
   <strong>Run cliente:</strong>
   <%= @travel_request.run_cli %>
-</p> -->
+</p>
 
 <p>
   <strong>Dirección origen:</strong>
@@ -37,18 +37,17 @@
 </p>
 
 <p>
-  <strong>Cantidad de pasajeros:</strong>
-
+  <strong>Cantidad pasajeros:</strong>
   <%= @travel_request.cant_pasaj_sol %>
 </p>
 
 <p>
-  <strong>Fecha creación:</strong>
+  <strong>Fecha creación solicitud:</strong>
   <%= @travel_request.fecha_crea_sol %>
 </p>
 
 <p>
-  <strong>Fecha que necesita el servicio:</strong>
+  <strong>Fecha que necesita servicio:</strong>
   <%= @travel_request.fecha_serv_sol %>
 </p>
 
@@ -57,18 +56,5 @@
   <%= @travel_request.est_sol %>
 </p>-->
 
-<!--<%= button_to 'Editar', edit_travel_request_path(@travel_request) , :method => 'get', :class => 'btn btn-warning' %> |
-<%= button_to 'Volver', travel_requests_path , :method => 'get', :class => 'btn btn-default'%>
--->
-<%=button_to 'Atras',{:controller=>'home'}, :class=>'btn btn-success' %>
-
-<% else %>
-
-
-<p>No se encuentra habilitado para ver esta solicitud </p>
-
-
-<% end %>
-
-
-</div></div></div>
+<%= button_to 'Editar', edit_travel_request_path(@travel_request) , :method => 'get', :class => 'btn btn-warning'  %> |
+<%= button_to 'Volver', travel_requests_path, :class=>'btn btn-success' %>

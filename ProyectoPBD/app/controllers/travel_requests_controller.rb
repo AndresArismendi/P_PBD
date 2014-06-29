@@ -5,8 +5,6 @@ class TravelRequestsController < ApplicationController
   # GET /travel_requests.json
   def index
     @travel_requests = TravelRequest.all
-    @travel = TravelRequest.all
-
   end
 
   # GET /travel_requests/1
@@ -17,7 +15,6 @@ class TravelRequestsController < ApplicationController
   # GET /travel_requests/new
   def new
     @travel_request = TravelRequest.new
-    @travel = TravelRequest.all
   end
 
   # GET /travel_requests/1/edit

@@ -11,51 +11,42 @@
     </div>
   <% end %>
 
-
-
-
-
   <div class="field">
-
-  <!--<p>  <%= f.label :RUT_cliente   %>  <%= current_user.rut%></p><br> -->
-    <%= f.hidden_field :run_cli, :value => current_user.rut  %>
-
-    
-      
+    <!--<%= f.label :Run_cliente %><br>-->
+    <%= f.hidden_field :run_cli, :value => current_user.rut %>
   </div>
   <div class="field">
-    <%= f.label :dirección_origen %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= f.text_field :dir_orig_sol %><br> 
+    <%= f.label :Dirección_origen %><br>
+    <%= f.text_field :dir_orig_sol %>
   </div>
   <div class="field">
-    <%= f.label :dirección_destino %>&nbsp;&nbsp;&nbsp;
-    <%= f.text_field :dir_dest_sol %><br>
+    <%= f.label :Dirección_destino %><br>
+    <%= f.text_field :dir_dest_sol %>
   </div>
   <div class="field">
-    <%= f.label :comuna_origen %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= f.text_field :com_orig_sol %><br>
+    <%= f.label :Comuna_origen %><br>
+    <%= f.text_field :com_orig_sol %>
   </div>
   <div class="field">
-    <%= f.label :comuna_destino %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= f.text_field :com_dest_sol %><br>
+    <%= f.label :Comuna_destino %><br>
+    <%= f.text_field :com_dest_sol %>
   </div>
   <div class="field">
-    <%= f.label :cantidad_pasajeros %>
-    <%= f.number_field :cant_pasaj_sol %><br>
+    <%= f.label :Cantidad_pasajeros %><br>
+    <%= f.number_field :cant_pasaj_sol %>
+  </div>
+  <div class="field"><p hidden>
+    <%= f.label :fecha_crea_sol %><br>
+    <%= f.datetime_select :fecha_crea_sol %>
+  </p></div>
+  <div class="field">
+    <%= f.label :Fecha_que_necesita_servicio %><br>
+    <%= f.datetime_select :fecha_serv_sol %>
   </div>
   <div class="field">
-  <p hidden>  <%= f.label :fecha_crea_sol %><br>
-    <%= f.date_select :fecha_crea_sol %> </p>
-  </div>
-  <div class="field">
-    <%= f.label :fecha_servicio %>
-    <%= f.date_select :fecha_serv_sol %><br>
-  </div>
-  <div class="field">
-    <!--<%= f.label :est_sol %><br>-->
+    <%= f.label :Estado_solicitud %><br>
     <%= f.hidden_field :est_sol, :value=> 'Pendiente' %>
   </div>
-  
   <div class="actions">
     <%= f.submit %>
   </div>

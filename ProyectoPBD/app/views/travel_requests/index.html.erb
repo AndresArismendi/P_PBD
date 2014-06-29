@@ -1,37 +1,20 @@
-<% if user_signed_in? and current_user.tipo == 'administrador' %>
-<div class="container marg2">
-    <br>
-    <br><br>
-        <div class="row">
-            <div class="col-lg-12 ">
+<h1>Listar Solicitud de Viaje</h1>
 
-<h1>Lista de solicitudes</h1>
-<div class="panel panel-default">
-      <!-- Default panel contents -->
-      <div class="panel-heading">Lista de solicitudes</div>
-      <div class="panel-body">
-        <p class="center"> En esta sección es posible modificar las solicitudes de viajes realizadas por los usuarios.<br>
-        
-        </p>
-      </div>
-
-      <!-- Table -->
-      <table class="table">
-
+<table>
   <thead>
     <tr>
       <th>Rut cliente</th>
       <th>Dirección origen</th>
-      <th>Dirirección destino</th>
+      <th>Dirección destino</th>
       <th>Comuna origen</th>
-      <th>Comuma destino</th>
+      <th>Comuna destino </th>
       <th>Cantidad pasajeros</th>
-      <th>Fecha creación</th>
-      <th>Fecha servicio</th>
-      <th>Estado solicitud</th>
-      <th>Mostrar</th>
-      <th>Editar</th>
-      <th>Eliminar</th>
+      <th>Fecha creación solicitud</th>
+      <th>Fecha que necesita servicio</th>
+      <th>Estados solicitud</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -47,9 +30,9 @@
         <td><%= travel_request.fecha_crea_sol %></td>
         <td><%= travel_request.fecha_serv_sol %></td>
         <td><%= travel_request.est_sol %></td>
-        <td><%= button_to 'Ver', travel_request , :method => 'get', :class => 'btn btn-info' %></td>
-        <td><%= button_to 'Editar', edit_travel_request_path(travel_request) , :method => 'get', :class => 'btn btn-warning' %></td>
-        <td><%= button_to 'Eliminar', travel_request, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger' %></td>
+        <td><%= button_to 'Ver', travel_request, :method => 'get', :class => 'btn btn-info' %></td>
+        <td><%= button_to 'Editar', edit_travel_request_path(travel_request) , :method => 'get', :class => 'btn btn-warning'%></td>
+        <td><%= button_to 'Eliminar', travel_request, method: :delete, data: { confirm: '¿Confirma eliminación?' }  , :class => 'btn btn-danger'%></td>
       </tr>
     <% end %>
   </tbody>
@@ -57,9 +40,4 @@
 
 <br>
 
-<%= button_to 'Nuevo', new_travel_request_path  , :method => 'get', :class => 'btn btn-default' %>
-<% else %>
-<h1>Inicia sesión</h1>
-
-<%end%>
-</div></div></div></div>
+<%= button_to 'Nuevo', new_travel_request_path  , :method => 'get', :class => 'btn btn-default'%>
