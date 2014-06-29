@@ -19,56 +19,7 @@
 	<p> Origen de viaje:<br>
 	<%= text_field_tag 'Origen Viaje', @o_viaje %></p>
 	<p> Comuna de origen:<br>
-	<p><%= select_tag :role, options_for_select([
-		
-
-	
-			[@comunnes[0].nom_comun, @comunnes[0].num_comun], 
-			[@comunnes[1].nom_comun, @comunnes[1].num_comun],
-			[@comunnes[2].nom_comun, @comunnes[2].num_comun],
-			[@comunnes[3].nom_comun, @comunnes[3].num_comun],
-			[@comunnes[4].nom_comun, @comunnes[4].num_comun],
-			[@comunnes[5].nom_comun, @comunnes[5].num_comun],
-			[@comunnes[6].nom_comun, @comunnes[6].num_comun],
-			[@comunnes[7].nom_comun, @comunnes[7].num_comun],
-			[@comunnes[8].nom_comun, @comunnes[8].num_comun],
-			[@comunnes[9].nom_comun, @comunnes[9].num_comun],
-			[@comunnes[10].nom_comun, @comunnes[10].num_comun],
-			[@comunnes[11].nom_comun, @comunnes[11].num_comun],
-			[@comunnes[12].nom_comun, @comunnes[12].num_comun],
-			[@comunnes[13].nom_comun, @comunnes[13].num_comun],
-			[@comunnes[14].nom_comun, @comunnes[14].num_comun],
-			[@comunnes[15].nom_comun, @comunnes[15].num_comun],
-			[@comunnes[16].nom_comun, @comunnes[16].num_comun],
-			[@comunnes[17].nom_comun, @comunnes[17].num_comun],
-			[@comunnes[18].nom_comun, @comunnes[18].num_comun],
-			[@comunnes[19].nom_comun, @comunnes[19].num_comun],
-			[@comunnes[20].nom_comun, @comunnes[20].num_comun],
-			[@comunnes[21].nom_comun, @comunnes[21].num_comun],
-			[@comunnes[22].nom_comun, @comunnes[22].num_comun],
-			[@comunnes[23].nom_comun, @comunnes[23].num_comun],
-			[@comunnes[24].nom_comun, @comunnes[24].num_comun],
-			[@comunnes[25].nom_comun, @comunnes[25].num_comun],
-			[@comunnes[26].nom_comun, @comunnes[26].num_comun],
-			[@comunnes[27].nom_comun, @comunnes[27].num_comun],
-			[@comunnes[28].nom_comun, @comunnes[28].num_comun],
-			[@comunnes[29].nom_comun, @comunnes[29].num_comun],
-			[@comunnes[30].nom_comun, @comunnes[30].num_comun],
-			[@comunnes[31].nom_comun, @comunnes[31].num_comun],
-			[@comunnes[32].nom_comun, @comunnes[32].num_comun],
-			[@comunnes[33].nom_comun, @comunnes[33].num_comun],
-			[@comunnes[34].nom_comun, @comunnes[34].num_comun],
-			[@comunnes[35].nom_comun, @comunnes[35].num_comun],
-			[@comunnes[36].nom_comun, @comunnes[36].num_comun],
-
-
-			
-	
-
-		
-
-
-		])%></p>
+	<p><%= select_tag 'role', options_for_select(@comunnes.collect{ |c| [c.nom_comun,c.num_comun] })%></p>
 
 	<%= text_field_tag 'Comuna Origen', @c_origen %></p>
 	<p> Destino de viaje:<br>
