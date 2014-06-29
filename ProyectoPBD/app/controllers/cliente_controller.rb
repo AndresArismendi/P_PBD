@@ -12,7 +12,7 @@ class ClienteController < ApplicationController
   	@d_viaje = params[:destino_viaje]
   	@c_destino = params[:comuna_destino]
   	@c_pasajeros = params[:cantidad_pasajeros]
-	  @prueba = params[:opcion]
+	@prueba = params[:opcion]
     @comunnes = Comunne.all
     @comuna_entrada=""
     @role = params[:role]

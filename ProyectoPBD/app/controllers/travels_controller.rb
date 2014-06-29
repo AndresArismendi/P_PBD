@@ -5,6 +5,14 @@ class TravelsController < ApplicationController
   # GET /travels.json
   def index
     @travels = Travel.all
+    @travel = Travel.new
+    @travel_requests = TravelRequest.all
+    @role = params[:role]    
+    @drivers = Driver.all
+
+
+
+
   end
 
   # GET /travels/1
@@ -15,6 +23,11 @@ class TravelsController < ApplicationController
   # GET /travels/new
   def new
     @travel = Travel.new
+    @travels = Travel.all    
+    @travel_requests = TravelRequest.all
+    @role = params[:role]
+    @drivers = Driver.all
+
   end
 
   # GET /travels/1/edit

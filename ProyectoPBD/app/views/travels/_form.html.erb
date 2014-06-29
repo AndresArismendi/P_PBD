@@ -12,12 +12,19 @@
   <% end %>
 
   <div class="field">
+
+  
+
     <%= f.label :rut_conductor %><br>
-    <%= f.text_field :run_driv %>
+    <!--<%= f.text_field :run_driv %> -->
+   <p><%= f.select :run_driv, options_for_select(@drivers.collect{ |dr| ["Nombre: "+dr.nom_cond+", Rut: "+dr.run_driv ,dr.run_driv] })%></p>
+
+
   </div>
   <div class="field">
     <%= f.label :id_solicitud_de_viaje %><br>
-    <%= f.number_field :id_trav_req %>
+    <!--<%= f.number_field :id_trav_req %>-->
+    <p><%= f.select :id_trav_req, options_for_select(@travel_requests.collect{ |tr| [tr.id_trav_req ,tr.id_trav_req] })%></p>
   </div>
   <div class="field">
     <%= f.label :hora_inicio_viaje %><br>
@@ -33,7 +40,7 @@
   </div>
   <div class="field">
     <%= f.label :valor_de_viaje %><br>
-    <%= f.number_field :val_via %>
+    <%= f.number_field :val_via%>
   </div>
   <div class="actions">
     <%= f.submit %>
