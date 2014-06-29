@@ -12,4 +12,3 @@ class TravelRequest < ActiveRecord::Base
     validates_presence_of :com_dest_sol, :message => "Falta comuna destino" 
 
 end
-

@@ -9,7 +9,7 @@ scaffold_amarillo:
 
 
 scaffold_rojo:
-	rails g scaffold travel_requests run_cli:string dir_orig_sol:string dir_dest_sol:string com_orig_sol:string com_dest_sol:string cant_pasaj_sol:integer fecha_crea_sol:date fecha_serv_sol:date est_sol:string --no-migration
+	rails g scaffold travel_requests run_cli:string dir_orig_sol:string dir_dest_sol:string com_orig_sol:string com_dest_sol:string cant_pasaj_sol:integer fecha_crea_sol:timestamp fecha_serv_sol:timestamp est_sol:string --no-migration
 
 	rails g scaffold travels run_driv:string id_trav_req:integer hora_ini_via:time tiemp_est_via:integer dist_est_via:float val_via:integer --no-migration
 

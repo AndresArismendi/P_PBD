@@ -1,5 +1,7 @@
 ActiveCab::Application.routes.draw do
   
+  resources :travel_requests
+
   resources :owners
 
   get "roles/index"

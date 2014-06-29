@@ -7,8 +7,8 @@ one:
   com_orig_sol: MyString
   com_dest_sol: MyString
   cant_pasaj_sol: 1
-  fecha_crea_sol: 2014-06-25
-  fecha_serv_sol: 2014-06-25
+  fecha_crea_sol: 2014-06-29 00:52:47
+  fecha_serv_sol: 2014-06-29 00:52:47
   est_sol: MyString
 
 two:
@@ -18,6 +18,6 @@ two:
   com_orig_sol: MyString
   com_dest_sol: MyString
   cant_pasaj_sol: 1
-  fecha_crea_sol: 2014-06-25
-  fecha_serv_sol: 2014-06-25
+  fecha_crea_sol: 2014-06-29 00:52:47
+  fecha_serv_sol: 2014-06-29 00:52:47
   est_sol: MyString
