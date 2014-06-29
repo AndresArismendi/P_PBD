@@ -3,7 +3,7 @@
       <br><br>
         <div class="row">
             <div class="col-lg-12 ">
-              <h1>Viajes</h1><br>
+              <h1>Bienvenido <%=current_user.nombre%></h1><br>
               <div class="col-lg-4 ">
 			           <ul class="nav nav-pills nav-stacked largo">
 			             <li class="active"> <%=link_to "Viajes", :controller => :conductor, :action => :index %> </li>
@@ -24,9 +24,10 @@
         <thead>
           <tr>
             <th>#</th>
+            <th>Nombre</th>
             <th>Origen</th>
             <th>Destino</th>
-            <th>Hora</th>
+            <th>Fecha y Hora</th>
             <th>Costo</th>
           </tr>
         </thead>
@@ -35,18 +36,21 @@
 
   <%@cont=1%>
 	<%@travels.each do |t| %>
-    <%@travel_requests.each do |tr|%>
-  		<%if t.run_driv==current_user.rut and tr.id_trav_req==t.id_trav_req and tr.est_sol== "Pendiente" %>
-        <tr>
-        <td><%= @cont %></td>
-        <td><%= tr.dir_orig_sol+" , "+tr.com_orig_sol  %></td>
-        <td><%= tr.dir_dest_sol+" , "+tr.com_dest_sol  %></td>
-        <td><%= t.hora_ini_via %></td>
-        <td><%= t.val_via %></td>
-        <td></td>
-        <%@cont = @cont + 1%>
-        </tr>
-  	  <%end%>
+    <%@travel_requests.order("fecha_serv_sol asc" ).each do |tr|%>
+      <%@clients.each do |cl| %>
+    		<%if t.run_driv==current_user.rut and tr.id_trav_req==t.id_trav_req and tr.est_sol== "Pendiente" and tr.run_cli == cl.run_cli%>
+          <tr>
+          <td><%= @cont %></td>
+          <td><%= cl.nom_cli+"  "+cl.apells_cli  %></td>
+          <td><%= tr.dir_orig_sol+" , "+tr.com_orig_sol  %></td>
+          <td><%= tr.dir_dest_sol+" , "+tr.com_dest_sol  %></td>
+          <td><%= tr.fecha_serv_sol.strftime("%d/%m/%Y  %H:%M") %></td>
+          <td><%= t.val_via %></td>
+          <td></td>
+          <%@cont = @cont + 1%>
+          </tr>
+    	  <%end%>
+      <%end%>
     <%end%>
 	<% end %>
 
