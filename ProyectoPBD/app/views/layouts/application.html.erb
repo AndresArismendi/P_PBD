@@ -11,6 +11,76 @@
   <link href="../../assets/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
   <link href="../../assets/bootstrap-theme.css" rel="stylesheet" type="text/css" />
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+   <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAuPsJpk3MBtDpJ4G8cqBnjRRaGTYH6UMl8mADNa0YKuWNNa8VNxQCzVBXTx2DYyXGsTOxpWhvIG7Djw" type="text/javascript"></script>
+    <style type="text/css">
+    body {
+      font-family: Verdana, Arial, sans serif;
+      font-size: 11px;
+      margin: 2px;
+    }
+    table.directions th {
+      background-color:#EEEEEE;
+    }
+
+    img {
+      color: #000000;
+    }
+    </style>
+    <script type="text/javascript">
+
+    var map;
+    var gdir;
+    var geocoder = null;
+    var addressMarker;
+    
+    function initialize() {
+      if (GBrowserIsCompatible()) {      
+        map = new GMap2(document.getElementById("map_canvas"));
+        gdir = new GDirections(map, document.getElementById("directions"));
+        GEvent.addListener(gdir, "load", onGDirectionsLoad);
+        GEvent.addListener(gdir, "error", handleErrors);
+    
+        setDirections("San Francisco", "Mountain View", "en_US");
+      }
+    }
+    
+    function setDirections(fromAddress, toAddress, locale) {
+      gdir.load("from: " + fromAddress + " to: " + toAddress,
+                { "locale": locale });
+    }
+    
+    function handleErrors(){
+     if (gdir.getStatus().code == G_GEO_UNKNOWN_ADDRESS)
+       alert("No se logro encontrar la ruta indicada, el motivo puede ser un mal ingreso de datos, o que la direccion sea muy actual y no exista en los registros.\nError de codigo: " + gdir.getStatus().code);
+     else if (gdir.getStatus().code == G_GEO_SERVER_ERROR)
+       alert("La direccion no se pudo procesar con exito, sin embargo la razón de falla no se sabe.\n Error de ingreso: " + gdir.getStatus().code);
+     
+     else if (gdir.getStatus().code == G_GEO_MISSING_QUERY)
+       alert("Se ha especificado una direccion vacia o nula como entrada, esto quiere decir que ninguna ruta se especifica.\n Error de ingreso: " + gdir.getStatus().code);
+    
+    //   else if (gdir.getStatus().code == G_UNAVAILABLE_ADDRESS)  <--- Doc bug... this is either not defined, or Doc is wrong
+    //     alert("The geocode for the given address or the route for the given directions query cannot be returned due to legal or contractual reasons.\n Error code: " + gdir.getStatus().code);
+       
+     else if (gdir.getStatus().code == G_GEO_BAD_KEY)
+       alert("La clave proporcionada no es válido o no coincide con el dominio para el que se le dio. \n Error de codigo: " + gdir.getStatus().code);
+    
+     else if (gdir.getStatus().code == G_GEO_BAD_REQUEST)
+       alert("La solicitud de ruta no se pudo realizar con exito.\n Error de codigo: " + gdir.getStatus().code);
+      
+     else alert("Se ha producido un error desconocido.");
+    }
+    
+    function onGDirectionsLoad(){ 
+        // Use this function to access information about the latest load()
+        // results.
+    
+        // e.g.
+        // document.getElementById("getStatus").innerHTML = gdir.getStatus().code;
+      // and yada yada yada...
+    }
+
+    </script>
+
 
   
  	<!-- Just for debugging purposes. Don't actually copy this line! -->

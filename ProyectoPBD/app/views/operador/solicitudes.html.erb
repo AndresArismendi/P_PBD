@@ -13,16 +13,23 @@
 			</div>	
 			
 			<div class="col-lg-8">
-				<h1>Listar Solicitud de Viaje</h1>
 
-					<table>
-					  <thead>
+<div class="panel panel-primary">
+                <!-- Default panel contents -->
+                <div class="panel-heading center">Lista de solicitudes</div>
+                <div class="panel-body">
+                  <p class="center"> En esta sección es posible ver, agregar o modificar clientes registrados en ActiveCab.<br>
+                  
+                  </p>
+                </div>
+
+                <!-- Table -->
+                <table class="table">					  <thead>
 					    <tr>
 					      <th>Rut cliente</th>
 					      <th>Dirección origen</th>
 					      <th>Dirección destino</th>
-					      <th>Comuna origen</th>
-					      <th>Comuna destino </th>
+					      
 					      <th>Cantidad pasajeros</th>
 					      <th>Fecha creación solicitud</th>
 					      <th>Fecha que necesita servicio</th>
@@ -31,13 +38,13 @@
 					  </thead>
 
 					  <tbody>
-					    <% @travel_requests.each do |travel_request| %>
+					    <% @travel_requests.order("fecha_serv_sol asc").each do |travel_request| %>
 					      <tr>
 					        <td><%= travel_request.run_cli %></td>
-					        <td><%= travel_request.dir_orig_sol %></td>
-					        <td><%= travel_request.dir_dest_sol %></td>
-					        <td><%= travel_request.com_orig_sol %></td>
-					        <td><%= travel_request.com_dest_sol %></td>
+					        <td><%= travel_request.dir_orig_sol.to_s+ " "+ travel_request.com_orig_sol.to_s%></td>
+					        <td><%= travel_request.dir_dest_sol+" "+travel_request.com_dest_sol %></td>
+					        
+					        
 					        <td><%= travel_request.cant_pasaj_sol %></td>
 					        <td><%= travel_request.fecha_crea_sol %></td>
 					        <td><%= travel_request.fecha_serv_sol %></td>
