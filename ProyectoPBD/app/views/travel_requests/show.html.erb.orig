@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <div class="container marg2">
     <br>
@@ -9,12 +10,14 @@
               <strong>Bien hecho!</strong> Tu solicitud ha sido enviada con exito. Espera nuestro llamado <%=link_to 'ActiveCab',{:controller=>'home'}, :class=>'alert-link'%>
             </div>
 
+=======
+>>>>>>> d5f7213551632565c8be036d240ee360a5c8a78c
 <p id="notice"><%= notice %></p>
 
-<!--<p>
+<p>
   <strong>Run cliente:</strong>
   <%= @travel_request.run_cli %>
-</p>-->
+</p>
 
 <p>
   <strong>Dirección origen:</strong>
@@ -56,8 +59,12 @@
   <%= @travel_request.est_sol %>
 </p>-->
 
-<!--<%= button_to 'Editar', edit_travel_request_path(@travel_request) , :method => 'get', :class => 'btn btn-warning'  %> | -->
+<<<<<<< HEAD
+<!--<%= button_to 'Editar', edit_travel_request_path(@travel_request) , :method => 'get', :class => 'btn btn-warning' %> |
+<%= button_to 'Volver', travel_requests_path , :method => 'get', :class => 'btn btn-default'%>
+-->
 <%=button_to 'Atras',{:controller=>'home'}, :class=>'btn btn-success' %>
+
 <% else %>
 
 
@@ -68,3 +75,7 @@
 
 
 </div></div></div>
+=======
+<%= button_to 'Editar', edit_travel_request_path(@travel_request) , :method => 'get', :class => 'btn btn-warning'  %> |
+<%= button_to 'Volver', travel_requests_path, :class=>'btn btn-success' %>
+>>>>>>> d5f7213551632565c8be036d240ee360a5c8a78c
