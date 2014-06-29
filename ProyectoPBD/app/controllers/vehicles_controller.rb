@@ -19,6 +19,8 @@ class VehiclesController < ApplicationController
   def new
     @vehicle = Vehicle.new
     @owner = Owner.new
+        @owners = Owner.all
+
   end
 
   # GET /vehicles/1/edit
