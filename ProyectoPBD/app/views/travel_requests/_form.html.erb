@@ -13,45 +13,47 @@
 
 
 
+
+
   <div class="field">
 
-  <p>  <%= f.label :RUT_cliente   %>  <%= current_user.rut%></p><br>
+  <!--<p>  <%= f.label :RUT_cliente   %>  <%= current_user.rut%></p><br> -->
     <%= f.hidden_field :run_cli, :value => current_user.rut  %>
 
     
       
   </div>
   <div class="field">
-    <%= f.label :dir_orig_sol %><br>
-    <%= f.text_field :dir_orig_sol %>
+    <%= f.label :dirección_origen %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.text_field :dir_orig_sol %><br> 
   </div>
   <div class="field">
-    <%= f.label :dir_dest_sol %><br>
-    <%= f.text_field :dir_dest_sol %>
+    <%= f.label :dirección_destino %>&nbsp;&nbsp;&nbsp;
+    <%= f.text_field :dir_dest_sol %><br>
   </div>
   <div class="field">
-    <%= f.label :com_orig_sol %><br>
-    <%= f.text_field :com_orig_sol %>
+    <%= f.label :comuna_origen %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.text_field :com_orig_sol %><br>
   </div>
   <div class="field">
-    <%= f.label :com_dest_sol %><br>
-    <%= f.text_field :com_dest_sol %>
+    <%= f.label :comuna_destino %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.text_field :com_dest_sol %><br>
   </div>
   <div class="field">
-    <%= f.label :cant_pasaj_sol %><br>
-    <%= f.number_field :cant_pasaj_sol %>
+    <%= f.label :cantidad_pasajeros %>
+    <%= f.number_field :cant_pasaj_sol %><br>
   </div>
   <div class="field">
-    <%= f.label :fecha_crea_sol %><br>
-    <%= f.date_select :fecha_crea_sol %>
+  <p hidden>  <%= f.label :fecha_crea_sol %><br>
+    <%= f.date_select :fecha_crea_sol %> </p>
   </div>
   <div class="field">
-    <%= f.label :fecha_serv_sol %><br>
-    <%= f.date_select :fecha_serv_sol %>
+    <%= f.label :fecha_servicio %>
+    <%= f.date_select :fecha_serv_sol %><br>
   </div>
   <div class="field">
-    <%= f.label :est_sol %><br>
-    <%= f.text_field :est_sol %>
+    <!--<%= f.label :est_sol %><br>-->
+    <%= f.hidden_field :est_sol, :value=> 'Pendiente' %>
   </div>
   
   <div class="actions">
