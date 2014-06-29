@@ -4,7 +4,10 @@ class VehiclesController < ApplicationController
   # GET /vehicles
   # GET /vehicles.json
   def index
-    @vehicles = Vehicle.all
+    @vehicles = Vehicle.all    
+    @owner = Owner.new
+    @owners = Owner.all
+
   end
 
   # GET /vehicles/1
@@ -15,6 +18,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles/new
   def new
     @vehicle = Vehicle.new
+    @owner = Owner.new
   end
 
   # GET /vehicles/1/edit
