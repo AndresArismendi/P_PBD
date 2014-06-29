@@ -43,12 +43,12 @@
 
 <p>
   <strong>Fecha creación solicitud:</strong>
-  <%= @travel_request.fecha_crea_sol %>
+  <%= @travel_request.fecha_crea_sol.strftime("%d/%m/%Y  %H:%M") %>
 </p>
 
 <p>
   <strong>Fecha que necesita servicio:</strong>
-  <%= @travel_request.fecha_serv_sol %>
+  <%= @travel_request.fecha_serv_sol.strftime("%d/%m/%Y  %H:%M") %>
 </p>
 
 <!--<p>

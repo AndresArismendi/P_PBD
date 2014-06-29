@@ -1,6 +1,8 @@
+<p></p><p></p>
 <p id="notice"><%= notice %></p>
 
 <p>
+  <br><br>
   <strong>Run propietario:</strong>
   <%= @owner.run_own %>
 </p>
@@ -25,5 +27,5 @@
   <%= @owner.email_prop %>
 </p>
 
-<%= button_to 'Editar', edit_owner_path(@owner), :method => 'get', :class => 'btn btn-warning' %> 
+<%= button_to 'Editar', edit_owner_path(@owner), :method => 'get', :class => 'btn btn-warning' %> <p></p>
 <%= button_to 'Volver', owners_path, :method => 'get', :class => 'btn btn-default' %>

@@ -22,7 +22,7 @@
         <td><%= owner.apells_prop %></td>
         <td><%= owner.tel_prop %></td>
         <td><%= owner.email_prop %></td>
-        <td><%= button_to 'Show', owner %></td>
+        <td><%= button_to 'Show', owner, :method => 'get', :class => 'btn btn-info' %></td>
         <td><%= button_to 'Editar', edit_owner_path(owner) , :method => 'get', :class => 'btn btn-warning' %></td>
         <td><%= button_to 'Eliminar', owner, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger'%></td>
       </tr>
