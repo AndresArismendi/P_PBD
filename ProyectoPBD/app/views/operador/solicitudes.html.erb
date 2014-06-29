@@ -1,9 +1,8 @@
 <br>
-<div class="container">
-        <div class="row">
-            <div class="col-lg-12 ">
-				
-
+<div class="container marg2">
+    <div class="row">
+        <div class="col-lg-12">
+			<div class="col-lg-4">
 				<ul class="nav nav-pills nav-stacked largo">
 				  	<li> <%=link_to "Distancia y valor", :controller => :operador, :action => :index %> </li>
 				  	<li> <%=link_to "Disponibilidad de conductores", :controller => :operador, :action => :disp_conductor %> </li>
@@ -11,13 +10,50 @@
 				  	<li> <%=link_to "Lista de usuarios registrados", :controller => :operador, :action => :usuarios_reg %> </li>
 
 				</ul>
-    		
-    		<%=@origen2 %>
+			</div>	
+			
+			<div class="col-lg-8">
+				<h1>Listar Solicitud de Viaje</h1>
 
-            </div>
+					<table>
+					  <thead>
+					    <tr>
+					      <th>Rut cliente</th>
+					      <th>Dirección origen</th>
+					      <th>Dirección destino</th>
+					      <th>Comuna origen</th>
+					      <th>Comuna destino </th>
+					      <th>Cantidad pasajeros</th>
+					      <th>Fecha creación solicitud</th>
+					      <th>Fecha que necesita servicio</th>
+					      <th>Estados solicitud</th>
+					    </tr>
+					  </thead>
 
-        </div>      
+					  <tbody>
+					    <% @travel_requests.each do |travel_request| %>
+					      <tr>
+					        <td><%= travel_request.run_cli %></td>
+					        <td><%= travel_request.dir_orig_sol %></td>
+					        <td><%= travel_request.dir_dest_sol %></td>
+					        <td><%= travel_request.com_orig_sol %></td>
+					        <td><%= travel_request.com_dest_sol %></td>
+					        <td><%= travel_request.cant_pasaj_sol %></td>
+					        <td><%= travel_request.fecha_crea_sol %></td>
+					        <td><%= travel_request.fecha_serv_sol %></td>
+					        <td><%= travel_request.est_sol %></td>
 
-    </div>
+					      </tr>
+					    <% end %>
+					  </tbody>
+					</table>
+			</div>
+				
+		</div>    		
+	</div>
+
+</div>      
+
+    
 
 

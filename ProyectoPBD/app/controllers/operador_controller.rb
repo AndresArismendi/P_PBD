@@ -4,6 +4,9 @@ require 'net/http'
 
 class OperadorController < ApplicationController
   def index
+
+    @kilometers_prices = KilometersPrice.all
+    @base_prices = BasePrice.all
 	$result = { "destination_addresses" => ["Calle1,SC,Ch"], "origin_addresses" => ["LJ, EC, RM"], "rows" => [{"elements" => [{"distance" => {"text" => "10km", "value" => 1000}, "duration" => {"text" => "15min", "value" => 903}, "status" => "OK"}]}], "status" => "OK"}	
   	@origen = params[:origen]
   	@destino = params[:destino]
@@ -17,6 +20,18 @@ class OperadorController < ApplicationController
 	@origin_addresses = $result["origin_addresses"][0]
 	@status = $result['status']
 	
+	@valor_km_vigente
+	@kilometers_prices.each do |kp|
+		if (kp.estado_val_km == 'activo')
+			@valor_km_vigente=kp.val_km
+		end
+
+	end
+
+	
+	@costo_total=0
+
+		
 	
 	if (@status == "INVALID_REQUEST")
 		
@@ -33,6 +48,7 @@ class OperadorController < ApplicationController
 		@duration = $result["rows"][0]["elements"][0]["duration"]["value"]
 		@duration_min = (@duration/60).round
 		@distance_km = (@distance*0.001).round(1)
+		@costo_total= (@valor_km_vigente)*@distance_km
 	
 	else
 		@error1 = "ELSE"
@@ -41,11 +57,17 @@ class OperadorController < ApplicationController
   end
 
   def solicitudes
+    @travel_requests = TravelRequest.all
+
+
+
   end
 
   def disp_conductor
   end
 
   def usuarios_reg
+  	  	@users = User.all
+
   end
 end
