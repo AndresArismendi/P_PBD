@@ -8,16 +8,15 @@
               <div class="col-lg-4 ">
 			           <ul class="nav nav-pills nav-stacked largo">
 			             <li class="active"> <%=link_to "Viajes", :controller => :conductor, :action => :index %> </li>
-			             <li> <%=link_to "Calendario", :controller => :conductor, :action => :calendario %> </li>
+			             <li> <%=link_to "Ruta de Viaje", :controller => :conductor, :action => :calendario %> </li>
 			           </ul>
                </div>
             <div class="col-lg-8 ">         
               <div class="panel panel-default">
               <!-- Default panel contents -->
-                <div class="panel-heading">Lista de viajes de costo fijo</div>
+                <div class="panel-heading">Lista de viajes pendientes</div>
                   <div class="panel-body">
-                    <p class="center"> En esta sección es posible modificar los viajes de costo fijo perteneciente a ActiveCab.<br>
-                    El resultado de estas modificaciones se reflejan en la vista "Servicios y tarifas".
+                    <p class="center"> En esta sección se despliegan los viajes asignados al conductor logueado.<br>
                     </p>
                   </div>
             <!-- Table -->

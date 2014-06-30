@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20140625044208) do
     t.string "tel1_cond",        limit: 40
     t.string "tel2_cond",        limit: 40
     t.string "email_cond",       limit: 40
-    t.string "venc_licenc_cond", limit: 40
+    t.date   "venc_licenc_cond"
   end
 
   add_index "drivers", ["run_driv"], name: "drivers_pk", unique: true, using: :btree
@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 20140625044208) do
 
   add_index "drivers_license_alerts", ["id_mens_alert_licenc"], name: "drivers_license_alerts_pk", unique: true, using: :btree
 
-  create_table "enterprise_clients", id: false, force: true do |t|
+  create_table "enterprise_clients", primary_key: "id_cli_ent", force: true do |t|
     t.string "run_cli", limit: 40, null: false
     t.string "rut_ent", limit: 40
   end
@@ -188,7 +188,7 @@ ActiveRecord::Schema.define(version: 20140625044208) do
 
   add_index "scheduling_blocks", ["id_block"], name: "scheduling_blocks_pk", unique: true, using: :btree
 
-  create_table "schedulings", id: false, force: true do |t|
+  create_table "schedulings", primary_key: "id_sched", force: true do |t|
     t.integer "id_off_veh"
     t.string  "run_driv",   limit: 40
     t.string  "run_cli",    limit: 40
