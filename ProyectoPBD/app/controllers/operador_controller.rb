@@ -3,6 +3,7 @@ require 'json'
 require 'net/http'
 
 class OperadorController < ApplicationController
+  
   def index
 
     @kilometers_prices = KilometersPrice.all
