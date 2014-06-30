@@ -13,20 +13,18 @@
 
   <div class="field">
     <%= f.label :id_bloque %><br>
-    <!--<%= f.number_field :id_block %>-->
-        <p><%= f.select :id_block, options_for_select(@scheduling_blocks.collect{ |sb| [sb.ini_bloq.strftime("%d/%m/%Y  %H:%M").to_s+" - "+sb.fin_bloq.strftime("%d/%m/%Y  %H:%M").to_s ,sb.id_block] })%></p>
-  
-
+    <%= f.number_field :id_block %>
+    
   </div>
   <div class="field">
     <%= f.label :rut_conductor %><br>
+    <%= f.text_field :run_driv %>
     
-    <p><%= f.select :run_driv, options_for_select(@drivers.collect{ |dr| ["Nombre: "+dr.nom_cond+", Rut: "+dr.run_driv ,dr.run_driv] })%></p>
 
   </div>
   <div class="field">
     <%= f.label :estado_oferta %><br>
-    <%= f.hidden_field :est_oferta_veh, :value=>'Disponible' %>
+    <%= f.text_field :est_oferta_veh, :value=>'Disponible' %>
   </div>
   <div class="actions">
     <%= f.submit %>

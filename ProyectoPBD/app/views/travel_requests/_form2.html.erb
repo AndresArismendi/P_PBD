@@ -21,9 +21,7 @@
   </div>
     <div class="field">
     <%= f.label :Comuna_origen %><br>
-    <!--<%= f.text_field :com_orig_sol %>-->
-    <p><%= f.select :com_orig_sol, options_for_select(@comunnes.collect{ |c| [c.nom_comun ,c.nom_comun] })%></p>
-
+    <%= f.text_field :com_orig_sol %>
 
 
   </div>
@@ -33,17 +31,15 @@
   </div>
   <div class="field">
     <%= f.label :Comuna_destino %><br>
-    <!--<%= f.text_field :com_dest_sol %>-->
-        <p><%= f.select :com_dest_sol, options_for_select(@comunnes.collect{ |c| [c.nom_comun ,c.nom_comun] })%></p>
-
+    <%= f.text_field :com_dest_sol %>
   </div>
   <div class="field">
     <%= f.label :Cantidad_pasajeros %><br>
     <%= f.number_field :cant_pasaj_sol %>
   </div>
   <div class="field">
-    <!--<%= f.label :fecha_crea_sol %><br>-->
-    <p hidden><%= f.datetime_select :fecha_crea_sol %></p>
+    <%= f.label :fecha_crea_sol %><br>
+    <%= f.datetime_select :fecha_crea_sol %>
   </div>
   <div class="field">
     <%= f.label :Fecha_que_necesita_servicio %><br>

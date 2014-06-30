@@ -6,6 +6,8 @@ class OfferVehiclesController < ApplicationController
   def index
     @offer_vehicles = OfferVehicle.all
     @drivers = Driver.all
+    @scheduling_blocks = SchedulingBlock.all
+
 
   end
 
@@ -18,6 +20,9 @@ class OfferVehiclesController < ApplicationController
   def new
     @offer_vehicle = OfferVehicle.new
     @drivers = Driver.all
+    @scheduling_blocks = SchedulingBlock.all
+
+
 
   end
 

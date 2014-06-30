@@ -1,5 +1,6 @@
 <br>
       <div class="container marg2">
+      <% if user_signed_in? and current_user.tipo == 'conductor' %>
       <br>
         <div class="row">
             <div class="col-lg-12 ">
@@ -68,3 +69,4 @@
     </div>
 
     </div></div></div>
+    <% end %>
