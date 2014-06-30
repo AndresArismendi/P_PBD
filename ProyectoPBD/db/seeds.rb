@@ -43,4 +43,10 @@
   	Comunne.create nom_comun: "San Bernardo", num_comun: 34
   	Comunne.create nom_comun: "Puente Alto", num_comun: 35
   	Comunne.create nom_comun: "Pirque", num_comun: 36
+<<<<<<< HEAD
   	Comunne.create nom_comun: "San Jose de Maipo", num_comun: 37
+=======
+  	Comunne.create nom_comun: "San Jose de Maipo", num_comun: 37
+
+
+>>>>>>> d19fc7a595db7a6e51b5793090fe38bd3b353957
