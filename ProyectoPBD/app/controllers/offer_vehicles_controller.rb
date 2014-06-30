@@ -5,6 +5,8 @@ class OfferVehiclesController < ApplicationController
   # GET /offer_vehicles.json
   def index
     @offer_vehicles = OfferVehicle.all
+    @drivers = Driver.all
+
   end
 
   # GET /offer_vehicles/1
@@ -15,6 +17,8 @@ class OfferVehiclesController < ApplicationController
   # GET /offer_vehicles/new
   def new
     @offer_vehicle = OfferVehicle.new
+    @drivers = Driver.all
+
   end
 
   # GET /offer_vehicles/1/edit

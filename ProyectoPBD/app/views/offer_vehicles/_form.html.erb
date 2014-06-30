@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :id_block %><br>
+    <%= f.label :id_bloque %><br>
     <%= f.number_field :id_block %>
   </div>
   <div class="field">
-    <%= f.label :run_driv %><br>
+    <%= f.label :rut_conductor %><br>
     <%= f.text_field :run_driv %>
   </div>
   <div class="field">
-    <%= f.label :est_oferta_veh %><br>
-    <%= f.text_field :est_oferta_veh %>
+    <%= f.label :estado_oferta %><br>
+    <%= f.hidden_field :est_oferta_veh, :value=>'Disponible' %>
   </div>
   <div class="actions">
     <%= f.submit %>
