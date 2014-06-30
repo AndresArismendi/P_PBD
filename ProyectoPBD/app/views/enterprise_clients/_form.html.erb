@@ -1,5 +1,3 @@
-<% if user_signed_in? and current_user.tipo == 'administrador' %>
-
   <%= form_for(@enterprise_client) do |f| %>
     <% if @enterprise_client.errors.any? %>
       <div id="error_explanation">
@@ -25,4 +23,3 @@
       <%= f.submit %>
     </div>
   <% end %>
-<% end %>
