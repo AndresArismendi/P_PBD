@@ -33,7 +33,8 @@ scaffold_celeste:
 scaffold_verde:
 	rails g scaffold schedulings id_off_veh:integer run_driv:string run_cli:string --no-migration
 
-	rails g scaffold offer_vehicles id_veh:integer id_block:integer est_oferta_veh:string --no-migration
+	rails g scaffold offer_vehicles id_block:integer run_driv:string  est_oferta_veh:string --no-migration
+
 
 	rails g scaffold scheduling_blocks ini_bloq:timestamp fin_bloq:timestamp --no-migration
 

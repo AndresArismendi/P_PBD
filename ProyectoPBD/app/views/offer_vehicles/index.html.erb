@@ -1,27 +1,11 @@
-<div class="container marg2">
-    <br>
-    <br><br>
-        <div class="row">
-            <div class="col-lg-12 ">
+<h1>Listing offer_vehicles</h1>
 
-<h1>Listado de ofertas de vehículo</h1>
-
-  <div class="panel panel-default">
-      <!-- Default panel contents -->
-      <div class="panel-heading">Lista de ofertas de vehículos</div>
-      <div class="panel-body">
-        <p class="center"> En esta sección es posible modificar la oferta que existe por parte de los vehículos.<br>
-        
-        </p>
-      </div>
-
-      <!-- Table -->
-      <table class="table">
+<table>
   <thead>
     <tr>
-      <th>Id vehículo</th>
-      <th>Id bloque</th>
-      <th>Estado oferta vehículo</th>
+      <th>Id block</th>
+      <th>Run driv</th>
+      <th>Est oferta veh</th>
       <th></th>
       <th></th>
       <th></th>
@@ -31,12 +15,12 @@
   <tbody>
     <% @offer_vehicles.each do |offer_vehicle| %>
       <tr>
-        <td><%= offer_vehicle.id_veh %></td>
         <td><%= offer_vehicle.id_block %></td>
+        <td><%= offer_vehicle.run_driv %></td>
         <td><%= offer_vehicle.est_oferta_veh %></td>
-        <td><%= button_to 'Ver', offer_vehicle , :method => 'get', :class => 'btn btn-info'%></td>
-        <td><%= button_to 'Editar', edit_offer_vehicle_path(offer_vehicle) , :method => 'get', :class => 'btn btn-warning'%></td>
-        <td><%= button_to 'Eliminar', offer_vehicle, method: :delete, data: { confirm: '¿Confirma eliminación?' } , :class => 'btn btn-danger'%></td>
+        <td><%= link_to 'Show', offer_vehicle %></td>
+        <td><%= link_to 'Edit', edit_offer_vehicle_path(offer_vehicle) %></td>
+        <td><%= link_to 'Destroy', offer_vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -44,4 +28,4 @@
 
 <br>
 
-<%= button_to 'Nuevo', new_offer_vehicle_path , :method => 'get', :class => 'btn btn-default'%>
+<%= link_to 'New Offer vehicle', new_offer_vehicle_path %>

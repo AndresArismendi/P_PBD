@@ -154,14 +154,14 @@ ActiveRecord::Schema.define(version: 20140625044208) do
   end
 
   create_table "offer_vehicles", primary_key: "id_off_veh", force: true do |t|
-    t.integer "id_veh"
     t.integer "id_block"
+    t.string  "run_driv",       limit: 40
     t.string  "est_oferta_veh", limit: 40
   end
 
   add_index "offer_vehicles", ["id_block"], name: "relationship_18_fk", using: :btree
   add_index "offer_vehicles", ["id_off_veh"], name: "offer_vehicles_pk", unique: true, using: :btree
-  add_index "offer_vehicles", ["id_veh"], name: "relationship_19_fk", using: :btree
+  add_index "offer_vehicles", ["run_driv"], name: "relationship_19_fk", using: :btree
 
   create_table "owner_commissions", primary_key: "id_own_com", force: true do |t|
     t.float "porcent_comi_prop"
@@ -234,15 +234,15 @@ ActiveRecord::Schema.define(version: 20140625044208) do
   add_index "transitions", ["sta_id_stat"], name: "relationship_5_fk", using: :btree
 
   create_table "travel_requests", primary_key: "id_trav_req", force: true do |t|
-    t.string  "run_cli",        limit: 40
-    t.string  "dir_orig_sol",   limit: 60
-    t.string  "dir_dest_sol",   limit: 60
-    t.string  "com_orig_sol",   limit: 60
-    t.string  "com_dest_sol",   limit: 60
-    t.integer "cant_pasaj_sol"
-    t.date    "fecha_crea_sol"
-    t.date    "fecha_serv_sol"
-    t.string  "est_sol",        limit: 20
+    t.string   "run_cli",        limit: 40
+    t.string   "dir_orig_sol",   limit: 60
+    t.string   "dir_dest_sol",   limit: 60
+    t.string   "com_orig_sol",   limit: 60
+    t.string   "com_dest_sol",   limit: 60
+    t.integer  "cant_pasaj_sol"
+    t.date     "fecha_crea_sol"
+    t.datetime "fecha_serv_sol"
+    t.string   "est_sol",        limit: 20
   end
 
   add_index "travel_requests", ["id_trav_req"], name: "travel_requests_pk", unique: true, using: :btree
@@ -262,8 +262,8 @@ ActiveRecord::Schema.define(version: 20140625044208) do
   add_index "travels", ["run_driv"], name: "relationship_13_fk", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "",        null: false
-    t.string   "encrypted_password",     default: "",        null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -272,7 +272,7 @@ ActiveRecord::Schema.define(version: 20140625044208) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "tipo",                   default: "cli_nat"
+    t.string   "tipo"
     t.string   "rut"
     t.string   "nombre"
     t.string   "apellidos"

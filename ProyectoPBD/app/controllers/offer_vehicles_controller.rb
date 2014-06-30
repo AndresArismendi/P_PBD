@@ -69,6 +69,6 @@ class OfferVehiclesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def offer_vehicle_params
-      params.require(:offer_vehicle).permit(:id_veh, :id_block, :est_oferta_veh)
+      params.require(:offer_vehicle).permit(:id_block, :run_driv, :est_oferta_veh)
     end
 end

@@ -18,7 +18,7 @@ class OfferVehiclesControllerTest < ActionController::TestCase
 
   test "should create offer_vehicle" do
     assert_difference('OfferVehicle.count') do
-      post :create, offer_vehicle: { est_oferta_veh: @offer_vehicle.est_oferta_veh, id_block: @offer_vehicle.id_block, id_veh: @offer_vehicle.id_veh }
+      post :create, offer_vehicle: { est_oferta_veh: @offer_vehicle.est_oferta_veh, id_block: @offer_vehicle.id_block, run_driv: @offer_vehicle.run_driv }
     end
 
     assert_redirected_to offer_vehicle_path(assigns(:offer_vehicle))
@@ -35,7 +35,7 @@ class OfferVehiclesControllerTest < ActionController::TestCase
   end
 
   test "should update offer_vehicle" do
-    patch :update, id: @offer_vehicle, offer_vehicle: { est_oferta_veh: @offer_vehicle.est_oferta_veh, id_block: @offer_vehicle.id_block, id_veh: @offer_vehicle.id_veh }
+    patch :update, id: @offer_vehicle, offer_vehicle: { est_oferta_veh: @offer_vehicle.est_oferta_veh, id_block: @offer_vehicle.id_block, run_driv: @offer_vehicle.run_driv }
     assert_redirected_to offer_vehicle_path(assigns(:offer_vehicle))
   end
 

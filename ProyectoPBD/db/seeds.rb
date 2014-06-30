@@ -44,11 +44,3 @@
   	Comunne.create nom_comun: "Puente Alto", num_comun: 35
   	Comunne.create nom_comun: "Pirque", num_comun: 36
   	Comunne.create nom_comun: "San Jose de Maipo", num_comun: 37
-
-
-#Agregar los recorridos fijos en tarifas
-
-  FixedRate.create ori_tar: "Santiago Centro" dest_tar: "Aeropuerto" costo_tar: 17000 
-  FixedRate.create ori_tar: "Cerro Navia" dest_tar: "Aeropuerto" costo_tar: 20000
-  FixedRate.create ori_tar: "Providencia" dest_tar: "Aeropuerto" costo_tar: 16000 
-  FixedRate.create ori_tar: "Providencia" dest_tar: "Hotel Fundador" costo_tar: 16000

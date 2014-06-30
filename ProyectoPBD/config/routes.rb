@@ -1,5 +1,7 @@
 ActiveCab::Application.routes.draw do
   
+  resources :offer_vehicles
+
   resources :travel_requests
 
   resources :owners

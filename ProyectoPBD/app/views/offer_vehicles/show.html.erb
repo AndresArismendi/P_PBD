@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Id vehículo:</strong>
-  <%= @offer_vehicle.id_veh %>
-</p>
-
-<p>
   <strong>Id block:</strong>
   <%= @offer_vehicle.id_block %>
 </p>
 
 <p>
-  <strong>Estado oferta vehículo:</strong>
+  <strong>Run driv:</strong>
+  <%= @offer_vehicle.run_driv %>
+</p>
+
+<p>
+  <strong>Est oferta veh:</strong>
   <%= @offer_vehicle.est_oferta_veh %>
 </p>
 
-<%= button_to 'Editar', edit_offer_vehicle_path(@offer_vehicle) , :method => 'get', :class => 'btn btn-warning'%> |
-<%= button_to 'Volver', offer_vehicles_path , :method => 'get', :class => 'btn btn-default'%>
+<%= link_to 'Edit', edit_offer_vehicle_path(@offer_vehicle) %> |
+<%= link_to 'Back', offer_vehicles_path %>
