@@ -17,10 +17,13 @@
 
                   <%= form_tag :action => 'index' do %>
                     
+
+
+
                     <p> Rut de cliente a cambiar su rol:&nbsp; &nbsp; &nbsp;
-                    <%= text_field_tag 'rut', @rut %><br>
+                    <p><%= select_tag :rut, options_for_select(@users.collect{ |u| [u.rut, u.rut] })%></p>
                     <p> Correo de cliente a cambiar su rol:&nbsp;
-                    <%= text_field_tag 'correo', @correo %><br>
+                    <p><%= select_tag :correo, options_for_select(@users.collect{ |u| [u.email, u.email] })%></p>
                     <p> Seleccione el nuevo rol del cliente:
                     <%= select_tag :role, options_for_select([['cliente natural', 'cli_nat'],['operador', 'operador'],['conductor','conductor'], ['administrador', 'administrador']]) %><br><br>
 

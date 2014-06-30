@@ -13,7 +13,9 @@
 
   <div class="field">
     <%= f.label :Propietario %><br>
-    <p><%= f.select :run_own, options_for_select(@owners.collect{ |ow| ["Nombre: "+ow.nom_prop+", Rut: "+ow.run_own ,ow.run_own] })%></p>
+    <%= f.text_field :run_own %>
+
+    
 
 
 
@@ -33,7 +35,9 @@
   <div class="field">
 
     <%= f.label :Tipo_vehículo %><br>
-  <p><%= f.select :tipo_veh, options_for_select([['sedan' ,'sedan'],['camioneta','camioneta']])%></p>
+    <%= f.text_field :tipo_veh %>
+
+  
   </div>
   <div class="field">
     <%= f.label :Kilómetros_recorridos%><br>
